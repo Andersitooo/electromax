@@ -96,37 +96,51 @@ $busqueda_activa = false;
 $busqueda_like = '';
 $busqueda_prefix = '';
 $busqueda_tokens = [];
+$busqueda_usar_trgm = false;
 
 $emx_escape_like = static function ($value) {
     return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], (string)$value);
 };
 
+$emx_pg_trgm_disponible = static function ($pdo) {
+    try {
+        $stmt = $pdo->query("SELECT to_regprocedure('similarity(text,text)') IS NOT NULL");
+        return (bool)$stmt->fetchColumn();
+    } catch (Throwable $e) {
+        return false;
+    }
+};
+
 if (isset($_GET['q']) && trim((string)$_GET['q']) !== '') {
     $filtro_activo = true;
     $busqueda_activa = true;
-    $busqueda_query = trim(preg_replace('/\s+/', ' ', (string)$_GET['q']));
+    $busqueda_query = trim(preg_replace('/\s+/u', ' ', (string)$_GET['q']));
     $busqueda_query = mb_substr($busqueda_query, 0, 80);
     $busqueda_like = '%' . $emx_escape_like($busqueda_query) . '%';
     $busqueda_prefix = $emx_escape_like($busqueda_query) . '%';
+    $busqueda_usar_trgm = (mb_strlen($busqueda_query) >= 3 && isset($pdo) && $emx_pg_trgm_disponible($pdo));
 
     $raw_tokens = preg_split('/\s+/u', mb_strtolower($busqueda_query));
     $busqueda_tokens = [];
     foreach ($raw_tokens as $token) {
         $token = trim($token);
-        if (mb_strlen($token) >= 2 && !in_array($token, $busqueda_tokens, true)) {
+        // Permitimos 1 letra para que "L" ya encuentre Lavadora, Laptop, etc.
+        if (mb_strlen($token) >= 1 && !in_array($token, $busqueda_tokens, true)) {
             $busqueda_tokens[] = $token;
         }
     }
-    $busqueda_tokens = array_slice($busqueda_tokens, 0, 5);
+    $busqueda_tokens = array_slice($busqueda_tokens, 0, 6);
 
     $search_clauses = ["(
         p.nombre ILIKE :busq_nombre ESCAPE '\\'
+        OR p.nombre ILIKE :busq_nombre_prefix ESCAPE '\\'
         OR COALESCE(p.descripcion_corta,'') ILIKE :busq_descripcion ESCAPE '\\'
         OR COALESCE(p.sku,'') ILIKE :busq_sku ESCAPE '\\'
         OR COALESCE(m.nombre,'') ILIKE :busq_marca ESCAPE '\\'
         OR COALESCE(c.nombre,'') ILIKE :busq_categoria ESCAPE '\\'
     )"];
     $params[':busq_nombre'] = $busqueda_like;
+    $params[':busq_nombre_prefix'] = $busqueda_prefix;
     $params[':busq_descripcion'] = $busqueda_like;
     $params[':busq_sku'] = $busqueda_like;
     $params[':busq_marca'] = $busqueda_like;
@@ -134,18 +148,32 @@ if (isset($_GET['q']) && trim((string)$_GET['q']) !== '') {
 
     foreach ($busqueda_tokens as $i => $token) {
         $token_like = '%' . $emx_escape_like($token) . '%';
+        $token_prefix = $emx_escape_like($token) . '%';
         $search_clauses[] = "(
             p.nombre ILIKE :busq_tok_{$i}_nombre ESCAPE '\\'
+            OR p.nombre ILIKE :busq_tok_{$i}_nombre_prefix ESCAPE '\\'
             OR COALESCE(p.descripcion_corta,'') ILIKE :busq_tok_{$i}_descripcion ESCAPE '\\'
             OR COALESCE(p.sku,'') ILIKE :busq_tok_{$i}_sku ESCAPE '\\'
             OR COALESCE(m.nombre,'') ILIKE :busq_tok_{$i}_marca ESCAPE '\\'
             OR COALESCE(c.nombre,'') ILIKE :busq_tok_{$i}_categoria ESCAPE '\\'
         )";
         $params[":busq_tok_{$i}_nombre"] = $token_like;
+        $params[":busq_tok_{$i}_nombre_prefix"] = $token_prefix;
         $params[":busq_tok_{$i}_descripcion"] = $token_like;
         $params[":busq_tok_{$i}_sku"] = $token_like;
         $params[":busq_tok_{$i}_marca"] = $token_like;
         $params[":busq_tok_{$i}_categoria"] = $token_like;
+    }
+
+    if ($busqueda_usar_trgm) {
+        $search_clauses[] = "(
+            similarity(LOWER(p.nombre), LOWER(:busq_fuzzy_nombre)) >= 0.18
+            OR similarity(LOWER(COALESCE(m.nombre,'')), LOWER(:busq_fuzzy_marca)) >= 0.22
+            OR similarity(LOWER(COALESCE(c.nombre,'')), LOWER(:busq_fuzzy_categoria)) >= 0.22
+        )";
+        $params[':busq_fuzzy_nombre'] = $busqueda_query;
+        $params[':busq_fuzzy_marca'] = $busqueda_query;
+        $params[':busq_fuzzy_categoria'] = $busqueda_query;
     }
 
     $where_clauses[] = '(' . implode(' OR ', $search_clauses) . ')';
@@ -185,12 +213,12 @@ if (isset($pdo)) {
 
     if (!empty($busqueda_activa)) {
         $score_parts = [
-            "CASE WHEN LOWER(p.nombre) = LOWER(:score_exact_nombre) THEN 120 ELSE 0 END",
-            "CASE WHEN LOWER(p.nombre) LIKE LOWER(:score_prefix_nombre) ESCAPE '\\' THEN 90 ELSE 0 END",
-            "CASE WHEN LOWER(COALESCE(p.sku,'')) = LOWER(:score_exact_sku) THEN 80 ELSE 0 END",
-            "CASE WHEN LOWER(COALESCE(m.nombre,'')) LIKE LOWER(:score_marca) ESCAPE '\\' THEN 45 ELSE 0 END",
-            "CASE WHEN LOWER(COALESCE(c.nombre,'')) LIKE LOWER(:score_categoria) ESCAPE '\\' THEN 35 ELSE 0 END",
-            "CASE WHEN LOWER(COALESCE(p.descripcion_corta,'')) LIKE LOWER(:score_descripcion) ESCAPE '\\' THEN 15 ELSE 0 END",
+            "CASE WHEN LOWER(p.nombre) = LOWER(:score_exact_nombre) THEN 140 ELSE 0 END",
+            "CASE WHEN LOWER(p.nombre) LIKE LOWER(:score_prefix_nombre) ESCAPE '\\' THEN 110 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(p.sku,'')) = LOWER(:score_exact_sku) THEN 90 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(m.nombre,'')) LIKE LOWER(:score_marca) ESCAPE '\\' THEN 50 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(c.nombre,'')) LIKE LOWER(:score_categoria) ESCAPE '\\' THEN 42 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(p.descripcion_corta,'')) LIKE LOWER(:score_descripcion) ESCAPE '\\' THEN 18 ELSE 0 END",
         ];
         $score_params = [
             ':score_exact_nombre' => $busqueda_query,
@@ -203,14 +231,29 @@ if (isset($pdo)) {
 
         foreach ($busqueda_tokens as $i => $token) {
             $token_like = '%' . $emx_escape_like($token) . '%';
-            $score_parts[] = "CASE WHEN p.nombre ILIKE :score_tok_{$i}_nombre ESCAPE '\\' THEN 18 ELSE 0 END";
-            $score_parts[] = "CASE WHEN COALESCE(p.descripcion_corta,'') ILIKE :score_tok_{$i}_descripcion ESCAPE '\\' THEN 8 ELSE 0 END";
-            $score_parts[] = "CASE WHEN COALESCE(m.nombre,'') ILIKE :score_tok_{$i}_marca ESCAPE '\\' THEN 12 ELSE 0 END";
-            $score_parts[] = "CASE WHEN COALESCE(c.nombre,'') ILIKE :score_tok_{$i}_categoria ESCAPE '\\' THEN 10 ELSE 0 END";
+            $token_prefix = $emx_escape_like($token) . '%';
+            $score_parts[] = "CASE WHEN p.nombre ILIKE :score_tok_{$i}_nombre_prefix ESCAPE '\\' THEN 35 ELSE 0 END";
+            $score_parts[] = "CASE WHEN p.nombre ILIKE :score_tok_{$i}_nombre ESCAPE '\\' THEN 22 ELSE 0 END";
+            $score_parts[] = "CASE WHEN COALESCE(p.descripcion_corta,'') ILIKE :score_tok_{$i}_descripcion ESCAPE '\\' THEN 9 ELSE 0 END";
+            $score_parts[] = "CASE WHEN COALESCE(m.nombre,'') ILIKE :score_tok_{$i}_marca ESCAPE '\\' THEN 14 ELSE 0 END";
+            $score_parts[] = "CASE WHEN COALESCE(c.nombre,'') ILIKE :score_tok_{$i}_categoria ESCAPE '\\' THEN 12 ELSE 0 END";
+            $score_params[":score_tok_{$i}_nombre_prefix"] = $token_prefix;
             $score_params[":score_tok_{$i}_nombre"] = $token_like;
             $score_params[":score_tok_{$i}_descripcion"] = $token_like;
             $score_params[":score_tok_{$i}_marca"] = $token_like;
             $score_params[":score_tok_{$i}_categoria"] = $token_like;
+        }
+
+        if ($busqueda_usar_trgm) {
+            $score_parts[] = "CASE WHEN similarity(LOWER(p.nombre), LOWER(:score_fuzzy_nombre_a)) >= 0.18 THEN similarity(LOWER(p.nombre), LOWER(:score_fuzzy_nombre_b)) * 55 ELSE 0 END";
+            $score_parts[] = "CASE WHEN similarity(LOWER(COALESCE(m.nombre,'')), LOWER(:score_fuzzy_marca_a)) >= 0.22 THEN similarity(LOWER(COALESCE(m.nombre,'')), LOWER(:score_fuzzy_marca_b)) * 35 ELSE 0 END";
+            $score_parts[] = "CASE WHEN similarity(LOWER(COALESCE(c.nombre,'')), LOWER(:score_fuzzy_categoria_a)) >= 0.22 THEN similarity(LOWER(COALESCE(c.nombre,'')), LOWER(:score_fuzzy_categoria_b)) * 30 ELSE 0 END";
+            $score_params[':score_fuzzy_nombre_a'] = $busqueda_query;
+            $score_params[':score_fuzzy_nombre_b'] = $busqueda_query;
+            $score_params[':score_fuzzy_marca_a'] = $busqueda_query;
+            $score_params[':score_fuzzy_marca_b'] = $busqueda_query;
+            $score_params[':score_fuzzy_categoria_a'] = $busqueda_query;
+            $score_params[':score_fuzzy_categoria_b'] = $busqueda_query;
         }
 
         $score_parts[] = "CASE WHEN COALESCE(p.stock_actual_global,0) > 0 THEN 8 ELSE 0 END";

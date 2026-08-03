@@ -67,7 +67,7 @@
       if (!productos.length && !categorias.length && !marcas.length) {
         box.innerHTML = `
           <div class="p-4 text-sm text-slate-500">
-            No encontré coincidencias exactas.
+            No encontré coincidencias exactas. Puedes buscar igual o escribir otra letra.
             <button type="submit" class="block mt-2 font-bold text-blue-700 hover:text-blue-900">Buscar de todas formas</button>
           </div>`;
         open();
@@ -76,7 +76,7 @@
 
       const productHtml = productos.length ? `
         <div class="p-2">
-          <p class="px-3 py-2 text-[11px] font-black uppercase tracking-widest text-slate-400">Productos encontrados</p>
+          <p class="px-3 py-2 text-[11px] font-black uppercase tracking-widest text-slate-400">Productos sugeridos</p>
           ${productos.map((p) => {
             const disc = normalizeDiscount(p.descuento_porcentaje);
             return `
@@ -129,7 +129,7 @@
 
     const search = debounce(async () => {
       const q = input.value.trim();
-      if (q.length < 2) {
+      if (q.length < 1) {
         close();
         return;
       }
@@ -156,7 +156,7 @@
 
     input.addEventListener('input', search);
     input.addEventListener('focus', () => {
-      if (input.value.trim().length >= 2) search();
+      if (input.value.trim().length >= 1) search();
     });
 
     input.addEventListener('keydown', (e) => {
