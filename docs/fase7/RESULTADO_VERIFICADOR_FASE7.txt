@@ -1,0 +1,5 @@
+Verificación de adaptadores Fase 7
+Raíz: /mnt/data/emx_fase7_adaptadores_rutas
+
+Resultado: todos los adaptadores tienen archivo origen y destino.
+

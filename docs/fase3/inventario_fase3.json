@@ -1,0 +1,134 @@
+{
+  "fecha": "2026-08-02 23:07:55",
+  "fase": 3,
+  "objetivo": "Mover configuración, seguridad y helpers sin romper rutas",
+  "archivos_movidos": [
+    {
+      "archivo_antiguo": "db.php",
+      "nueva_ubicacion": "app/Config/database.php",
+      "tipo": "configuración de base de datos",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "config_google.php",
+      "nueva_ubicacion": "app/Config/google.php",
+      "tipo": "configuración de Google Login",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "config_correo.php",
+      "nueva_ubicacion": "app/Config/mail.php",
+      "tipo": "configuración SMTP/correo",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "config_correo.example.php",
+      "nueva_ubicacion": "app/Config/mail.example.php",
+      "tipo": "plantilla de configuración SMTP",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "empresa_config.php",
+      "nueva_ubicacion": "app/Config/company.php",
+      "tipo": "configuración de empresa",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "seguridad.php",
+      "nueva_ubicacion": "app/Middleware/security.php",
+      "tipo": "seguridad, sesión, roles y CSRF",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_automatizacion.php",
+      "nueva_ubicacion": "app/Helpers/funciones_automatizacion.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_auxiliares.php",
+      "nueva_ubicacion": "app/Helpers/funciones_auxiliares.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_backorder.php",
+      "nueva_ubicacion": "app/Helpers/funciones_backorder.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_descuentos_volumen.php",
+      "nueva_ubicacion": "app/Helpers/funciones_descuentos_volumen.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_facturacion.php",
+      "nueva_ubicacion": "app/Helpers/funciones_facturacion.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_ficha_tecnica.php",
+      "nueva_ubicacion": "app/Helpers/funciones_ficha_tecnica.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_garantias.php",
+      "nueva_ubicacion": "app/Helpers/funciones_garantias.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_google_auth.php",
+      "nueva_ubicacion": "app/Helpers/funciones_google_auth.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_home.php",
+      "nueva_ubicacion": "app/Helpers/funciones_home.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_logistica.php",
+      "nueva_ubicacion": "app/Helpers/funciones_logistica.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_notificaciones.php",
+      "nueva_ubicacion": "app/Helpers/funciones_notificaciones.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_planes.php",
+      "nueva_ubicacion": "app/Helpers/funciones_planes.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_soporte.php",
+      "nueva_ubicacion": "app/Helpers/funciones_soporte.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_stock.php",
+      "nueva_ubicacion": "app/Helpers/funciones_stock.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    },
+    {
+      "archivo_antiguo": "funciones_wishlist.php",
+      "nueva_ubicacion": "app/Helpers/funciones_wishlist.php",
+      "tipo": "helper/funciones compartidas",
+      "compatibilidad": "adaptador en raíz"
+    }
+  ],
+  "regla": "Las rutas antiguas quedan como adaptadores."
+}

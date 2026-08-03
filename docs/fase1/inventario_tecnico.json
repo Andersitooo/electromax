@@ -1,0 +1,705 @@
+{
+  "fecha_generacion": "2026-08-02",
+  "fuente": "electromax_auditoria_seguridad_rutas_final(2).zip",
+  "conteo": {
+    "archivos_total": 201,
+    "php": 66,
+    "sql": 22,
+    "markdown": 59,
+    "php_lint_errors": 0
+  },
+  "admin_modules": [
+    "banners",
+    "categorias",
+    "clientes",
+    "dashboard",
+    "devoluciones",
+    "empresa",
+    "garantias",
+    "marcas",
+    "pedidos",
+    "planes",
+    "producto_proveedores",
+    "productos",
+    "sucursales",
+    "usuarios"
+  ],
+  "proveedor_sections": [
+    "capacidad",
+    "dashboard",
+    "perfil",
+    "propuestas",
+    "solicitudes"
+  ],
+  "mi_cuenta_sections": [
+    "devoluciones",
+    "direcciones",
+    "historial",
+    "membresia",
+    "pedidos",
+    "perfil",
+    "seguridad"
+  ],
+  "includes": {
+    "add_to_cart.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_planes.php",
+      "funciones_backorder.php",
+      "funciones_descuentos_volumen.php"
+    ],
+    "admin.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_stock.php",
+      "funciones_wishlist.php",
+      "funciones_facturacion.php",
+      "flujo_admin.php"
+    ],
+    "analitica.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "api_filtrar_productos.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "api_filtros.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "api_guardar_producto.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "api_producto.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "api_wishlist.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_wishlist.php"
+    ],
+    "auth.php": [
+      "seguridad.php",
+      "db.php",
+      "config_google.php"
+    ],
+    "banner_redirect.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "buscar_sugerencias.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "cancelar_membresia.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "carrito.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_planes.php",
+      "funciones_backorder.php",
+      "funciones_descuentos_volumen.php"
+    ],
+    "checkout.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_logistica.php",
+      "funciones_auxiliares.php",
+      "funciones_backorder.php",
+      "funciones_descuentos_volumen.php",
+      "funciones_stock.php",
+      "funciones_garantias.php",
+      "funciones_facturacion.php"
+    ],
+    "components/footer.php": [],
+    "components/navbar.php": [],
+    "config_correo.example.php": [],
+    "config_correo.php": [],
+    "config_google.php": [],
+    "correos_empresa.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_facturacion.php"
+    ],
+    "crear_admin.php": [
+      "db.php"
+    ],
+    "crear_usuario_empresa.php": [],
+    "db.php": [],
+    "empresa_config.php": [],
+    "factura_pdf.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "ficha_tecnica.php": [
+      "seguridad.php",
+      "db.php",
+      "empresa_config.php",
+      "funciones_ficha_tecnica.php"
+    ],
+    "ficha_tecnica_pdf.php": [
+      "seguridad.php",
+      "db.php",
+      "empresa_config.php"
+    ],
+    "flujo_admin.php": [],
+    "funciones_automatizacion.php": [
+      "funciones_logistica.php"
+    ],
+    "funciones_auxiliares.php": [],
+    "funciones_backorder.php": [],
+    "funciones_descuentos_volumen.php": [],
+    "funciones_facturacion.php": [],
+    "funciones_ficha_tecnica.php": [],
+    "funciones_garantias.php": [],
+    "funciones_google_auth.php": [
+      "config_google.php"
+    ],
+    "funciones_home.php": [],
+    "funciones_logistica.php": [],
+    "funciones_notificaciones.php": [],
+    "funciones_planes.php": [],
+    "funciones_soporte.php": [],
+    "funciones_stock.php": [],
+    "funciones_wishlist.php": [],
+    "garantia.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_garantias.php",
+      "components/navbar.php",
+      "components/footer.php"
+    ],
+    "generar_etiqueta.php": [
+      "seguridad.php",
+      "db.php",
+      "empresa_config.php"
+    ],
+    "google_auth.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_google_auth.php"
+    ],
+    "imprimir_guia.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "index.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_wishlist.php",
+      "funciones_home.php"
+    ],
+    "logout.php": [
+      "seguridad.php"
+    ],
+    "mi_cuenta.php": [
+      "seguridad.php",
+      "db.php",
+      "config_google.php",
+      "funciones_facturacion.php",
+      "flujo_admin.php"
+    ],
+    "notificaciones.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_wishlist.php"
+    ],
+    "planes.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "probar_correo_facturacion.php": [],
+    "procesar_devolucion.php": [
+      "seguridad.php",
+      "db.php",
+      "flujo_admin.php"
+    ],
+    "producto.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_planes.php",
+      "funciones_wishlist.php",
+      "funciones_backorder.php",
+      "funciones_ficha_tecnica.php",
+      "funciones_home.php",
+      "funciones_descuentos_volumen.php"
+    ],
+    "proveedor.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "recibir_devolucion.php": [
+      "seguridad.php",
+      "db.php",
+      "flujo_admin.php"
+    ],
+    "responder_devolucion.php": [
+      "seguridad.php",
+      "db.php",
+      "flujo_admin.php"
+    ],
+    "scripts/reorganizar_uploads_existentes.php": [],
+    "seguridad.php": [],
+    "simulador_sucursales.php": [
+      "seguridad.php",
+      "db.php"
+    ],
+    "soporte.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_notificaciones.php",
+      "funciones_soporte.php"
+    ],
+    "soporte_admin.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_notificaciones.php",
+      "funciones_soporte.php"
+    ],
+    "tracking.php": [
+      "seguridad.php",
+      "db.php",
+      "flujo_admin.php"
+    ],
+    "verificar_phpmailer.php": [],
+    "wishlist.php": [
+      "seguridad.php",
+      "db.php",
+      "funciones_wishlist.php"
+    ]
+  },
+  "reverse_includes": {
+    "seguridad.php": [
+      "add_to_cart.php",
+      "admin.php",
+      "analitica.php",
+      "api_filtrar_productos.php",
+      "api_filtros.php",
+      "api_guardar_producto.php",
+      "api_producto.php",
+      "api_wishlist.php",
+      "auth.php",
+      "banner_redirect.php",
+      "buscar_sugerencias.php",
+      "cancelar_membresia.php",
+      "carrito.php",
+      "checkout.php",
+      "correos_empresa.php",
+      "factura_pdf.php",
+      "ficha_tecnica.php",
+      "ficha_tecnica_pdf.php",
+      "garantia.php",
+      "generar_etiqueta.php",
+      "google_auth.php",
+      "imprimir_guia.php",
+      "index.php",
+      "logout.php",
+      "mi_cuenta.php",
+      "notificaciones.php",
+      "planes.php",
+      "procesar_devolucion.php",
+      "producto.php",
+      "proveedor.php",
+      "recibir_devolucion.php",
+      "responder_devolucion.php",
+      "simulador_sucursales.php",
+      "soporte.php",
+      "soporte_admin.php",
+      "tracking.php",
+      "wishlist.php"
+    ],
+    "db.php": [
+      "add_to_cart.php",
+      "admin.php",
+      "analitica.php",
+      "api_filtrar_productos.php",
+      "api_filtros.php",
+      "api_guardar_producto.php",
+      "api_producto.php",
+      "api_wishlist.php",
+      "auth.php",
+      "banner_redirect.php",
+      "buscar_sugerencias.php",
+      "cancelar_membresia.php",
+      "carrito.php",
+      "checkout.php",
+      "correos_empresa.php",
+      "crear_admin.php",
+      "factura_pdf.php",
+      "ficha_tecnica.php",
+      "ficha_tecnica_pdf.php",
+      "garantia.php",
+      "generar_etiqueta.php",
+      "google_auth.php",
+      "imprimir_guia.php",
+      "index.php",
+      "mi_cuenta.php",
+      "notificaciones.php",
+      "planes.php",
+      "procesar_devolucion.php",
+      "producto.php",
+      "proveedor.php",
+      "recibir_devolucion.php",
+      "responder_devolucion.php",
+      "simulador_sucursales.php",
+      "soporte.php",
+      "soporte_admin.php",
+      "tracking.php",
+      "wishlist.php"
+    ],
+    "funciones_planes.php": [
+      "add_to_cart.php",
+      "carrito.php",
+      "producto.php"
+    ],
+    "funciones_backorder.php": [
+      "add_to_cart.php",
+      "carrito.php",
+      "checkout.php",
+      "producto.php"
+    ],
+    "funciones_descuentos_volumen.php": [
+      "add_to_cart.php",
+      "carrito.php",
+      "checkout.php",
+      "producto.php"
+    ],
+    "funciones_stock.php": [
+      "admin.php",
+      "checkout.php"
+    ],
+    "funciones_wishlist.php": [
+      "admin.php",
+      "api_wishlist.php",
+      "index.php",
+      "notificaciones.php",
+      "producto.php",
+      "wishlist.php"
+    ],
+    "funciones_facturacion.php": [
+      "admin.php",
+      "checkout.php",
+      "correos_empresa.php",
+      "mi_cuenta.php"
+    ],
+    "flujo_admin.php": [
+      "admin.php",
+      "mi_cuenta.php",
+      "procesar_devolucion.php",
+      "recibir_devolucion.php",
+      "responder_devolucion.php",
+      "tracking.php"
+    ],
+    "config_google.php": [
+      "auth.php",
+      "funciones_google_auth.php",
+      "mi_cuenta.php"
+    ],
+    "funciones_logistica.php": [
+      "checkout.php",
+      "funciones_automatizacion.php"
+    ],
+    "funciones_auxiliares.php": [
+      "checkout.php"
+    ],
+    "funciones_garantias.php": [
+      "checkout.php",
+      "garantia.php"
+    ],
+    "empresa_config.php": [
+      "ficha_tecnica.php",
+      "ficha_tecnica_pdf.php",
+      "generar_etiqueta.php"
+    ],
+    "funciones_ficha_tecnica.php": [
+      "ficha_tecnica.php",
+      "producto.php"
+    ],
+    "components/navbar.php": [
+      "garantia.php"
+    ],
+    "components/footer.php": [
+      "garantia.php"
+    ],
+    "funciones_google_auth.php": [
+      "google_auth.php"
+    ],
+    "funciones_home.php": [
+      "index.php",
+      "producto.php"
+    ],
+    "funciones_notificaciones.php": [
+      "soporte.php",
+      "soporte_admin.php"
+    ],
+    "funciones_soporte.php": [
+      "soporte.php",
+      "soporte_admin.php"
+    ]
+  },
+  "sql_summary": [
+    [
+      "bd.sql",
+      401,
+      21,
+      2,
+      0,
+      0
+    ],
+    [
+      "fix_reabastecimiento_duplicadas.sql",
+      39,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "hotfix_notificaciones_descuento_wishlist.sql",
+      21,
+      0,
+      5,
+      0,
+      0
+    ],
+    [
+      "hotfix_notificaciones_wishlist_php_final.sql",
+      30,
+      0,
+      6,
+      0,
+      0
+    ],
+    [
+      "hotfix_notificaciones_wishlist_trigger.sql",
+      154,
+      0,
+      6,
+      3,
+      1
+    ],
+    [
+      "migracion_busqueda_inteligente.sql",
+      20,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "migracion_descuentos_volumen_funcionales.sql",
+      15,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      "migracion_devoluciones_decision_cliente.sql",
+      75,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      "migracion_devoluciones_estimacion_reemplazo_prime.sql",
+      19,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      "migracion_devoluciones_flujo_secuencial_fraude.sql",
+      33,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      "migracion_email_outbox_panel.sql",
+      15,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      "migracion_empresa_config_admin.sql",
+      68,
+      1,
+      7,
+      0,
+      0
+    ],
+    [
+      "migracion_empresa_simplificada_admin.sql",
+      68,
+      1,
+      7,
+      0,
+      0
+    ],
+    [
+      "migracion_facturacion_garantias_checkout.sql",
+      232,
+      8,
+      16,
+      0,
+      0
+    ],
+    [
+      "migracion_final_correo_facturacion.sql",
+      305,
+      10,
+      22,
+      0,
+      0
+    ],
+    [
+      "migracion_flujo_guiado.sql",
+      130,
+      2,
+      5,
+      0,
+      0
+    ],
+    [
+      "migracion_google_login.sql",
+      31,
+      1,
+      5,
+      0,
+      0
+    ],
+    [
+      "migracion_nota_credito_correo_auto.sql",
+      30,
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      "migracion_notificaciones_wishlist_mejoradas.sql",
+      11,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      "migracion_reemplazo_series_trazabilidad.sql",
+      45,
+      0,
+      12,
+      0,
+      0
+    ],
+    [
+      "migracion_reformulacion_segura.sql",
+      141,
+      5,
+      32,
+      0,
+      0
+    ],
+    [
+      "migracion_soporte_tickets.sql",
+      58,
+      2,
+      0,
+      1,
+      1
+    ]
+  ],
+  "top_php_by_lines": [
+    [
+      "flujo_admin.php",
+      1645
+    ],
+    [
+      "admin.php",
+      1567
+    ],
+    [
+      "checkout.php",
+      903
+    ],
+    [
+      "index.php",
+      857
+    ],
+    [
+      "mi_cuenta.php",
+      762
+    ],
+    [
+      "funciones_facturacion.php",
+      758
+    ],
+    [
+      "producto.php",
+      691
+    ],
+    [
+      "analitica.php",
+      682
+    ],
+    [
+      "proveedor.php",
+      617
+    ],
+    [
+      "funciones_backorder.php",
+      531
+    ],
+    [
+      "auth.php",
+      409
+    ],
+    [
+      "seguridad.php",
+      407
+    ],
+    [
+      "soporte.php",
+      384
+    ],
+    [
+      "carrito.php",
+      378
+    ],
+    [
+      "soporte_admin.php",
+      358
+    ],
+    [
+      "funciones_stock.php",
+      355
+    ],
+    [
+      "funciones_google_auth.php",
+      351
+    ],
+    [
+      "funciones_wishlist.php",
+      331
+    ],
+    [
+      "tracking.php",
+      303
+    ],
+    [
+      "ficha_tecnica_pdf.php",
+      266
+    ]
+  ]
+}

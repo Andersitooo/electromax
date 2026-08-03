@@ -1,0 +1,553 @@
+{
+  "fase": 7,
+  "fecha": "2026-08-02 23:20:56",
+  "php": [
+    {
+      "ruta_antigua": "add_to_cart.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "admin.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/admin/admin_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "analitica.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "api_filtrar_productos.php",
+      "tipo": "endpoint_api_raiz",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "api_filtros.php",
+      "tipo": "endpoint_api_raiz",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "api_guardar_producto.php",
+      "tipo": "endpoint_api_raiz",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "api_producto.php",
+      "tipo": "endpoint_api_raiz",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "api_wishlist.php",
+      "tipo": "endpoint_api_raiz",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "auth.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/auth/auth_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "banner_redirect.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "buscar_sugerencias.php",
+      "tipo": "endpoint_api_raiz",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "cancelar_membresia.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "carrito.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/carrito_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "checkout.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/checkout_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "config_correo.example.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Config/mail.example.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "config_correo.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Config/mail.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "config_google.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Config/google.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "correos_empresa.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/admin/correos_empresa_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "crear_admin.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "crear_usuario_empresa.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "db.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Config/database.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "empresa_config.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Config/company.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "factura_pdf.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "ficha_tecnica.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "ficha_tecnica_pdf.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "flujo_admin.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_automatizacion.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_automatizacion.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_auxiliares.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_auxiliares.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_backorder.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_backorder.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_descuentos_volumen.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_descuentos_volumen.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_facturacion.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_facturacion.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_ficha_tecnica.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_ficha_tecnica.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_garantias.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_garantias.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_google_auth.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_google_auth.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_home.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_home.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_logistica.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_logistica.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_notificaciones.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_notificaciones.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_planes.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_planes.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_soporte.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_soporte.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_stock.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_stock.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "funciones_wishlist.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Helpers/funciones_wishlist.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "garantia.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/garantia_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "generar_etiqueta.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "google_auth.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "imprimir_guia.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "index.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/index_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "logout.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "mi_cuenta.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/mi_cuenta_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "notificaciones.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/notificaciones_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "planes.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/planes_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "probar_correo_facturacion.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "procesar_devolucion.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "producto.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/producto_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "proveedor.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/proveedor/proveedor_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "recibir_devolucion.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "responder_devolucion.php",
+      "tipo": "accion_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "seguridad.php",
+      "tipo": "adaptador_php",
+      "destino_interno": "app/Middleware/security.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "simulador_sucursales.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "soporte.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/soporte_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "soporte_admin.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/admin/soporte_admin_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "tracking.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/tracking_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "verificar_phpmailer.php",
+      "tipo": "ruta_raiz_compatible",
+      "destino_interno": "",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "wishlist.php",
+      "tipo": "controlador_con_vista_separada",
+      "destino_interno": "views/frontend/wishlist_view.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "components/footer.php",
+      "tipo": "adaptador_componente",
+      "destino_interno": "views/components/footer.php",
+      "existe": true
+    },
+    {
+      "ruta_antigua": "components/navbar.php",
+      "tipo": "adaptador_componente",
+      "destino_interno": "views/components/navbar.php",
+      "existe": true
+    }
+  ],
+  "sql": [
+    {
+      "ruta_antigua": "bd.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/schema/bd.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "fix_reabastecimiento_duplicadas.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/hotfixes/fix_reabastecimiento_duplicadas.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "hotfix_notificaciones_descuento_wishlist.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/hotfixes/hotfix_notificaciones_descuento_wishlist.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "hotfix_notificaciones_wishlist_php_final.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/hotfixes/hotfix_notificaciones_wishlist_php_final.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "hotfix_notificaciones_wishlist_trigger.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/hotfixes/hotfix_notificaciones_wishlist_trigger.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_busqueda_inteligente.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_busqueda_inteligente.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_descuentos_volumen_funcionales.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_descuentos_volumen_funcionales.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_devoluciones_decision_cliente.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_devoluciones_decision_cliente.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_devoluciones_estimacion_reemplazo_prime.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_devoluciones_estimacion_reemplazo_prime.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_devoluciones_flujo_secuencial_fraude.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_devoluciones_flujo_secuencial_fraude.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_email_outbox_panel.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_email_outbox_panel.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_empresa_config_admin.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_empresa_config_admin.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_empresa_simplificada_admin.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_empresa_simplificada_admin.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_facturacion_garantias_checkout.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_facturacion_garantias_checkout.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_final_correo_facturacion.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_final_correo_facturacion.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_flujo_guiado.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_flujo_guiado.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_google_login.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_google_login.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_nota_credito_correo_auto.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_nota_credito_correo_auto.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_notificaciones_wishlist_mejoradas.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_notificaciones_wishlist_mejoradas.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_reemplazo_series_trazabilidad.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_reemplazo_series_trazabilidad.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_reformulacion_segura.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_reformulacion_segura.sql",
+      "existe_destino": true
+    },
+    {
+      "ruta_antigua": "migracion_soporte_tickets.sql",
+      "tipo": "adaptador_sql",
+      "destino_interno": "database/migrations/migracion_soporte_tickets.sql",
+      "existe_destino": true
+    }
+  ],
+  "views": [
+    "views/admin/admin_view.php",
+    "views/admin/correos_empresa_view.php",
+    "views/admin/soporte_admin_view.php",
+    "views/auth/auth_view.php",
+    "views/components/footer.php",
+    "views/components/navbar.php",
+    "views/frontend/carrito_view.php",
+    "views/frontend/checkout_view.php",
+    "views/frontend/garantia_view.php",
+    "views/frontend/index_view.php",
+    "views/frontend/mi_cuenta_view.php",
+    "views/frontend/notificaciones_view.php",
+    "views/frontend/planes_view.php",
+    "views/frontend/producto_view.php",
+    "views/frontend/soporte_view.php",
+    "views/frontend/tracking_view.php",
+    "views/frontend/wishlist_view.php",
+    "views/layouts/admin_layout.php",
+    "views/layouts/frontend_layout.php",
+    "views/layouts/proveedor_layout.php",
+    "views/proveedor/proveedor_view.php"
+  ]
+}

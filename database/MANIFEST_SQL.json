@@ -1,0 +1,350 @@
+[
+  {
+    "archivo_original": "bd.sql",
+    "nueva_ubicacion": "database/schema/bd.sql",
+    "categoria": "schema",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "roles",
+      "planes",
+      "sucursales",
+      "categorias",
+      "marcas",
+      "usuarios",
+      "direcciones_usuario",
+      "productos",
+      "producto_multimedia",
+      "inventario_sucursal",
+      "producto_proveedor",
+      "solicitudes_reabastecimiento",
+      "cotizaciones_proveedores",
+      "pedidos",
+      "detalle_pedidos",
+      "productos_vistos",
+      "page_sections",
+      "banners_promocionales",
+      "tracking_logs",
+      "reportes_pedidos",
+      "devoluciones"
+    ],
+    "tablas_alteradas": [
+      "devoluciones",
+      "usuarios"
+    ],
+    "tamano_bytes": 17499
+  },
+  {
+    "archivo_original": "fix_reabastecimiento_duplicadas.sql",
+    "nueva_ubicacion": "database/hotfixes/fix_reabastecimiento_duplicadas.sql",
+    "categoria": "hotfixes",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [],
+    "tamano_bytes": 1173
+  },
+  {
+    "archivo_original": "hotfix_notificaciones_descuento_wishlist.sql",
+    "nueva_ubicacion": "database/hotfixes/hotfix_notificaciones_descuento_wishlist.sql",
+    "categoria": "hotfixes",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "notificaciones",
+      "productos"
+    ],
+    "tamano_bytes": 884
+  },
+  {
+    "archivo_original": "hotfix_notificaciones_wishlist_php_final.sql",
+    "nueva_ubicacion": "database/hotfixes/hotfix_notificaciones_wishlist_php_final.sql",
+    "categoria": "hotfixes",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "notificaciones",
+      "productos"
+    ],
+    "tamano_bytes": 1307
+  },
+  {
+    "archivo_original": "hotfix_notificaciones_wishlist_trigger.sql",
+    "nueva_ubicacion": "database/hotfixes/hotfix_notificaciones_wishlist_trigger.sql",
+    "categoria": "hotfixes",
+    "funciones_detectadas": [
+      "emx_pct_descuento",
+      "emx_fmt_pct",
+      "emx_notificar_wishlist_producto_update"
+    ],
+    "triggers_detectados": [
+      "trg_emx_wishlist_producto_update"
+    ],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "notificaciones",
+      "productos"
+    ],
+    "tamano_bytes": 5868
+  },
+  {
+    "archivo_original": "migracion_busqueda_inteligente.sql",
+    "nueva_ubicacion": "database/migrations/migracion_busqueda_inteligente.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [],
+    "tamano_bytes": 794
+  },
+  {
+    "archivo_original": "migracion_descuentos_volumen_funcionales.sql",
+    "nueva_ubicacion": "database/migrations/migracion_descuentos_volumen_funcionales.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "capacidad_proveedor",
+      "productos"
+    ],
+    "tamano_bytes": 619
+  },
+  {
+    "archivo_original": "migracion_devoluciones_decision_cliente.sql",
+    "nueva_ubicacion": "database/migrations/migracion_devoluciones_decision_cliente.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "devoluciones"
+    ],
+    "tamano_bytes": 2962
+  },
+  {
+    "archivo_original": "migracion_devoluciones_estimacion_reemplazo_prime.sql",
+    "nueva_ubicacion": "database/migrations/migracion_devoluciones_estimacion_reemplazo_prime.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "pedidos"
+    ],
+    "tamano_bytes": 950
+  },
+  {
+    "archivo_original": "migracion_devoluciones_flujo_secuencial_fraude.sql",
+    "nueva_ubicacion": "database/migrations/migracion_devoluciones_flujo_secuencial_fraude.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "devoluciones"
+    ],
+    "tamano_bytes": 2024
+  },
+  {
+    "archivo_original": "migracion_email_outbox_panel.sql",
+    "nueva_ubicacion": "database/migrations/migracion_email_outbox_panel.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "email_outbox"
+    ],
+    "tablas_alteradas": [],
+    "tamano_bytes": 633
+  },
+  {
+    "archivo_original": "migracion_empresa_config_admin.sql",
+    "nueva_ubicacion": "database/migrations/migracion_empresa_config_admin.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "empresa_config"
+    ],
+    "tablas_alteradas": [
+      "empresa_config"
+    ],
+    "tamano_bytes": 3032
+  },
+  {
+    "archivo_original": "migracion_empresa_simplificada_admin.sql",
+    "nueva_ubicacion": "database/migrations/migracion_empresa_simplificada_admin.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "empresa_config"
+    ],
+    "tablas_alteradas": [
+      "empresa_config"
+    ],
+    "tamano_bytes": 3032
+  },
+  {
+    "archivo_original": "migracion_facturacion_garantias_checkout.sql",
+    "nueva_ubicacion": "database/migrations/migracion_facturacion_garantias_checkout.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "empresa_config",
+      "datos_facturacion_usuario",
+      "facturas",
+      "factura_detalles",
+      "notas_credito",
+      "email_outbox",
+      "producto_garantias",
+      "garantia_casos"
+    ],
+    "tablas_alteradas": [
+      "detalle_pedidos",
+      "devoluciones",
+      "empresa_config",
+      "pedidos"
+    ],
+    "tamano_bytes": 11761
+  },
+  {
+    "archivo_original": "migracion_final_correo_facturacion.sql",
+    "nueva_ubicacion": "database/migrations/migracion_final_correo_facturacion.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "empresa_config",
+      "datos_facturacion_usuario",
+      "facturas",
+      "factura_detalles",
+      "notas_credito",
+      "email_outbox",
+      "producto_garantias",
+      "garantia_casos",
+      "empresa_config",
+      "email_outbox"
+    ],
+    "tablas_alteradas": [
+      "detalle_pedidos",
+      "devoluciones",
+      "empresa_config",
+      "pedidos"
+    ],
+    "tamano_bytes": 15589
+  },
+  {
+    "archivo_original": "migracion_flujo_guiado.sql",
+    "nueva_ubicacion": "database/migrations/migracion_flujo_guiado.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "reclamos_proveedor",
+      "reclamos_courier"
+    ],
+    "tablas_alteradas": [
+      "detalle_pedidos",
+      "devoluciones",
+      "pedidos"
+    ],
+    "tamano_bytes": 6263
+  },
+  {
+    "archivo_original": "migracion_google_login.sql",
+    "nueva_ubicacion": "database/migrations/migracion_google_login.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "usuarios_auth_eventos"
+    ],
+    "tablas_alteradas": [
+      "usuarios"
+    ],
+    "tamano_bytes": 1266
+  },
+  {
+    "archivo_original": "migracion_nota_credito_correo_auto.sql",
+    "nueva_ubicacion": "database/migrations/migracion_nota_credito_correo_auto.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "email_outbox"
+    ],
+    "tablas_alteradas": [
+      "notas_credito"
+    ],
+    "tamano_bytes": 1044
+  },
+  {
+    "archivo_original": "migracion_notificaciones_wishlist_mejoradas.sql",
+    "nueva_ubicacion": "database/migrations/migracion_notificaciones_wishlist_mejoradas.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "productos"
+    ],
+    "tamano_bytes": 455
+  },
+  {
+    "archivo_original": "migracion_reemplazo_series_trazabilidad.sql",
+    "nueva_ubicacion": "database/migrations/migracion_reemplazo_series_trazabilidad.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [],
+    "tablas_alteradas": [
+      "detalle_pedidos",
+      "devoluciones"
+    ],
+    "tamano_bytes": 1451
+  },
+  {
+    "archivo_original": "migracion_reformulacion_segura.sql",
+    "nueva_ubicacion": "database/migrations/migracion_reformulacion_segura.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [],
+    "triggers_detectados": [],
+    "tablas_creadas": [
+      "reclamos_courier",
+      "capacidad_proveedor",
+      "propuestas_proveedor",
+      "pedidos_backorder",
+      "cronogramas_reabastecimiento"
+    ],
+    "tablas_alteradas": [
+      "detalle_pedidos",
+      "devoluciones",
+      "pedidos",
+      "productos",
+      "solicitudes_reabastecimiento"
+    ],
+    "tamano_bytes": 7608
+  },
+  {
+    "archivo_original": "migracion_soporte_tickets.sql",
+    "nueva_ubicacion": "database/migrations/migracion_soporte_tickets.sql",
+    "categoria": "migrations",
+    "funciones_detectadas": [
+      "soporte_touch_updated_at"
+    ],
+    "triggers_detectados": [
+      "trg_soporte_tickets_updated_at"
+    ],
+    "tablas_creadas": [
+      "soporte_tickets",
+      "soporte_mensajes"
+    ],
+    "tablas_alteradas": [],
+    "tamano_bytes": 2464
+  }
+]

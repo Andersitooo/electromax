@@ -1,0 +1,229 @@
+{
+  "fecha": "2026-08-02 23:50:08",
+  "controladores_netos": [
+    {
+      "route": "index.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/index.php"
+    },
+    {
+      "route": "producto.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/producto.php"
+    },
+    {
+      "route": "carrito.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/carrito.php"
+    },
+    {
+      "route": "checkout.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/checkout.php"
+    },
+    {
+      "route": "mi_cuenta.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/mi_cuenta.php"
+    },
+    {
+      "route": "wishlist.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/wishlist.php"
+    },
+    {
+      "route": "notificaciones.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/notificaciones.php"
+    },
+    {
+      "route": "tracking.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/tracking.php"
+    },
+    {
+      "route": "planes.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/planes.php"
+    },
+    {
+      "route": "garantia.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/garantia.php"
+    },
+    {
+      "route": "soporte.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/soporte.php"
+    },
+    {
+      "route": "factura_pdf.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/factura_pdf.php"
+    },
+    {
+      "route": "ficha_tecnica.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/ficha_tecnica.php"
+    },
+    {
+      "route": "ficha_tecnica_pdf.php",
+      "group": "Web",
+      "controller": "app/Controllers/Web/ficha_tecnica_pdf.php"
+    },
+    {
+      "route": "admin.php",
+      "group": "Admin",
+      "controller": "app/Controllers/Admin/admin.php"
+    },
+    {
+      "route": "soporte_admin.php",
+      "group": "Admin",
+      "controller": "app/Controllers/Admin/soporte_admin.php"
+    },
+    {
+      "route": "correos_empresa.php",
+      "group": "Admin",
+      "controller": "app/Controllers/Admin/correos_empresa.php"
+    },
+    {
+      "route": "analitica.php",
+      "group": "Admin",
+      "controller": "app/Controllers/Admin/analitica.php"
+    },
+    {
+      "route": "crear_admin.php",
+      "group": "Admin",
+      "controller": "app/Controllers/Admin/crear_admin.php"
+    },
+    {
+      "route": "proveedor.php",
+      "group": "Proveedor",
+      "controller": "app/Controllers/Proveedor/proveedor.php"
+    },
+    {
+      "route": "auth.php",
+      "group": "Auth",
+      "controller": "app/Controllers/Auth/auth.php"
+    },
+    {
+      "route": "google_auth.php",
+      "group": "Auth",
+      "controller": "app/Controllers/Auth/google_auth.php"
+    },
+    {
+      "route": "logout.php",
+      "group": "Auth",
+      "controller": "app/Controllers/Auth/logout.php"
+    },
+    {
+      "route": "api_producto.php",
+      "group": "Api",
+      "controller": "app/Controllers/Api/api_producto.php"
+    },
+    {
+      "route": "api_filtros.php",
+      "group": "Api",
+      "controller": "app/Controllers/Api/api_filtros.php"
+    },
+    {
+      "route": "api_filtrar_productos.php",
+      "group": "Api",
+      "controller": "app/Controllers/Api/api_filtrar_productos.php"
+    },
+    {
+      "route": "api_guardar_producto.php",
+      "group": "Api",
+      "controller": "app/Controllers/Api/api_guardar_producto.php"
+    },
+    {
+      "route": "api_wishlist.php",
+      "group": "Api",
+      "controller": "app/Controllers/Api/api_wishlist.php"
+    },
+    {
+      "route": "buscar_sugerencias.php",
+      "group": "Api",
+      "controller": "app/Controllers/Api/buscar_sugerencias.php"
+    },
+    {
+      "route": "add_to_cart.php",
+      "group": "Api",
+      "controller": "app/Controllers/Api/add_to_cart.php"
+    },
+    {
+      "route": "cancelar_membresia.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/cancelar_membresia.php"
+    },
+    {
+      "route": "procesar_devolucion.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/procesar_devolucion.php"
+    },
+    {
+      "route": "recibir_devolucion.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/recibir_devolucion.php"
+    },
+    {
+      "route": "responder_devolucion.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/responder_devolucion.php"
+    },
+    {
+      "route": "banner_redirect.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/banner_redirect.php"
+    },
+    {
+      "route": "generar_etiqueta.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/generar_etiqueta.php"
+    },
+    {
+      "route": "imprimir_guia.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/imprimir_guia.php"
+    },
+    {
+      "route": "simulador_sucursales.php",
+      "group": "Actions",
+      "controller": "app/Controllers/Actions/simulador_sucursales.php"
+    },
+    {
+      "route": "crear_usuario_empresa.php",
+      "group": "Tools",
+      "controller": "app/Controllers/Tools/crear_usuario_empresa.php"
+    },
+    {
+      "route": "probar_correo_facturacion.php",
+      "group": "Tools",
+      "controller": "app/Controllers/Tools/probar_correo_facturacion.php"
+    },
+    {
+      "route": "verificar_phpmailer.php",
+      "group": "Tools",
+      "controller": "app/Controllers/Tools/verificar_phpmailer.php"
+    }
+  ],
+  "vistas_parcheadas": [
+    "views/frontend/carrito_view.php",
+    "views/frontend/checkout_view.php",
+    "views/frontend/garantia_view.php",
+    "views/frontend/index_view.php",
+    "views/frontend/notificaciones_view.php",
+    "views/frontend/planes_view.php",
+    "views/frontend/producto_view.php",
+    "views/frontend/soporte_view.php",
+    "views/frontend/tracking_view.php",
+    "views/frontend/wishlist_view.php"
+  ],
+  "public_dirs": [
+    "public/assets",
+    "public/uploads"
+  ],
+  "php_validados": 263,
+  "errores_php": 0,
+  "verificador_fase10": 0
+}

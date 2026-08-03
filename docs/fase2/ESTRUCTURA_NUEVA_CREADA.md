@@ -1,0 +1,85 @@
+# Estructura nueva creada
+
+```text
+- app/
+  - Config/
+  - Controllers/
+    - Admin/
+    - Api/
+    - Auth/
+    - Cliente/
+    - Proveedor/
+  - Helpers/
+  - Middleware/
+  - Repositories/
+    - Devoluciones/
+    - Pedidos/
+    - Productos/
+    - Proveedores/
+    - Usuarios/
+  - Services/
+    - Auth/
+    - Carrito/
+    - Catalogo/
+    - Checkout/
+    - Devoluciones/
+    - Facturacion/
+    - Garantias/
+    - Notificaciones/
+    - Pedidos/
+    - Proveedor/
+    - Reabastecimiento/
+  - Support/
+- bootstrap/
+- database/
+  - functions/
+  - hotfixes/
+  - migrations/
+  - queries/
+    - admin/
+    - cliente/
+    - proveedor/
+  - schema/
+  - seeds/
+  - triggers/
+  - fase2/
+- public/
+  - assets/
+  - media/
+  - uploads/
+- routes/
+- storage/
+  - cache/
+  - comprobantes/
+  - facturas/
+  - logs/
+  - notas_credito/
+  - temp/
+  - uploads/
+    - devoluciones/
+    - perfiles/
+    - productos/
+    - soporte/
+- views/
+  - admin/
+    - dashboard/
+    - devoluciones/
+    - pedidos/
+    - productos/
+    - proveedores/
+  - auth/
+  - cliente/
+    - carrito/
+    - catalogo/
+    - checkout/
+    - cuenta/
+    - soporte/
+  - components/
+  - layouts/
+  - proveedor/
+    - capacidad/
+    - cotizaciones/
+    - perfil/
+```
+
+Esta estructura todavía es una zona de preparación. No reemplaza las rutas actuales.

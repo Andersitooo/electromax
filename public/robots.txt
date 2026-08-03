@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin.php
+Disallow: /proveedor.php
+Disallow: /mi_cuenta.php
+Disallow: /checkout.php

@@ -1,0 +1,23 @@
+archivo,tipo,destino,motivo
+bd.sql,adaptador_sql,database/schema/bd.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+fix_reabastecimiento_duplicadas.sql,adaptador_sql,database/hotfixes/fix_reabastecimiento_duplicadas.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+hotfix_notificaciones_descuento_wishlist.sql,adaptador_sql,database/hotfixes/hotfix_notificaciones_descuento_wishlist.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+hotfix_notificaciones_wishlist_php_final.sql,adaptador_sql,database/hotfixes/hotfix_notificaciones_wishlist_php_final.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+hotfix_notificaciones_wishlist_trigger.sql,adaptador_sql,database/hotfixes/hotfix_notificaciones_wishlist_trigger.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_busqueda_inteligente.sql,adaptador_sql,database/migrations/migracion_busqueda_inteligente.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_descuentos_volumen_funcionales.sql,adaptador_sql,database/migrations/migracion_descuentos_volumen_funcionales.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_devoluciones_decision_cliente.sql,adaptador_sql,database/migrations/migracion_devoluciones_decision_cliente.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_devoluciones_estimacion_reemplazo_prime.sql,adaptador_sql,database/migrations/migracion_devoluciones_estimacion_reemplazo_prime.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_devoluciones_flujo_secuencial_fraude.sql,adaptador_sql,database/migrations/migracion_devoluciones_flujo_secuencial_fraude.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_email_outbox_panel.sql,adaptador_sql,database/migrations/migracion_email_outbox_panel.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_empresa_config_admin.sql,adaptador_sql,database/migrations/migracion_empresa_config_admin.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_empresa_simplificada_admin.sql,adaptador_sql,database/migrations/migracion_empresa_simplificada_admin.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_facturacion_garantias_checkout.sql,adaptador_sql,database/migrations/migracion_facturacion_garantias_checkout.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_final_correo_facturacion.sql,adaptador_sql,database/migrations/migracion_final_correo_facturacion.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_flujo_guiado.sql,adaptador_sql,database/migrations/migracion_flujo_guiado.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_google_login.sql,adaptador_sql,database/migrations/migracion_google_login.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_nota_credito_correo_auto.sql,adaptador_sql,database/migrations/migracion_nota_credito_correo_auto.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_notificaciones_wishlist_mejoradas.sql,adaptador_sql,database/migrations/migracion_notificaciones_wishlist_mejoradas.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_reemplazo_series_trazabilidad.sql,adaptador_sql,database/migrations/migracion_reemplazo_series_trazabilidad.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_reformulacion_segura.sql,adaptador_sql,database/migrations/migracion_reformulacion_segura.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.
+migracion_soporte_tickets.sql,adaptador_sql,database/migrations/migracion_soporte_tickets.sql,Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando.

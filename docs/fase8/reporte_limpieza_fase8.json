@@ -1,0 +1,1689 @@
+{
+  "fase": 8,
+  "fecha": "2026-08-02 23:23:24",
+  "readmes_movidos": [
+    {
+      "archivo_original": "README_AJUSTE_FICHA_CARRITO_LIMPIEZA.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_AJUSTE_FICHA_CARRITO_LIMPIEZA.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_AJUSTE_FINAL.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_AJUSTE_FINAL.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_AJUSTE_FINAL_CARRITO_FICHA.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_AJUSTE_FINAL_CARRITO_FICHA.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_AJUSTE_LOGO_FICHAS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_AJUSTE_LOGO_FICHAS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_AJUSTE_PREMIUM_FICHA_CARRITO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_AJUSTE_PREMIUM_FICHA_CARRITO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_ANALITICA_POWERBI_LIMPIEZA_EMOJIS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_ANALITICA_POWERBI_LIMPIEZA_EMOJIS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_ANALITICA_REAL_ICONOS_RESTAURADOS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_ANALITICA_REAL_ICONOS_RESTAURADOS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_BACKORDER_RESERVA_REORDEN.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_BACKORDER_RESERVA_REORDEN.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_BUSQUEDA_INTELIGENTE_AUTOCOMPLETE.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_BUSQUEDA_INTELIGENTE_AUTOCOMPLETE.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_CALENDARIO_SOBRESTOCK.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_CALENDARIO_SOBRESTOCK.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_CARRITO_CALENDARIO_ORDENADO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_CARRITO_CALENDARIO_ORDENADO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_CENTRO_SOPORTE_SIMPLE.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_CENTRO_SOPORTE_SIMPLE.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_CORREO_EMPRESA_LISTO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_CORREO_EMPRESA_LISTO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_CORREO_FUNCIONAL_SEGURO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_CORREO_FUNCIONAL_SEGURO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_DESCUENTOS_VOLUMEN_FUNCIONALES.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_DESCUENTOS_VOLUMEN_FUNCIONALES.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_DEVOLUCIONES_COSTOS_FLUJOS_DISTINTOS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_DEVOLUCIONES_COSTOS_FLUJOS_DISTINTOS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_DEVOLUCIONES_DECISION_CLIENTE.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_DEVOLUCIONES_DECISION_CLIENTE.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_DEVOLUCIONES_ESTIMACION_REEMPLAZO_PRIME.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_DEVOLUCIONES_ESTIMACION_REEMPLAZO_PRIME.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_DEVOLUCIONES_FLUJO_SECUENCIAL_FRAUDE.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_DEVOLUCIONES_FLUJO_SECUENCIAL_FRAUDE.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_DEVOLUCIONES_MOTIVOS_CUBIERTOS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_DEVOLUCIONES_MOTIVOS_CUBIERTOS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_DISENO_FACTURA_APROBADO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_DISENO_FACTURA_APROBADO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_EMPRESA_ADMIN_SIMPLIFICADA.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_EMPRESA_ADMIN_SIMPLIFICADA.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FACTURACION_GARANTIAS_CHECKOUT.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FACTURACION_GARANTIAS_CHECKOUT.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FACTURA_PDF_DISENO_EXACTO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FACTURA_PDF_DISENO_EXACTO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FASE1_MAPA_DEPENDENCIAS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FASE1_MAPA_DEPENDENCIAS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FASE2_ESTRUCTURA_NUEVA.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FASE2_ESTRUCTURA_NUEVA.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FASE3_CONFIG_SEGURIDAD_HELPERS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FASE3_CONFIG_SEGURIDAD_HELPERS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FASE4_LOGICA_NEGOCIO_COMENTADA.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FASE4_LOGICA_NEGOCIO_COMENTADA.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FASE5_VISTAS_SEPARADAS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FASE5_VISTAS_SEPARADAS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FASE6_SQL_ORGANIZADO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FASE6_SQL_ORGANIZADO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FASE7_ADAPTADORES_RUTAS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FASE7_ADAPTADORES_RUTAS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FINAL_CORREO_FACTURACION.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FINAL_CORREO_FACTURACION.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_ADMIN_CRUD_PRODUCTOS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_ADMIN_CRUD_PRODUCTOS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_CHECKOUT_FACTURA_CORREO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_CHECKOUT_FACTURA_CORREO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_CHECKOUT_PRODUCTO_ID_BOOLEAN.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_CHECKOUT_PRODUCTO_ID_BOOLEAN.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_CUENTA_NAV_LOGIN_FOOTER.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_CUENTA_NAV_LOGIN_FOOTER.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_GOOGLE_CLIENT_ID_VISIBLE.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_GOOGLE_CLIENT_ID_VISIBLE.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_ICONOS_CATEGORIAS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_ICONOS_CATEGORIAS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_LLEGO_DANADO_FLUJO_CONECTADO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_LLEGO_DANADO_FLUJO_CONECTADO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_LOGO_NAVBAR_CONTRASTE.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_LOGO_NAVBAR_CONTRASTE.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FIX_REABASTECIMIENTO_DUPLICADAS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FIX_REABASTECIMIENTO_DUPLICADAS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_FLUJO_GUIADO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_FLUJO_GUIADO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_GOOGLE_CLIENT_ID_CONFIGURADO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_GOOGLE_CLIENT_ID_CONFIGURADO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_GOOGLE_LOGIN_VINCULACION.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_GOOGLE_LOGIN_VINCULACION.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_HOME_BANNERS_RECOMENDADOS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_HOME_BANNERS_RECOMENDADOS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_HOTFIX_FUNCION_REABASTECIMIENTO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_HOTFIX_FUNCION_REABASTECIMIENTO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_HOTFIX_NOTIFICACIONES_DESCUENTO_WISHLIST.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_HOTFIX_NOTIFICACIONES_DESCUENTO_WISHLIST.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_HOTFIX_NOTIFICACIONES_WISHLIST_PHP_FINAL.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_HOTFIX_NOTIFICACIONES_WISHLIST_PHP_FINAL.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_HOTFIX_TRIGGER_NOTIFICACIONES_WISHLIST.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_HOTFIX_TRIGGER_NOTIFICACIONES_WISHLIST.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_INSTALAR_PHPMAILER.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_INSTALAR_PHPMAILER.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_LOGIN_REDISHENO_LOGO_CLARO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_LOGIN_REDISHENO_LOGO_CLARO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_MODALES_DEVOLUCIONES_FLUJO_FINAL.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_MODALES_DEVOLUCIONES_FLUJO_FINAL.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_MULTIPLES_IMAGENES_PRODUCTO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_MULTIPLES_IMAGENES_PRODUCTO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_NAVBAR_FOOTER_GLOBAL.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_NAVBAR_FOOTER_GLOBAL.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_NAVBAR_FOOTER_PRODUCTO_REAL.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_NAVBAR_FOOTER_PRODUCTO_REAL.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_NAVBAR_PRODUCTO_UNIFICADO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_NAVBAR_PRODUCTO_UNIFICADO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_NAV_NOTIS_OFERTAS_FIX.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_NAV_NOTIS_OFERTAS_FIX.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_NOTA_CREDITO_CORREO_AUTO.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_NOTA_CREDITO_CORREO_AUTO.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_PANEL_EMPRESA_FACTURACION.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_PANEL_EMPRESA_FACTURACION.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_PARCHE_ERRORES_BACKORDER.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_PARCHE_ERRORES_BACKORDER.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_PROVEEDOR_EDITAR_CAPACIDAD.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_PROVEEDOR_EDITAR_CAPACIDAD.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_RECHAZO_ESTIMACION_FINAL.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_RECHAZO_ESTIMACION_FINAL.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_REEMPLAZO_SERIES_TRAZABILIDAD.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_REEMPLAZO_SERIES_TRAZABILIDAD.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_REFORMULACION_SEGURA.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_REFORMULACION_SEGURA.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    },
+    {
+      "archivo_original": "README_UPLOADS_ORDENADOS.md",
+      "nueva_ubicacion": "docs/historial/readmes_raiz/README_UPLOADS_ORDENADOS.md",
+      "motivo": "Documento histórico en raíz. Se mueve para limpiar el directorio principal."
+    }
+  ],
+  "auditorias_movidas": [
+    {
+      "archivo_original": "AUDITORIA_SEGURIDAD_RUTAS.md",
+      "nueva_ubicacion": "docs/auditorias/AUDITORIA_SEGURIDAD_RUTAS.md",
+      "motivo": "Auditoría técnica movida a carpeta de auditorías."
+    }
+  ],
+  "duplicados_exactos": [
+    {
+      "hash": "33b012befca90fbcac8bb59483608c272f18fa118148383801113e4124413025",
+      "count": 2,
+      "size_bytes_each": 432446,
+      "files": [
+        "uploads/Televisor Indurama 3.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_2.png"
+      ]
+    },
+    {
+      "hash": "8ee99f988ec7587616be891d941ab2685c5beecfd9a81a902c1c67140ef7a159",
+      "count": 2,
+      "size_bytes_each": 320376,
+      "files": [
+        "uploads/prod_1784389146.png",
+        "uploads/prod_cb2c225c-bedb-4f8d-a5fe-944c00dbeedc_1784390846_0.png"
+      ]
+    },
+    {
+      "hash": "c375beb1397e48787ab85009fa61450583cf114a1e19ce002bab719bfe9ba065",
+      "count": 2,
+      "size_bytes_each": 287960,
+      "files": [
+        "uploads/Televisor Indurama 2.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_1.png"
+      ]
+    },
+    {
+      "hash": "57099e863bf28aa124c45cad972441ffaae7fdc1f33b40af99c2c9333f01ec10",
+      "count": 2,
+      "size_bytes_each": 213638,
+      "files": [
+        "uploads/Televisor Indurama.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_0.png"
+      ]
+    },
+    {
+      "hash": "fcec57eccb70dff385d383f533349263b2199cd297dc3caca83b4a90d69f6420",
+      "count": 3,
+      "size_bytes_each": 193478,
+      "files": [
+        "uploads/banners/banner2.webp",
+        "uploads/banners/banner_1784859999.webp",
+        "uploads/banners/banner_1784687194.webp"
+      ]
+    },
+    {
+      "hash": "fded861901231bdaca9dc54e29ad4422b51bc8201f01a0b0d787f2c6d414760b",
+      "count": 2,
+      "size_bytes_each": 158007,
+      "files": [
+        "assets/electromax_logo.png",
+        "assets/electromax_logo_web.png"
+      ]
+    },
+    {
+      "hash": "470be12127fbf033265c773f1a6324e6f77289c6b5d2002bdd1d9647acc9d56b",
+      "count": 2,
+      "size_bytes_each": 138238,
+      "files": [
+        "uploads/banners/banner_1784686666.webp",
+        "uploads/banners/banner.webp"
+      ]
+    },
+    {
+      "hash": "44e3ca468b104119720d295af4e21497421b93781b66d98db8eb5fd3c175e279",
+      "count": 4,
+      "size_bytes_each": 65175,
+      "files": [
+        "uploads/prod_1784387310.png",
+        "uploads/prod_cb2c225c-bedb-4f8d-a5fe-944c00dbeedc_1784390846_1.png",
+        "uploads/prod_1784386952.png",
+        "uploads/prod_1784343838.png"
+      ]
+    },
+    {
+      "hash": "0b8dfcb7018641dc62cb07d35b6d98ca9b20395763d9195ffb87e48ea047e00d",
+      "count": 3,
+      "size_bytes_each": 49582,
+      "files": [
+        "uploads/devoluciones/dev_6a6811d698290_user_2c296d6c-652d-4f02-aa8c-1ac9c7b13c9e_1785200600.jpeg",
+        "uploads/perfiles/user_2c296d6c-652d-4f02-aa8c-1ac9c7b13c9e_1785200600.jpeg",
+        "uploads/perfiles/ft.jpeg"
+      ]
+    },
+    {
+      "hash": "e2c1151b346df2664de7391dccebd2e3730a56f50d673c47fd82c80d4cbbb66f",
+      "count": 2,
+      "size_bytes_each": 43882,
+      "files": [
+        "uploads/Televisor Indurama 4.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_3.png"
+      ]
+    },
+    {
+      "hash": "2a3e9fce8c8bf754c002e0bd7714efa2498dd09e51a9a0e69c08963556cf4645",
+      "count": 2,
+      "size_bytes_each": 40347,
+      "files": [
+        "uploads/Televisor Indurama 5.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_4.png"
+      ]
+    },
+    {
+      "hash": "88a5baf346ae8274323f0344320114d56d9219483a79b3874f5d0eaac46dd9b5",
+      "count": 4,
+      "size_bytes_each": 35195,
+      "files": [
+        "uploads/devoluciones/dev_6a62b1537e87f_banner_1784505975.jpg",
+        "uploads/devoluciones/dev_6a60140f86f2f_Tom And Jerry Wallpaper.jpg",
+        "uploads/devoluciones/dev_6a62a3d968f48_banner_1784505975.jpg",
+        "uploads/banners/banner_1784505975.jpg"
+      ]
+    },
+    {
+      "hash": "bdc4deaf05b868d405708f1b303ed642b1fa01db52c444d6acc31a39d1f0aba3",
+      "count": 2,
+      "size_bytes_each": 15589,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_final_correo_facturacion.sql",
+        "database/migrations/migracion_final_correo_facturacion.sql"
+      ]
+    },
+    {
+      "hash": "9a2d97e531b2d7123f1510879a5a7afb23e3abf39c5e489c2ee79d5ccdac7ed8",
+      "count": 2,
+      "size_bytes_each": 12103,
+      "files": [
+        "uploads/marca_1784408744.png",
+        "uploads/logo lg.png"
+      ]
+    },
+    {
+      "hash": "c3c2783319a7600361fbb918b46c7200c8619563da833b3ebf5093e8b723a96e",
+      "count": 2,
+      "size_bytes_each": 11761,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_facturacion_garantias_checkout.sql",
+        "database/migrations/migracion_facturacion_garantias_checkout.sql"
+      ]
+    },
+    {
+      "hash": "189ee7fde1e1250efa849742d5684d8ca4490dc208f44f9dfb8f5a8c73c181b6",
+      "count": 2,
+      "size_bytes_each": 10759,
+      "files": [
+        "uploads/marca_1784408625.png",
+        "uploads/logo indurama.png"
+      ]
+    },
+    {
+      "hash": "5a8708d8b6be3d61807fa560f124576d57a33aa716fee5636ca09de05d012395",
+      "count": 2,
+      "size_bytes_each": 7608,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_reformulacion_segura.sql",
+        "database/migrations/migracion_reformulacion_segura.sql"
+      ]
+    },
+    {
+      "hash": "42c0f6d26b078d697a575c2a97868ce8d090ea00a62f422afb3b3e725e6c804c",
+      "count": 2,
+      "size_bytes_each": 6263,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_flujo_guiado.sql",
+        "database/migrations/migracion_flujo_guiado.sql"
+      ]
+    },
+    {
+      "hash": "a1933b743c7d669c04fae6e61a7fd053e9cc3ee69f999c028cc60935f7564e8f",
+      "count": 2,
+      "size_bytes_each": 6189,
+      "files": [
+        "uploads/marca_1784408813.png",
+        "uploads/logo samsung.png"
+      ]
+    },
+    {
+      "hash": "049bdcf586243ff71a612ef73657054cb9e8a333a6242bd5f13640d096ede5d6",
+      "count": 2,
+      "size_bytes_each": 5868,
+      "files": [
+        "storage/backups/fase6_sql_originales/hotfix_notificaciones_wishlist_trigger.sql",
+        "database/hotfixes/hotfix_notificaciones_wishlist_trigger.sql"
+      ]
+    },
+    {
+      "hash": "9d15828a0097fd2a72ad47016d38c1003e849154a7e99800494d3ecd19c1237c",
+      "count": 2,
+      "size_bytes_each": 3146,
+      "files": [
+        "database/MANIFEST_SQL.md",
+        "docs/fase6/MAPA_SQL_ORGANIZADO.md"
+      ]
+    },
+    {
+      "hash": "54d1a1d30ddb945ce65b1102c10ed01ff150ea8a73ef1b1a18f6ac5995f9c7cf",
+      "count": 4,
+      "size_bytes_each": 3032,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_empresa_simplificada_admin.sql",
+        "storage/backups/fase6_sql_originales/migracion_empresa_config_admin.sql",
+        "database/migrations/migracion_empresa_simplificada_admin.sql",
+        "database/migrations/migracion_empresa_config_admin.sql"
+      ]
+    },
+    {
+      "hash": "af3e6d03c131a96d741378f8f98d158ff1cf107df9eece4f293607effd6ffd3a",
+      "count": 2,
+      "size_bytes_each": 2962,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_devoluciones_decision_cliente.sql",
+        "database/migrations/migracion_devoluciones_decision_cliente.sql"
+      ]
+    },
+    {
+      "hash": "24b3b6faf13102ca4cb0952a280a779861a9b7f08310a8232151b99566a75f30",
+      "count": 2,
+      "size_bytes_each": 2464,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_soporte_tickets.sql",
+        "database/migrations/migracion_soporte_tickets.sql"
+      ]
+    },
+    {
+      "hash": "db017b1932a65d33ad50d0c2c77412f6bb28d10fc20bd4995a8f231b45165d56",
+      "count": 2,
+      "size_bytes_each": 2024,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_devoluciones_flujo_secuencial_fraude.sql",
+        "database/migrations/migracion_devoluciones_flujo_secuencial_fraude.sql"
+      ]
+    },
+    {
+      "hash": "5f2766e585421485c41243456b6c288df0c23549f093b2cb0924d1314cffdf98",
+      "count": 2,
+      "size_bytes_each": 1451,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_reemplazo_series_trazabilidad.sql",
+        "database/migrations/migracion_reemplazo_series_trazabilidad.sql"
+      ]
+    },
+    {
+      "hash": "f421ccb192035467651680ee238ecbc45f1a24f8d7d19864811a3f926d1d2140",
+      "count": 2,
+      "size_bytes_each": 1335,
+      "files": [
+        "docs/fase1/00_RESUMEN_FASE_1.md",
+        "docs/historial/readmes_raiz/README_FASE1_MAPA_DEPENDENCIAS.md"
+      ]
+    },
+    {
+      "hash": "5b4b919a4e49069fa289ab560c59875ccee1fca31759f614f2fefc95ed3ac648",
+      "count": 2,
+      "size_bytes_each": 1307,
+      "files": [
+        "storage/backups/fase6_sql_originales/hotfix_notificaciones_wishlist_php_final.sql",
+        "database/hotfixes/hotfix_notificaciones_wishlist_php_final.sql"
+      ]
+    },
+    {
+      "hash": "3c44ea189512d556c194d5895197edcf4f21e2c2211a8d96fa44df5a7bbad733",
+      "count": 2,
+      "size_bytes_each": 1266,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_google_login.sql",
+        "database/migrations/migracion_google_login.sql"
+      ]
+    },
+    {
+      "hash": "c97ae9defc9a0339b125335904d2e9d0065e913be9500f3aa9e9dff5e21b6443",
+      "count": 2,
+      "size_bytes_each": 1173,
+      "files": [
+        "storage/backups/fase6_sql_originales/fix_reabastecimiento_duplicadas.sql",
+        "database/hotfixes/fix_reabastecimiento_duplicadas.sql"
+      ]
+    },
+    {
+      "hash": "a228dc14e4cbb5fd158ed8546d3b22620822c7e76bde42798fdd655d49a44b0d",
+      "count": 2,
+      "size_bytes_each": 1044,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_nota_credito_correo_auto.sql",
+        "database/migrations/migracion_nota_credito_correo_auto.sql"
+      ]
+    },
+    {
+      "hash": "113cae552b9c4ef8f83064961428d296a7359fcd92ac0c4291c63c98f0b5b12b",
+      "count": 2,
+      "size_bytes_each": 950,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_devoluciones_estimacion_reemplazo_prime.sql",
+        "database/migrations/migracion_devoluciones_estimacion_reemplazo_prime.sql"
+      ]
+    },
+    {
+      "hash": "9a0a181455dcc43aad242dcaba05c374feec60c8aff4ace991504d10d2218925",
+      "count": 2,
+      "size_bytes_each": 884,
+      "files": [
+        "storage/backups/fase6_sql_originales/hotfix_notificaciones_descuento_wishlist.sql",
+        "database/hotfixes/hotfix_notificaciones_descuento_wishlist.sql"
+      ]
+    },
+    {
+      "hash": "aff5e2bc0f89c70e42193fb98328e6062c49427a82967d7bd99c935ccbc4d546",
+      "count": 2,
+      "size_bytes_each": 794,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_busqueda_inteligente.sql",
+        "database/migrations/migracion_busqueda_inteligente.sql"
+      ]
+    },
+    {
+      "hash": "07776d69de63d83d4818eeb31db2c3d0a524dff7661f603e94c3e477be2ea899",
+      "count": 2,
+      "size_bytes_each": 633,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_email_outbox_panel.sql",
+        "database/migrations/migracion_email_outbox_panel.sql"
+      ]
+    },
+    {
+      "hash": "933b25abbbb0c2fa96106ae825125cd40f0ebecc698a6173164dede8c5516f57",
+      "count": 2,
+      "size_bytes_each": 619,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_descuentos_volumen_funcionales.sql",
+        "database/migrations/migracion_descuentos_volumen_funcionales.sql"
+      ]
+    },
+    {
+      "hash": "c78e319444c3c8e8bf5ab378bb9619a2c9176302b0b63695a2e051bc29119489",
+      "count": 2,
+      "size_bytes_each": 455,
+      "files": [
+        "storage/backups/fase6_sql_originales/migracion_notificaciones_wishlist_mejoradas.sql",
+        "database/migrations/migracion_notificaciones_wishlist_mejoradas.sql"
+      ]
+    },
+    {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "count": 79,
+      "size_bytes_each": 0,
+      "files": [
+        "app/.gitkeep",
+        "database/.gitkeep",
+        "storage/.gitkeep",
+        "views/.gitkeep",
+        "routes/.gitkeep",
+        "public/.gitkeep",
+        "bootstrap/.gitkeep",
+        "public/assets/.gitkeep",
+        "public/uploads/.gitkeep",
+        "public/media/.gitkeep",
+        "views/layouts/.gitkeep",
+        "views/auth/.gitkeep",
+        "views/admin/.gitkeep",
+        "views/components/.gitkeep",
+        "views/proveedor/.gitkeep",
+        "views/cliente/.gitkeep",
+        "views/cliente/catalogo/.gitkeep",
+        "views/cliente/cuenta/.gitkeep",
+        "views/cliente/carrito/.gitkeep",
+        "views/cliente/checkout/.gitkeep",
+        "views/cliente/soporte/.gitkeep",
+        "views/proveedor/capacidad/.gitkeep",
+        "views/proveedor/perfil/.gitkeep",
+        "views/proveedor/cotizaciones/.gitkeep",
+        "views/admin/devoluciones/.gitkeep",
+        "views/admin/proveedores/.gitkeep",
+        "views/admin/dashboard/.gitkeep",
+        "views/admin/productos/.gitkeep",
+        "views/admin/pedidos/.gitkeep",
+        "storage/temp/.gitkeep",
+        "storage/comprobantes/.gitkeep",
+        "storage/uploads/.gitkeep",
+        "storage/facturas/.gitkeep",
+        "storage/notas_credito/.gitkeep",
+        "storage/logs/.gitkeep",
+        "storage/cache/.gitkeep",
+        "storage/uploads/devoluciones/.gitkeep",
+        "storage/uploads/productos/.gitkeep",
+        "storage/uploads/perfiles/.gitkeep",
+        "storage/uploads/soporte/.gitkeep",
+        "docs/fase2/.gitkeep",
+        "database/seeds/.gitkeep",
+        "database/hotfixes/.gitkeep",
+        "database/triggers/.gitkeep",
+        "database/schema/.gitkeep",
+        "database/queries/.gitkeep",
+        "database/migrations/.gitkeep",
+        "database/functions/.gitkeep",
+        "database/queries/admin/.gitkeep",
+        "database/queries/proveedor/.gitkeep",
+        "database/queries/cliente/.gitkeep",
+        "app/Support/.gitkeep",
+        "app/Controllers/.gitkeep",
+        "app/Middleware/.gitkeep",
+        "app/Helpers/.gitkeep",
+        "app/Services/.gitkeep",
+        "app/Config/.gitkeep",
+        "app/Repositories/.gitkeep",
+        "app/Repositories/Pedidos/.gitkeep",
+        "app/Repositories/Productos/.gitkeep",
+        "app/Repositories/Usuarios/.gitkeep",
+        "app/Repositories/Proveedores/.gitkeep",
+        "app/Repositories/Devoluciones/.gitkeep",
+        "app/Services/Auth/.gitkeep",
+        "app/Services/Facturacion/.gitkeep",
+        "app/Services/Notificaciones/.gitkeep",
+        "app/Services/Pedidos/.gitkeep",
+        "app/Services/Garantias/.gitkeep",
+        "app/Services/Proveedor/.gitkeep",
+        "app/Services/Checkout/.gitkeep",
+        "app/Services/Reabastecimiento/.gitkeep",
+        "app/Services/Carrito/.gitkeep",
+        "app/Services/Catalogo/.gitkeep",
+        "app/Services/Devoluciones/.gitkeep",
+        "app/Controllers/Cliente/.gitkeep",
+        "app/Controllers/Auth/.gitkeep",
+        "app/Controllers/Admin/.gitkeep",
+        "app/Controllers/Proveedor/.gitkeep",
+        "app/Controllers/Api/.gitkeep"
+      ]
+    }
+  ],
+  "candidatos_limpieza_manual": [
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/Televisor Indurama 3.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_2.png"
+      ],
+      "size_bytes_each": 432446,
+      "hash": "33b012befca90fbcac8bb59483608c272f18fa118148383801113e4124413025"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/prod_1784389146.png",
+        "uploads/prod_cb2c225c-bedb-4f8d-a5fe-944c00dbeedc_1784390846_0.png"
+      ],
+      "size_bytes_each": 320376,
+      "hash": "8ee99f988ec7587616be891d941ab2685c5beecfd9a81a902c1c67140ef7a159"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/Televisor Indurama 2.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_1.png"
+      ],
+      "size_bytes_each": 287960,
+      "hash": "c375beb1397e48787ab85009fa61450583cf114a1e19ce002bab719bfe9ba065"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/Televisor Indurama.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_0.png"
+      ],
+      "size_bytes_each": 213638,
+      "hash": "57099e863bf28aa124c45cad972441ffaae7fdc1f33b40af99c2c9333f01ec10"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/banners/banner2.webp",
+        "uploads/banners/banner_1784859999.webp",
+        "uploads/banners/banner_1784687194.webp"
+      ],
+      "size_bytes_each": 193478,
+      "hash": "fcec57eccb70dff385d383f533349263b2199cd297dc3caca83b4a90d69f6420"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto detectado. No se elimina automáticamente para no romper referencias.",
+      "archivos": [
+        "assets/electromax_logo.png",
+        "assets/electromax_logo_web.png"
+      ],
+      "size_bytes_each": 158007,
+      "hash": "fded861901231bdaca9dc54e29ad4422b51bc8201f01a0b0d787f2c6d414760b"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/banners/banner_1784686666.webp",
+        "uploads/banners/banner.webp"
+      ],
+      "size_bytes_each": 138238,
+      "hash": "470be12127fbf033265c773f1a6324e6f77289c6b5d2002bdd1d9647acc9d56b"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/prod_1784387310.png",
+        "uploads/prod_cb2c225c-bedb-4f8d-a5fe-944c00dbeedc_1784390846_1.png",
+        "uploads/prod_1784386952.png",
+        "uploads/prod_1784343838.png"
+      ],
+      "size_bytes_each": 65175,
+      "hash": "44e3ca468b104119720d295af4e21497421b93781b66d98db8eb5fd3c175e279"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/devoluciones/dev_6a6811d698290_user_2c296d6c-652d-4f02-aa8c-1ac9c7b13c9e_1785200600.jpeg",
+        "uploads/perfiles/user_2c296d6c-652d-4f02-aa8c-1ac9c7b13c9e_1785200600.jpeg",
+        "uploads/perfiles/ft.jpeg"
+      ],
+      "size_bytes_each": 49582,
+      "hash": "0b8dfcb7018641dc62cb07d35b6d98ca9b20395763d9195ffb87e48ea047e00d"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/Televisor Indurama 4.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_3.png"
+      ],
+      "size_bytes_each": 43882,
+      "hash": "e2c1151b346df2664de7391dccebd2e3730a56f50d673c47fd82c80d4cbbb66f"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/Televisor Indurama 5.png",
+        "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_4.png"
+      ],
+      "size_bytes_each": 40347,
+      "hash": "2a3e9fce8c8bf754c002e0bd7714efa2498dd09e51a9a0e69c08963556cf4645"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/devoluciones/dev_6a62b1537e87f_banner_1784505975.jpg",
+        "uploads/devoluciones/dev_6a60140f86f2f_Tom And Jerry Wallpaper.jpg",
+        "uploads/devoluciones/dev_6a62a3d968f48_banner_1784505975.jpg",
+        "uploads/banners/banner_1784505975.jpg"
+      ],
+      "size_bytes_each": 35195,
+      "hash": "88a5baf346ae8274323f0344320114d56d9219483a79b3874f5d0eaac46dd9b5"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_final_correo_facturacion.sql",
+        "database/migrations/migracion_final_correo_facturacion.sql"
+      ],
+      "size_bytes_each": 15589,
+      "hash": "bdc4deaf05b868d405708f1b303ed642b1fa01db52c444d6acc31a39d1f0aba3"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/marca_1784408744.png",
+        "uploads/logo lg.png"
+      ],
+      "size_bytes_each": 12103,
+      "hash": "9a2d97e531b2d7123f1510879a5a7afb23e3abf39c5e489c2ee79d5ccdac7ed8"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_facturacion_garantias_checkout.sql",
+        "database/migrations/migracion_facturacion_garantias_checkout.sql"
+      ],
+      "size_bytes_each": 11761,
+      "hash": "c3c2783319a7600361fbb918b46c7200c8619563da833b3ebf5093e8b723a96e"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/marca_1784408625.png",
+        "uploads/logo indurama.png"
+      ],
+      "size_bytes_each": 10759,
+      "hash": "189ee7fde1e1250efa849742d5684d8ca4490dc208f44f9dfb8f5a8c73c181b6"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_reformulacion_segura.sql",
+        "database/migrations/migracion_reformulacion_segura.sql"
+      ],
+      "size_bytes_each": 7608,
+      "hash": "5a8708d8b6be3d61807fa560f124576d57a33aa716fee5636ca09de05d012395"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_flujo_guiado.sql",
+        "database/migrations/migracion_flujo_guiado.sql"
+      ],
+      "size_bytes_each": 6263,
+      "hash": "42c0f6d26b078d697a575c2a97868ce8d090ea00a62f422afb3b3e725e6c804c"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en uploads. No se elimina porque la base de datos puede guardar la URL exacta.",
+      "archivos": [
+        "uploads/marca_1784408813.png",
+        "uploads/logo samsung.png"
+      ],
+      "size_bytes_each": 6189,
+      "hash": "a1933b743c7d669c04fae6e61a7fd053e9cc3ee69f999c028cc60935f7564e8f"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/hotfix_notificaciones_wishlist_trigger.sql",
+        "database/hotfixes/hotfix_notificaciones_wishlist_trigger.sql"
+      ],
+      "size_bytes_each": 5868,
+      "hash": "049bdcf586243ff71a612ef73657054cb9e8a333a6242bd5f13640d096ede5d6"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "database/MANIFEST_SQL.md",
+        "docs/fase6/MAPA_SQL_ORGANIZADO.md"
+      ],
+      "size_bytes_each": 3146,
+      "hash": "9d15828a0097fd2a72ad47016d38c1003e849154a7e99800494d3ecd19c1237c"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_empresa_simplificada_admin.sql",
+        "storage/backups/fase6_sql_originales/migracion_empresa_config_admin.sql",
+        "database/migrations/migracion_empresa_simplificada_admin.sql",
+        "database/migrations/migracion_empresa_config_admin.sql"
+      ],
+      "size_bytes_each": 3032,
+      "hash": "54d1a1d30ddb945ce65b1102c10ed01ff150ea8a73ef1b1a18f6ac5995f9c7cf"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_devoluciones_decision_cliente.sql",
+        "database/migrations/migracion_devoluciones_decision_cliente.sql"
+      ],
+      "size_bytes_each": 2962,
+      "hash": "af3e6d03c131a96d741378f8f98d158ff1cf107df9eece4f293607effd6ffd3a"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_soporte_tickets.sql",
+        "database/migrations/migracion_soporte_tickets.sql"
+      ],
+      "size_bytes_each": 2464,
+      "hash": "24b3b6faf13102ca4cb0952a280a779861a9b7f08310a8232151b99566a75f30"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_devoluciones_flujo_secuencial_fraude.sql",
+        "database/migrations/migracion_devoluciones_flujo_secuencial_fraude.sql"
+      ],
+      "size_bytes_each": 2024,
+      "hash": "db017b1932a65d33ad50d0c2c77412f6bb28d10fc20bd4995a8f231b45165d56"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_reemplazo_series_trazabilidad.sql",
+        "database/migrations/migracion_reemplazo_series_trazabilidad.sql"
+      ],
+      "size_bytes_each": 1451,
+      "hash": "5f2766e585421485c41243456b6c288df0c23549f093b2cb0924d1314cffdf98"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto detectado. No se elimina automáticamente para no romper referencias.",
+      "archivos": [
+        "docs/fase1/00_RESUMEN_FASE_1.md",
+        "docs/historial/readmes_raiz/README_FASE1_MAPA_DEPENDENCIAS.md"
+      ],
+      "size_bytes_each": 1335,
+      "hash": "f421ccb192035467651680ee238ecbc45f1a24f8d7d19864811a3f926d1d2140"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/hotfix_notificaciones_wishlist_php_final.sql",
+        "database/hotfixes/hotfix_notificaciones_wishlist_php_final.sql"
+      ],
+      "size_bytes_each": 1307,
+      "hash": "5b4b919a4e49069fa289ab560c59875ccee1fca31759f614f2fefc95ed3ac648"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_google_login.sql",
+        "database/migrations/migracion_google_login.sql"
+      ],
+      "size_bytes_each": 1266,
+      "hash": "3c44ea189512d556c194d5895197edcf4f21e2c2211a8d96fa44df5a7bbad733"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/fix_reabastecimiento_duplicadas.sql",
+        "database/hotfixes/fix_reabastecimiento_duplicadas.sql"
+      ],
+      "size_bytes_each": 1173,
+      "hash": "c97ae9defc9a0339b125335904d2e9d0065e913be9500f3aa9e9dff5e21b6443"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_nota_credito_correo_auto.sql",
+        "database/migrations/migracion_nota_credito_correo_auto.sql"
+      ],
+      "size_bytes_each": 1044,
+      "hash": "a228dc14e4cbb5fd158ed8546d3b22620822c7e76bde42798fdd655d49a44b0d"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_devoluciones_estimacion_reemplazo_prime.sql",
+        "database/migrations/migracion_devoluciones_estimacion_reemplazo_prime.sql"
+      ],
+      "size_bytes_each": 950,
+      "hash": "113cae552b9c4ef8f83064961428d296a7359fcd92ac0c4291c63c98f0b5b12b"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/hotfix_notificaciones_descuento_wishlist.sql",
+        "database/hotfixes/hotfix_notificaciones_descuento_wishlist.sql"
+      ],
+      "size_bytes_each": 884,
+      "hash": "9a0a181455dcc43aad242dcaba05c374feec60c8aff4ace991504d10d2218925"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_busqueda_inteligente.sql",
+        "database/migrations/migracion_busqueda_inteligente.sql"
+      ],
+      "size_bytes_each": 794,
+      "hash": "aff5e2bc0f89c70e42193fb98328e6062c49427a82967d7bd99c935ccbc4d546"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_email_outbox_panel.sql",
+        "database/migrations/migracion_email_outbox_panel.sql"
+      ],
+      "size_bytes_each": 633,
+      "hash": "07776d69de63d83d4818eeb31db2c3d0a524dff7661f603e94c3e477be2ea899"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_descuentos_volumen_funcionales.sql",
+        "database/migrations/migracion_descuentos_volumen_funcionales.sql"
+      ],
+      "size_bytes_each": 619,
+      "hash": "933b25abbbb0c2fa96106ae825125cd40f0ebecc698a6173164dede8c5516f57"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "storage/backups/fase6_sql_originales/migracion_notificaciones_wishlist_mejoradas.sql",
+        "database/migrations/migracion_notificaciones_wishlist_mejoradas.sql"
+      ],
+      "size_bytes_each": 455,
+      "hash": "c78e319444c3c8e8bf5ab378bb9619a2c9176302b0b63695a2e051bc29119489"
+    },
+    {
+      "tipo": "duplicado_exacto",
+      "motivo": "Duplicado exacto en SQL/base de datos. No se elimina para conservar historial y compatibilidad.",
+      "archivos": [
+        "app/.gitkeep",
+        "database/.gitkeep",
+        "storage/.gitkeep",
+        "views/.gitkeep",
+        "routes/.gitkeep",
+        "public/.gitkeep",
+        "bootstrap/.gitkeep",
+        "public/assets/.gitkeep",
+        "public/uploads/.gitkeep",
+        "public/media/.gitkeep",
+        "views/layouts/.gitkeep",
+        "views/auth/.gitkeep",
+        "views/admin/.gitkeep",
+        "views/components/.gitkeep",
+        "views/proveedor/.gitkeep",
+        "views/cliente/.gitkeep",
+        "views/cliente/catalogo/.gitkeep",
+        "views/cliente/cuenta/.gitkeep",
+        "views/cliente/carrito/.gitkeep",
+        "views/cliente/checkout/.gitkeep",
+        "views/cliente/soporte/.gitkeep",
+        "views/proveedor/capacidad/.gitkeep",
+        "views/proveedor/perfil/.gitkeep",
+        "views/proveedor/cotizaciones/.gitkeep",
+        "views/admin/devoluciones/.gitkeep",
+        "views/admin/proveedores/.gitkeep",
+        "views/admin/dashboard/.gitkeep",
+        "views/admin/productos/.gitkeep",
+        "views/admin/pedidos/.gitkeep",
+        "storage/temp/.gitkeep",
+        "storage/comprobantes/.gitkeep",
+        "storage/uploads/.gitkeep",
+        "storage/facturas/.gitkeep",
+        "storage/notas_credito/.gitkeep",
+        "storage/logs/.gitkeep",
+        "storage/cache/.gitkeep",
+        "storage/uploads/devoluciones/.gitkeep",
+        "storage/uploads/productos/.gitkeep",
+        "storage/uploads/perfiles/.gitkeep",
+        "storage/uploads/soporte/.gitkeep",
+        "docs/fase2/.gitkeep",
+        "database/seeds/.gitkeep",
+        "database/hotfixes/.gitkeep",
+        "database/triggers/.gitkeep",
+        "database/schema/.gitkeep",
+        "database/queries/.gitkeep",
+        "database/migrations/.gitkeep",
+        "database/functions/.gitkeep",
+        "database/queries/admin/.gitkeep",
+        "database/queries/proveedor/.gitkeep",
+        "database/queries/cliente/.gitkeep",
+        "app/Support/.gitkeep",
+        "app/Controllers/.gitkeep",
+        "app/Middleware/.gitkeep",
+        "app/Helpers/.gitkeep",
+        "app/Services/.gitkeep",
+        "app/Config/.gitkeep",
+        "app/Repositories/.gitkeep",
+        "app/Repositories/Pedidos/.gitkeep",
+        "app/Repositories/Productos/.gitkeep",
+        "app/Repositories/Usuarios/.gitkeep",
+        "app/Repositories/Proveedores/.gitkeep",
+        "app/Repositories/Devoluciones/.gitkeep",
+        "app/Services/Auth/.gitkeep",
+        "app/Services/Facturacion/.gitkeep",
+        "app/Services/Notificaciones/.gitkeep",
+        "app/Services/Pedidos/.gitkeep",
+        "app/Services/Garantias/.gitkeep",
+        "app/Services/Proveedor/.gitkeep",
+        "app/Services/Checkout/.gitkeep",
+        "app/Services/Reabastecimiento/.gitkeep",
+        "app/Services/Carrito/.gitkeep",
+        "app/Services/Catalogo/.gitkeep",
+        "app/Services/Devoluciones/.gitkeep",
+        "app/Controllers/Cliente/.gitkeep",
+        "app/Controllers/Auth/.gitkeep",
+        "app/Controllers/Admin/.gitkeep",
+        "app/Controllers/Proveedor/.gitkeep",
+        "app/Controllers/Api/.gitkeep"
+      ],
+      "size_bytes_each": 0,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "php_conservados": [
+    {
+      "archivo": "add_to_cart.php",
+      "tipo": "critico",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "admin.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "analitica.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "api_filtrar_productos.php",
+      "tipo": "endpoint_api",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "api_filtros.php",
+      "tipo": "endpoint_api",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "api_guardar_producto.php",
+      "tipo": "endpoint_api",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "api_producto.php",
+      "tipo": "endpoint_api",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "api_wishlist.php",
+      "tipo": "endpoint_api",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "auth.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "banner_redirect.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "buscar_sugerencias.php",
+      "tipo": "endpoint_api",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "cancelar_membresia.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "carrito.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "checkout.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "config_correo.example.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "config_correo.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "config_google.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "correos_empresa.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "crear_admin.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "crear_usuario_empresa.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "db.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "empresa_config.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "factura_pdf.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "ficha_tecnica.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "ficha_tecnica_pdf.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "flujo_admin.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_automatizacion.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_auxiliares.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_backorder.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_descuentos_volumen.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_facturacion.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_ficha_tecnica.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_garantias.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_google_auth.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_home.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_logistica.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_notificaciones.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_planes.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_soporte.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_stock.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "funciones_wishlist.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "garantia.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "generar_etiqueta.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "google_auth.php",
+      "tipo": "critico",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "imprimir_guia.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "index.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "logout.php",
+      "tipo": "critico",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "mi_cuenta.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "notificaciones.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "planes.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "probar_correo_facturacion.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "procesar_devolucion.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "producto.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "proveedor.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "recibir_devolucion.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "responder_devolucion.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "seguridad.php",
+      "tipo": "adaptador_php",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "simulador_sucursales.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "soporte.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "soporte_admin.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "tracking.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "verificar_phpmailer.php",
+      "tipo": "ruta_raiz",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    },
+    {
+      "archivo": "wishlist.php",
+      "tipo": "controlador_con_vista_separada",
+      "motivo": "Se conserva para no romper URL, POST, include o compatibilidad."
+    }
+  ],
+  "sql_conservados": [
+    {
+      "archivo": "bd.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/schema/bd.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "fix_reabastecimiento_duplicadas.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/hotfixes/fix_reabastecimiento_duplicadas.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "hotfix_notificaciones_descuento_wishlist.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/hotfixes/hotfix_notificaciones_descuento_wishlist.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "hotfix_notificaciones_wishlist_php_final.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/hotfixes/hotfix_notificaciones_wishlist_php_final.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "hotfix_notificaciones_wishlist_trigger.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/hotfixes/hotfix_notificaciones_wishlist_trigger.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_busqueda_inteligente.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_busqueda_inteligente.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_descuentos_volumen_funcionales.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_descuentos_volumen_funcionales.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_devoluciones_decision_cliente.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_devoluciones_decision_cliente.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_devoluciones_estimacion_reemplazo_prime.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_devoluciones_estimacion_reemplazo_prime.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_devoluciones_flujo_secuencial_fraude.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_devoluciones_flujo_secuencial_fraude.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_email_outbox_panel.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_email_outbox_panel.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_empresa_config_admin.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_empresa_config_admin.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_empresa_simplificada_admin.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_empresa_simplificada_admin.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_facturacion_garantias_checkout.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_facturacion_garantias_checkout.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_final_correo_facturacion.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_final_correo_facturacion.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_flujo_guiado.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_flujo_guiado.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_google_login.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_google_login.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_nota_credito_correo_auto.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_nota_credito_correo_auto.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_notificaciones_wishlist_mejoradas.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_notificaciones_wishlist_mejoradas.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_reemplazo_series_trazabilidad.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_reemplazo_series_trazabilidad.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_reformulacion_segura.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_reformulacion_segura.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    },
+    {
+      "archivo": "migracion_soporte_tickets.sql",
+      "tipo": "adaptador_sql",
+      "destino": "database/migrations/migracion_soporte_tickets.sql",
+      "motivo": "Se conserva para que comandos antiguos psql -f archivo.sql sigan funcionando."
+    }
+  ],
+  "root_before_count": 157,
+  "root_after_count": 93,
+  "root_readmes_before_count": 65,
+  "root_readmes_after_count": 2
+}

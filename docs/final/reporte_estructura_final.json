@@ -1,0 +1,458 @@
+{
+  "fecha": "2026-08-02 23:54:01",
+  "removed_root_legacy": [
+    {
+      "origen": "add_to_cart.php",
+      "backup": "storage/backups/final_root_removed/add_to_cart.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "admin.php",
+      "backup": "storage/backups/final_root_removed/admin.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "analitica.php",
+      "backup": "storage/backups/final_root_removed/analitica.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "api_filtrar_productos.php",
+      "backup": "storage/backups/final_root_removed/api_filtrar_productos.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "api_filtros.php",
+      "backup": "storage/backups/final_root_removed/api_filtros.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "api_guardar_producto.php",
+      "backup": "storage/backups/final_root_removed/api_guardar_producto.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "api_producto.php",
+      "backup": "storage/backups/final_root_removed/api_producto.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "api_wishlist.php",
+      "backup": "storage/backups/final_root_removed/api_wishlist.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "auth.php",
+      "backup": "storage/backups/final_root_removed/auth.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "banner_redirect.php",
+      "backup": "storage/backups/final_root_removed/banner_redirect.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "buscar_sugerencias.php",
+      "backup": "storage/backups/final_root_removed/buscar_sugerencias.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "cancelar_membresia.php",
+      "backup": "storage/backups/final_root_removed/cancelar_membresia.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "carrito.php",
+      "backup": "storage/backups/final_root_removed/carrito.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "checkout.php",
+      "backup": "storage/backups/final_root_removed/checkout.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "config_correo.example.php",
+      "backup": "storage/backups/final_root_removed/config_correo.example.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "config_correo.php",
+      "backup": "storage/backups/final_root_removed/config_correo.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "config_google.php",
+      "backup": "storage/backups/final_root_removed/config_google.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "correos_empresa.php",
+      "backup": "storage/backups/final_root_removed/correos_empresa.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "crear_admin.php",
+      "backup": "storage/backups/final_root_removed/crear_admin.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "crear_usuario_empresa.php",
+      "backup": "storage/backups/final_root_removed/crear_usuario_empresa.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "db.php",
+      "backup": "storage/backups/final_root_removed/db.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "empresa_config.php",
+      "backup": "storage/backups/final_root_removed/empresa_config.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "factura_pdf.php",
+      "backup": "storage/backups/final_root_removed/factura_pdf.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "ficha_tecnica.php",
+      "backup": "storage/backups/final_root_removed/ficha_tecnica.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "ficha_tecnica_pdf.php",
+      "backup": "storage/backups/final_root_removed/ficha_tecnica_pdf.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "flujo_admin.php",
+      "backup": "storage/backups/final_root_removed/flujo_admin.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_automatizacion.php",
+      "backup": "storage/backups/final_root_removed/funciones_automatizacion.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_auxiliares.php",
+      "backup": "storage/backups/final_root_removed/funciones_auxiliares.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_backorder.php",
+      "backup": "storage/backups/final_root_removed/funciones_backorder.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_descuentos_volumen.php",
+      "backup": "storage/backups/final_root_removed/funciones_descuentos_volumen.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_facturacion.php",
+      "backup": "storage/backups/final_root_removed/funciones_facturacion.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_ficha_tecnica.php",
+      "backup": "storage/backups/final_root_removed/funciones_ficha_tecnica.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_garantias.php",
+      "backup": "storage/backups/final_root_removed/funciones_garantias.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_google_auth.php",
+      "backup": "storage/backups/final_root_removed/funciones_google_auth.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_home.php",
+      "backup": "storage/backups/final_root_removed/funciones_home.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_logistica.php",
+      "backup": "storage/backups/final_root_removed/funciones_logistica.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_notificaciones.php",
+      "backup": "storage/backups/final_root_removed/funciones_notificaciones.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_planes.php",
+      "backup": "storage/backups/final_root_removed/funciones_planes.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_soporte.php",
+      "backup": "storage/backups/final_root_removed/funciones_soporte.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_stock.php",
+      "backup": "storage/backups/final_root_removed/funciones_stock.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "funciones_wishlist.php",
+      "backup": "storage/backups/final_root_removed/funciones_wishlist.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "garantia.php",
+      "backup": "storage/backups/final_root_removed/garantia.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "generar_etiqueta.php",
+      "backup": "storage/backups/final_root_removed/generar_etiqueta.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "google_auth.php",
+      "backup": "storage/backups/final_root_removed/google_auth.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "imprimir_guia.php",
+      "backup": "storage/backups/final_root_removed/imprimir_guia.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "index.php",
+      "backup": "storage/backups/final_root_removed/index.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "logout.php",
+      "backup": "storage/backups/final_root_removed/logout.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "mi_cuenta.php",
+      "backup": "storage/backups/final_root_removed/mi_cuenta.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "notificaciones.php",
+      "backup": "storage/backups/final_root_removed/notificaciones.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "planes.php",
+      "backup": "storage/backups/final_root_removed/planes.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "probar_correo_facturacion.php",
+      "backup": "storage/backups/final_root_removed/probar_correo_facturacion.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "procesar_devolucion.php",
+      "backup": "storage/backups/final_root_removed/procesar_devolucion.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "producto.php",
+      "backup": "storage/backups/final_root_removed/producto.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "proveedor.php",
+      "backup": "storage/backups/final_root_removed/proveedor.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "recibir_devolucion.php",
+      "backup": "storage/backups/final_root_removed/recibir_devolucion.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "responder_devolucion.php",
+      "backup": "storage/backups/final_root_removed/responder_devolucion.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "seguridad.php",
+      "backup": "storage/backups/final_root_removed/seguridad.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "simulador_sucursales.php",
+      "backup": "storage/backups/final_root_removed/simulador_sucursales.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "soporte.php",
+      "backup": "storage/backups/final_root_removed/soporte.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "soporte_admin.php",
+      "backup": "storage/backups/final_root_removed/soporte_admin.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "tracking.php",
+      "backup": "storage/backups/final_root_removed/tracking.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "verificar_phpmailer.php",
+      "backup": "storage/backups/final_root_removed/verificar_phpmailer.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "wishlist.php",
+      "backup": "storage/backups/final_root_removed/wishlist.php",
+      "tipo": "file"
+    },
+    {
+      "origen": "bd.sql",
+      "backup": "storage/backups/final_root_removed/bd.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "fix_reabastecimiento_duplicadas.sql",
+      "backup": "storage/backups/final_root_removed/fix_reabastecimiento_duplicadas.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "hotfix_notificaciones_descuento_wishlist.sql",
+      "backup": "storage/backups/final_root_removed/hotfix_notificaciones_descuento_wishlist.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "hotfix_notificaciones_wishlist_php_final.sql",
+      "backup": "storage/backups/final_root_removed/hotfix_notificaciones_wishlist_php_final.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "hotfix_notificaciones_wishlist_trigger.sql",
+      "backup": "storage/backups/final_root_removed/hotfix_notificaciones_wishlist_trigger.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_busqueda_inteligente.sql",
+      "backup": "storage/backups/final_root_removed/migracion_busqueda_inteligente.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_descuentos_volumen_funcionales.sql",
+      "backup": "storage/backups/final_root_removed/migracion_descuentos_volumen_funcionales.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_devoluciones_decision_cliente.sql",
+      "backup": "storage/backups/final_root_removed/migracion_devoluciones_decision_cliente.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_devoluciones_estimacion_reemplazo_prime.sql",
+      "backup": "storage/backups/final_root_removed/migracion_devoluciones_estimacion_reemplazo_prime.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_devoluciones_flujo_secuencial_fraude.sql",
+      "backup": "storage/backups/final_root_removed/migracion_devoluciones_flujo_secuencial_fraude.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_email_outbox_panel.sql",
+      "backup": "storage/backups/final_root_removed/migracion_email_outbox_panel.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_empresa_config_admin.sql",
+      "backup": "storage/backups/final_root_removed/migracion_empresa_config_admin.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_empresa_simplificada_admin.sql",
+      "backup": "storage/backups/final_root_removed/migracion_empresa_simplificada_admin.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_facturacion_garantias_checkout.sql",
+      "backup": "storage/backups/final_root_removed/migracion_facturacion_garantias_checkout.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_final_correo_facturacion.sql",
+      "backup": "storage/backups/final_root_removed/migracion_final_correo_facturacion.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_flujo_guiado.sql",
+      "backup": "storage/backups/final_root_removed/migracion_flujo_guiado.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_google_login.sql",
+      "backup": "storage/backups/final_root_removed/migracion_google_login.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_nota_credito_correo_auto.sql",
+      "backup": "storage/backups/final_root_removed/migracion_nota_credito_correo_auto.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_notificaciones_wishlist_mejoradas.sql",
+      "backup": "storage/backups/final_root_removed/migracion_notificaciones_wishlist_mejoradas.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_reemplazo_series_trazabilidad.sql",
+      "backup": "storage/backups/final_root_removed/migracion_reemplazo_series_trazabilidad.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_reformulacion_segura.sql",
+      "backup": "storage/backups/final_root_removed/migracion_reformulacion_segura.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "migracion_soporte_tickets.sql",
+      "backup": "storage/backups/final_root_removed/migracion_soporte_tickets.sql",
+      "tipo": "file"
+    },
+    {
+      "origen": "components",
+      "backup": "storage/backups/final_root_removed/components",
+      "tipo": "dir"
+    },
+    {
+      "origen": "assets",
+      "backup": "storage/backups/final_root_removed/assets",
+      "tipo": "dir"
+    },
+    {
+      "origen": "uploads",
+      "backup": "storage/backups/final_root_removed/uploads",
+      "tipo": "dir"
+    }
+  ],
+  "root_php_remaining": [],
+  "root_sql_remaining": [],
+  "root_dirs": [
+    "app",
+    "database",
+    "docs",
+    "storage",
+    "views",
+    "routes",
+    "scripts",
+    "public",
+    "bootstrap"
+  ]
+}

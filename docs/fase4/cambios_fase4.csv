@@ -1,0 +1,8 @@
+archivo,tipo_cambio,descripcion
+app/Services/Catalogo/PricingService.php,nuevo,"Servicio de precios, IVA y descuentos"
+app/Services/Inventario/SerialNumberService.php,nuevo,"Servicio de SKU, series y validación de series"
+app/Services/Proveedor/SupplierCapacityService.php,nuevo,Servicio de capacidad y descuentos del proveedor
+app/Services/ReglasNegocio/BusinessRulesReference.php,nuevo,Mapa explicativo de reglas del negocio
+app/Helpers/funciones_descuentos_volumen.php,modificado,Ahora delega cálculos a PricingService
+app/Helpers/funciones_auxiliares.php,modificado,Ahora delega SKU y series a SerialNumberService
+proveedor.php,modificado,Ahora delega descuento por rango y normalización a SupplierCapacityService

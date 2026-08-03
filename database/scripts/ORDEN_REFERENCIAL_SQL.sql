@@ -1,0 +1,37 @@
+-- Script de referencia - Fase 6
+--
+-- Este archivo NO debe ejecutarse automáticamente sin revisar.
+-- Sirve como guía para entender el orden lógico.
+--
+-- Recomendación:
+-- 1. En instalación nueva, revisar schema/bd.sql.
+-- 2. Luego ejecutar solo las migraciones que correspondan.
+-- 3. Ejecutar hotfixes únicamente si aplica el problema.
+
+-- Schema base:
+-- \i database/schema/bd.sql
+
+-- Migraciones detectadas:
+-- \i database/migrations/migracion_busqueda_inteligente.sql
+-- \i database/migrations/migracion_descuentos_volumen_funcionales.sql
+-- \i database/migrations/migracion_devoluciones_decision_cliente.sql
+-- \i database/migrations/migracion_devoluciones_estimacion_reemplazo_prime.sql
+-- \i database/migrations/migracion_devoluciones_flujo_secuencial_fraude.sql
+-- \i database/migrations/migracion_email_outbox_panel.sql
+-- \i database/migrations/migracion_empresa_config_admin.sql
+-- \i database/migrations/migracion_empresa_simplificada_admin.sql
+-- \i database/migrations/migracion_facturacion_garantias_checkout.sql
+-- \i database/migrations/migracion_final_correo_facturacion.sql
+-- \i database/migrations/migracion_flujo_guiado.sql
+-- \i database/migrations/migracion_google_login.sql
+-- \i database/migrations/migracion_nota_credito_correo_auto.sql
+-- \i database/migrations/migracion_notificaciones_wishlist_mejoradas.sql
+-- \i database/migrations/migracion_reemplazo_series_trazabilidad.sql
+-- \i database/migrations/migracion_reformulacion_segura.sql
+-- \i database/migrations/migracion_soporte_tickets.sql
+
+-- Hotfixes detectados:
+-- \i database/hotfixes/fix_reabastecimiento_duplicadas.sql
+-- \i database/hotfixes/hotfix_notificaciones_descuento_wishlist.sql
+-- \i database/hotfixes/hotfix_notificaciones_wishlist_php_final.sql
+-- \i database/hotfixes/hotfix_notificaciones_wishlist_trigger.sql

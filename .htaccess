@@ -1,0 +1,48 @@
+# ElectroMax - producción anderspace.online
+# Opción recomendada en VPS:
+#   DocumentRoot /var/www/anderspace/electromax/public
+#
+# Este .htaccess protege el proyecto si el DocumentRoot apunta a la raíz.
+
+Options -Indexes
+DirectoryIndex public/index.php
+
+<IfModule mod_headers.c>
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+<FilesMatch "^(\.env|\.env\..*|composer\.(json|lock)|package(-lock)?\.json|README.*\.md|.*\.sql|.*\.log)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Bloquear carpetas internas si Apache apunta a la raíz del proyecto.
+RewriteRule ^(app|bootstrap|database|docs|routes|scripts|storage|views|vendor)(/|$) - [F,L,NC]
+
+# No reescribir lo que ya entra a public.
+RewriteRule ^public/ - [L]
+
+# Archivos públicos.
+RewriteRule ^assets/(.*)$ public/assets/$1 [L,QSA]
+RewriteRule ^uploads/(.*)$ public/uploads/$1 [L,QSA]
+RewriteRule ^favicon\.ico$ public/assets/favicon/favicon.ico [L,QSA]
+
+# Home del proyecto.
+RewriteRule ^$ public/index.php [L,QSA]
+
+# URLs PHP antiguas, sin mantener PHP en raíz.
+RewriteRule ^([A-Za-z0-9_-]+\.php)$ public/$1 [L,QSA]
+
+# Rutas limpias opcionales.
+RewriteRule ^(home|producto|carrito|checkout|mi-cuenta|admin|proveedor|login|auth|wishlist|notificaciones|tracking|planes|soporte)/?$ public/router.php [L,QSA]
+</IfModule>

@@ -1,0 +1,111 @@
+{
+  "fecha": "2026-08-02 23:26:00",
+  "php_files": 179,
+  "sql_files": 67,
+  "view_files": 21,
+  "service_files": 4,
+  "helper_files": 16,
+  "docs_files": 134,
+  "php_errors": 0,
+  "modules": [
+    {
+      "modulo": "Catálogo y productos",
+      "archivos": [
+        "index.php",
+        "producto.php",
+        "api_producto.php",
+        "api_filtros.php",
+        "api_filtrar_productos.php",
+        "buscar_sugerencias.php"
+      ]
+    },
+    {
+      "modulo": "Carrito y checkout",
+      "archivos": [
+        "carrito.php",
+        "add_to_cart.php",
+        "checkout.php"
+      ]
+    },
+    {
+      "modulo": "Usuarios y autenticación",
+      "archivos": [
+        "auth.php",
+        "google_auth.php",
+        "logout.php",
+        "config_google.php"
+      ]
+    },
+    {
+      "modulo": "Panel administrativo",
+      "archivos": [
+        "admin.php",
+        "analitica.php",
+        "correos_empresa.php",
+        "crear_admin.php",
+        "crear_usuario_empresa.php"
+      ]
+    },
+    {
+      "modulo": "Panel proveedor",
+      "archivos": [
+        "proveedor.php"
+      ]
+    },
+    {
+      "modulo": "Pedidos y tracking",
+      "archivos": [
+        "tracking.php",
+        "flujo_admin.php"
+      ]
+    },
+    {
+      "modulo": "Devoluciones y garantías",
+      "archivos": [
+        "mi_cuenta.php",
+        "garantia.php",
+        "procesar_devolucion.php",
+        "recibir_devolucion.php",
+        "responder_devolucion.php",
+        "funciones_garantias.php"
+      ]
+    },
+    {
+      "modulo": "Facturación y correo",
+      "archivos": [
+        "factura_pdf.php",
+        "funciones_facturacion.php",
+        "config_correo.php",
+        "verificar_phpmailer.php",
+        "probar_correo_facturacion.php"
+      ]
+    },
+    {
+      "modulo": "Wishlist y notificaciones",
+      "archivos": [
+        "wishlist.php",
+        "api_wishlist.php",
+        "notificaciones.php",
+        "funciones_wishlist.php",
+        "funciones_notificaciones.php"
+      ]
+    },
+    {
+      "modulo": "Soporte",
+      "archivos": [
+        "soporte.php",
+        "soporte_admin.php",
+        "funciones_soporte.php"
+      ]
+    },
+    {
+      "modulo": "Logística, stock y reabastecimiento",
+      "archivos": [
+        "funciones_stock.php",
+        "funciones_backorder.php",
+        "funciones_logistica.php",
+        "simulador_sucursales.php"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+<?php
+if (!defined('EMX_ROOT')) {
+    require_once dirname(__DIR__, 3) . '/bootstrap/app.php';
+}
+
+require_once EMX_MIDDLEWARE_PATH . '/security.php';
+require_once EMX_CONFIG_PATH . '/database.php';
+require_once EMX_HELPERS_PATH . '/funciones_wishlist.php'; // <-- NUEVO: Funciones de wishlist
+require_once EMX_HELPERS_PATH . '/funciones_home.php';
+
+if (!isset($_SESSION['carrito'])) $_SESSION['carrito'] = [];
+$total_items_carrito = array_sum(array_column($_SESSION['carrito'], 'cantidad'));
+
+$foto_perfil_usuario = null;
+$notificaciones_no_leidas = 0;
+$wishlist_ids = [];
+
+if (isset($_SESSION['usuario_id'])) {
+    try {
+        $stmt_foto = $pdo->prepare("SELECT foto_perfil_url FROM usuarios WHERE id = ?");
+        $stmt_foto->execute([$_SESSION['usuario_id']]);
+        $foto_perfil_usuario = $stmt_foto->fetchColumn();
+        
+        // Obtener notificaciones no leídas
+        $notificaciones_no_leidas = contarNotificacionesNoLeidas($pdo, $_SESSION['usuario_id']);
+        
+        // Obtener IDs de productos en wishlist para renderizar el estado inicial
+        $stmt_w = $pdo->prepare("SELECT producto_id FROM wishlist WHERE usuario_id = ?");
+        $stmt_w->execute([$_SESSION['usuario_id']]);
+        $wishlist_ids = $stmt_w->fetchAll(PDO::FETCH_COLUMN);
+    } catch (Exception $e) {
+        $foto_perfil_usuario = null;
+    }
+}
+
+$productos = [];
+$categorias_nav = [];
+$categorias_display = [];
+$secciones_home = [];
+$productos_best = [];
+
+$filtro_activo = false;
+$titulo_filtro = "";
+$subtitulo_filtro = "";
+$where_clauses = ["p.deleted_at IS NULL", "p.is_active = TRUE"];
+$params = [];
+
+if (isset($_GET['categoria']) && !empty($_GET['categoria'])) {
+    $filtro_activo = true;
+    $where_clauses[] = "c.slug = :categoria_slug";
+    $params[':categoria_slug'] = $_GET['categoria'];
+    $stmt_cat = $pdo->prepare("SELECT nombre FROM categorias WHERE slug = ?");
+    $stmt_cat->execute([$_GET['categoria']]);
+    $cat_nombre = $stmt_cat->fetchColumn();
+    $titulo_filtro = ($cat_nombre ?: $_GET['categoria']);
+    $subtitulo_filtro = "Explora todos los productos de " . ($cat_nombre ?: $_GET['categoria']);
+}
+
+if (isset($_GET['descuento_min']) && is_numeric($_GET['descuento_min'])) {
+    $filtro_activo = true;
+    $min_desc = (float)$_GET['descuento_min'];
+
+    // El descuento puede estar guardado como 10 o como 0.10.
+    // Esta expresión lo normaliza a porcentaje real y acepta exactamente 10%.
+    $where_clauses[] = "(CASE WHEN p.descuento_porcentaje > 0 AND p.descuento_porcentaje <= 1 THEN p.descuento_porcentaje * 100 ELSE p.descuento_porcentaje END) >= :descuento_min";
+    $where_clauses[] = "(p.descuento_porcentaje IS NOT NULL AND p.descuento_porcentaje > 0)";
+    $where_clauses[] = "(p.descuento_desde IS NULL OR p.descuento_desde <= CURRENT_DATE)";
+    $where_clauses[] = "(p.descuento_hasta IS NULL OR p.descuento_hasta >= CURRENT_DATE)";
+    $params[':descuento_min'] = $min_desc;
+
+    $titulo_filtro = "Ofertas desde " . round($min_desc) . "% de descuento";
+    $subtitulo_filtro = "Productos con " . round($min_desc) . "% de descuento o más";
+}
+
+if (isset($_GET['prime_only']) && $_GET['prime_only'] === '1') {
+    $filtro_activo = true;
+    if (isset($_SESSION['usuario_id'])) {
+        $stmt_prime = $pdo->prepare("SELECT p.es_prime FROM usuarios u LEFT JOIN planes p ON u.plan_id = p.id WHERE u.id = ? AND p.es_prime = TRUE");
+        $stmt_prime->execute([$_SESSION['usuario_id']]);
+        if (!$stmt_prime->fetchColumn()) { $where_clauses[] = "1 = 0"; } else { $where_clauses[] = "p.is_prime_exclusive = TRUE"; }
+    } else { $where_clauses[] = "1 = 0"; }
+    $titulo_filtro = "Exclusivo para Miembros Prime";
+    $subtitulo_filtro = "Beneficios y precios especiales solo para miembros VIP";
+}
+
+if (isset($_GET['tag']) && !empty($_GET['tag'])) {
+    $filtro_activo = true;
+    $where_clauses[] = "p.id IN (SELECT producto_id FROM producto_tags_rel WHERE tag_id IN (SELECT id FROM product_tags WHERE nombre = :tag_nombre))";
+    $params[':tag_nombre'] = $_GET['tag'];
+    $titulo_filtro = "Campaña: " . htmlspecialchars($_GET['tag']);
+    $subtitulo_filtro = "Productos destacados de esta campaña especial";
+}
+
+$busqueda_query = '';
+$busqueda_activa = false;
+$busqueda_like = '';
+$busqueda_prefix = '';
+$busqueda_tokens = [];
+
+$emx_escape_like = static function ($value) {
+    return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], (string)$value);
+};
+
+if (isset($_GET['q']) && trim((string)$_GET['q']) !== '') {
+    $filtro_activo = true;
+    $busqueda_activa = true;
+    $busqueda_query = trim(preg_replace('/\s+/', ' ', (string)$_GET['q']));
+    $busqueda_query = mb_substr($busqueda_query, 0, 80);
+    $busqueda_like = '%' . $emx_escape_like($busqueda_query) . '%';
+    $busqueda_prefix = $emx_escape_like($busqueda_query) . '%';
+
+    $raw_tokens = preg_split('/\s+/u', mb_strtolower($busqueda_query));
+    $busqueda_tokens = [];
+    foreach ($raw_tokens as $token) {
+        $token = trim($token);
+        if (mb_strlen($token) >= 2 && !in_array($token, $busqueda_tokens, true)) {
+            $busqueda_tokens[] = $token;
+        }
+    }
+    $busqueda_tokens = array_slice($busqueda_tokens, 0, 5);
+
+    $search_clauses = ["(
+        p.nombre ILIKE :busq_nombre ESCAPE '\\'
+        OR COALESCE(p.descripcion_corta,'') ILIKE :busq_descripcion ESCAPE '\\'
+        OR COALESCE(p.sku,'') ILIKE :busq_sku ESCAPE '\\'
+        OR COALESCE(m.nombre,'') ILIKE :busq_marca ESCAPE '\\'
+        OR COALESCE(c.nombre,'') ILIKE :busq_categoria ESCAPE '\\'
+    )"];
+    $params[':busq_nombre'] = $busqueda_like;
+    $params[':busq_descripcion'] = $busqueda_like;
+    $params[':busq_sku'] = $busqueda_like;
+    $params[':busq_marca'] = $busqueda_like;
+    $params[':busq_categoria'] = $busqueda_like;
+
+    foreach ($busqueda_tokens as $i => $token) {
+        $token_like = '%' . $emx_escape_like($token) . '%';
+        $search_clauses[] = "(
+            p.nombre ILIKE :busq_tok_{$i}_nombre ESCAPE '\\'
+            OR COALESCE(p.descripcion_corta,'') ILIKE :busq_tok_{$i}_descripcion ESCAPE '\\'
+            OR COALESCE(p.sku,'') ILIKE :busq_tok_{$i}_sku ESCAPE '\\'
+            OR COALESCE(m.nombre,'') ILIKE :busq_tok_{$i}_marca ESCAPE '\\'
+            OR COALESCE(c.nombre,'') ILIKE :busq_tok_{$i}_categoria ESCAPE '\\'
+        )";
+        $params[":busq_tok_{$i}_nombre"] = $token_like;
+        $params[":busq_tok_{$i}_descripcion"] = $token_like;
+        $params[":busq_tok_{$i}_sku"] = $token_like;
+        $params[":busq_tok_{$i}_marca"] = $token_like;
+        $params[":busq_tok_{$i}_categoria"] = $token_like;
+    }
+
+    $where_clauses[] = '(' . implode(' OR ', $search_clauses) . ')';
+
+    $titulo_filtro = "Resultados de búsqueda";
+    $subtitulo_filtro = "Resultados para '" . htmlspecialchars($busqueda_query) . "'";
+}
+
+$categoria_actual_id = null;
+if (isset($_GET['categoria']) && !empty($_GET['categoria'])) {
+    try {
+        $stmt_cat_id = $pdo->prepare("SELECT id FROM categorias WHERE slug = ?");
+        $stmt_cat_id->execute([$_GET['categoria']]);
+        $categoria_actual_id = $stmt_cat_id->fetchColumn();
+    } catch (Exception $e) { $categoria_actual_id = null; }
+}
+
+if (isset($pdo)) {
+    $stmt_cat = $pdo->query("SELECT id, nombre, slug FROM categorias WHERE is_active = TRUE ORDER BY nombre");
+    $categorias_nav = $stmt_cat->fetchAll(PDO::FETCH_ASSOC);
+    try {
+        $stmt_cat_full = $pdo->query("SELECT c.*, (SELECT COUNT(*) FROM productos WHERE categoria_id = c.id AND deleted_at IS NULL AND is_active = TRUE) as total_productos FROM categorias c WHERE c.is_active = TRUE ORDER BY c.nombre");
+        $categorias_display = $stmt_cat_full->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Exception $e) { $categorias_display = $categorias_nav; }
+
+    if (!$filtro_activo) {
+        $secciones_home = emxObtenerSeccionesHome($pdo);
+        $productos_best = emxObtenerMasVendidos($pdo, 12);
+    }
+
+    $where_sql = implode(' AND ', $where_clauses);
+    $limit = $filtro_activo ? "" : "LIMIT 8";
+
+    $search_score_sql = "0 AS search_score";
+    $order_sql = "p.created_at DESC";
+    $execute_params = $params;
+
+    if (!empty($busqueda_activa)) {
+        $score_parts = [
+            "CASE WHEN LOWER(p.nombre) = LOWER(:score_exact_nombre) THEN 120 ELSE 0 END",
+            "CASE WHEN LOWER(p.nombre) LIKE LOWER(:score_prefix_nombre) ESCAPE '\\' THEN 90 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(p.sku,'')) = LOWER(:score_exact_sku) THEN 80 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(m.nombre,'')) LIKE LOWER(:score_marca) ESCAPE '\\' THEN 45 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(c.nombre,'')) LIKE LOWER(:score_categoria) ESCAPE '\\' THEN 35 ELSE 0 END",
+            "CASE WHEN LOWER(COALESCE(p.descripcion_corta,'')) LIKE LOWER(:score_descripcion) ESCAPE '\\' THEN 15 ELSE 0 END",
+        ];
+        $score_params = [
+            ':score_exact_nombre' => $busqueda_query,
+            ':score_prefix_nombre' => $busqueda_prefix,
+            ':score_exact_sku' => $busqueda_query,
+            ':score_marca' => $busqueda_like,
+            ':score_categoria' => $busqueda_like,
+            ':score_descripcion' => $busqueda_like,
+        ];
+
+        foreach ($busqueda_tokens as $i => $token) {
+            $token_like = '%' . $emx_escape_like($token) . '%';
+            $score_parts[] = "CASE WHEN p.nombre ILIKE :score_tok_{$i}_nombre ESCAPE '\\' THEN 18 ELSE 0 END";
+            $score_parts[] = "CASE WHEN COALESCE(p.descripcion_corta,'') ILIKE :score_tok_{$i}_descripcion ESCAPE '\\' THEN 8 ELSE 0 END";
+            $score_parts[] = "CASE WHEN COALESCE(m.nombre,'') ILIKE :score_tok_{$i}_marca ESCAPE '\\' THEN 12 ELSE 0 END";
+            $score_parts[] = "CASE WHEN COALESCE(c.nombre,'') ILIKE :score_tok_{$i}_categoria ESCAPE '\\' THEN 10 ELSE 0 END";
+            $score_params[":score_tok_{$i}_nombre"] = $token_like;
+            $score_params[":score_tok_{$i}_descripcion"] = $token_like;
+            $score_params[":score_tok_{$i}_marca"] = $token_like;
+            $score_params[":score_tok_{$i}_categoria"] = $token_like;
+        }
+
+        $score_parts[] = "CASE WHEN COALESCE(p.stock_actual_global,0) > 0 THEN 8 ELSE 0 END";
+        $score_parts[] = "CASE WHEN COALESCE(p.descuento_porcentaje,0) > 0 THEN 5 ELSE 0 END";
+
+        $search_score_sql = "(\n            " . implode(" +\n            ", $score_parts) . "\n        ) AS search_score";
+        $order_sql = "search_score DESC, p.created_at DESC";
+        $execute_params = array_merge($score_params, $params);
+    }
+
+    $sql = "SELECT p.*, c.nombre as categoria, c.slug as categoria_slug, m.nombre as marca, pm.url as imagen_principal,
+        {$search_score_sql},
+        (SELECT COALESCE(AVG(calificacion),0) FROM reseñas_productos WHERE producto_id = p.id AND aprobado = TRUE) as promedio_calificacion,
+        (SELECT COUNT(*) FROM reseñas_productos WHERE producto_id = p.id AND aprobado = TRUE) as total_reseñas
+        FROM productos p LEFT JOIN categorias c ON p.categoria_id = c.id LEFT JOIN marcas m ON p.marca_id = m.id
+        LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1
+        WHERE $where_sql ORDER BY {$order_sql} $limit";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($execute_params);
+    $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getCategoryIcon($n) {
+    $n = strtolower($n);
+    $m = ['refrigerador'=>'fa-snowflake','heladera'=>'fa-snowflake','nevera'=>'fa-snowflake','televisor'=>'fa-tv','tv'=>'fa-tv','lavadora'=>'fa-water','lavarropas'=>'fa-water','microondas'=>'fa-bolt','horno'=>'fa-fire','cocina'=>'fa-utensils','computadora'=>'fa-laptop','laptop'=>'fa-laptop','monitor'=>'fa-desktop','audio'=>'fa-headphones','sonido'=>'fa-volume-up','celular'=>'fa-mobile-screen','smartphone'=>'fa-mobile-screen','cámara'=>'fa-camera','consola'=>'fa-gamepad','gaming'=>'fa-gamepad','aire'=>'fa-temperature-low','ac'=>'fa-temperature-low','ventilador'=>'fa-fan','cafetera'=>'fa-mug-hot','impresora'=>'fa-print','tablet'=>'fa-tablet-screen-button','accesorio'=>'fa-puzzle-piece'];
+    foreach ($m as $k=>$i) { if (strpos($n,$k)!==false) return $i; } return 'fa-microchip';
+}
+function getCategoryAccent($n) {
+    $n = strtolower($n);
+    $m = ['refrigerador'=>'blue','heladera'=>'blue','televisor'=>'indigo','tv'=>'indigo','lavadora'=>'cyan','microondas'=>'orange','horno'=>'red','cocina'=>'red','computadora'=>'purple','laptop'=>'purple','monitor'=>'slate','audio'=>'pink','celular'=>'emerald','smartphone'=>'emerald','cámara'=>'amber','consola'=>'violet','aire'=>'sky','ac'=>'sky'];
+    foreach ($m as $k=>$c) { if (strpos($n,$k)!==false) return $c; } return 'slate';
+}
+
+$productos_json = json_encode($productos, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+$productos_best_json = json_encode($productos_best, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+$categoria_id_json = json_encode($categoria_actual_id);
+$wishlist_ids_json = json_encode($wishlist_ids);
+$best_chunks_count = !empty($productos_best) ? count(array_chunk($productos_best, 4)) : 1;
+
+// ============================================
+// Fase 5: carga de vista separada
+// ============================================
+// En esta fase la ruta antigua se conserva.
+// Este archivo prepara datos, procesa formularios y luego carga la vista.
+// La vista está separada en: views/frontend/index_view.php
+require EMX_VIEWS_PATH . '/frontend/index_view.php';
+exit;

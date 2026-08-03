@@ -1,0 +1,116 @@
+{
+  "fase": 5,
+  "fecha": "2026-08-02 23:15:23",
+  "objetivo": "Separar vistas frontend, admin y proveedor sin romper rutas antiguas.",
+  "resultados": [
+    {
+      "ruta_antigua": "auth.php",
+      "vista_nueva": "views/auth/auth_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "index.php",
+      "vista_nueva": "views/frontend/index_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "producto.php",
+      "vista_nueva": "views/frontend/producto_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "carrito.php",
+      "vista_nueva": "views/frontend/carrito_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "checkout.php",
+      "vista_nueva": "views/frontend/checkout_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "mi_cuenta.php",
+      "vista_nueva": "views/frontend/mi_cuenta_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "planes.php",
+      "vista_nueva": "views/frontend/planes_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "wishlist.php",
+      "vista_nueva": "views/frontend/wishlist_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "notificaciones.php",
+      "vista_nueva": "views/frontend/notificaciones_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "tracking.php",
+      "vista_nueva": "views/frontend/tracking_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "garantia.php",
+      "vista_nueva": "views/frontend/garantia_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "soporte.php",
+      "vista_nueva": "views/frontend/soporte_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "admin.php",
+      "vista_nueva": "views/admin/admin_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "soporte_admin.php",
+      "vista_nueva": "views/admin/soporte_admin_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "correos_empresa.php",
+      "vista_nueva": "views/admin/correos_empresa_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "proveedor.php",
+      "vista_nueva": "views/proveedor/proveedor_view.php",
+      "estado": "separado",
+      "nota": "controlador conserva ruta antigua"
+    },
+    {
+      "ruta_antigua": "components/navbar.php",
+      "vista_nueva": "views/components/navbar.php",
+      "estado": "separado",
+      "nota": "adaptador conservado"
+    },
+    {
+      "ruta_antigua": "components/footer.php",
+      "vista_nueva": "views/components/footer.php",
+      "estado": "separado",
+      "nota": "adaptador conservado"
+    }
+  ],
+  "regla": "Las rutas raíz se conservan como controladores."
+}

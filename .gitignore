@@ -1,0 +1,46 @@
+# ===============================
+# ElectroMax - archivos NO GitHub
+# ===============================
+
+# Variables de entorno / secretos
+.env
+.env.*
+!.env.example
+!.env.production.example
+
+# Dependencias instaladas localmente
+/vendor/
+/node_modules/
+
+# Backups reales de base de datos
+*.backup
+*.dump
+*.bak
+*.sql.gz
+*.tar
+*.tar.gz
+*.zip
+!docs/**/*.zip
+
+# Logs y temporales
+*.log
+debug_error.log
+error_log
+.DS_Store
+Thumbs.db
+
+# Archivos generados por usuarios/sistema
+/public/uploads/**
+!/public/uploads/**/
+!/public/uploads/**/.gitkeep
+!/public/uploads/.htaccess
+!/public/uploads/_README_ESTRUCTURA_UPLOADS.txt
+
+/storage/**
+!/storage/**/
+!/storage/**/.gitkeep
+!/storage/README.md
+
+# IDE / sistema operativo
+.vscode/
+.idea/

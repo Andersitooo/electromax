@@ -1,0 +1,5 @@
+Verificación modo neto Fase 10
+Raíz: /mnt/data/emx_fase10_modo_neto_public_app
+
+Resultado: modo neto public/app preparado correctamente.
+

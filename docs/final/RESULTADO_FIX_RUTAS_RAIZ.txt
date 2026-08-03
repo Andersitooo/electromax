@@ -1,0 +1,5 @@
+Verificación de rutas raíz con estructura final
+Raíz: /mnt/data/emx_final_estructura_neta_fix_rutas_raiz
+
+Resultado: fix correcto. La raíz sigue limpia y .htaccess apunta a public/.
+

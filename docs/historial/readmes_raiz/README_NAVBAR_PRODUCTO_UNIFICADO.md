@@ -1,0 +1,37 @@
+# Navbar/footer de producto.php unificado
+
+Cambios aplicados:
+- Se quitó la franja superior oscura que mostraba:
+  - Babahoyo, Los Ríos, Ecuador
+  - Compra segura
+  - 30 días de devolución
+  - Seguir pedido
+  - Admin
+- Se dejó el estilo del navbar de `producto.php` como base global:
+  - logo ElectroMax
+  - buscador
+  - wishlist
+  - notificaciones
+  - perfil
+  - carrito
+  - fila de categorías
+  - membresías
+  - seguimiento de pedido
+- Se dejó el footer con estilo limpio tipo `producto.php`, pero con datos reales:
+  - ElectroMax S.A.S.
+  - Babahoyo, Los Ríos, Ecuador
+  - abustamante831@fafi.utb.edu.ec
+  - 04-273-0000
+- Si existe tabla de empresa, el footer toma los datos reales de la base.
+- Se aplicó en páginas cliente:
+  - index.php
+  - producto.php
+  - auth.php
+  - carrito.php
+  - checkout.php
+  - planes.php
+  - tracking.php
+  - garantia.php
+  - wishlist.php
+  - notificaciones.php
+  - mi_cuenta.php

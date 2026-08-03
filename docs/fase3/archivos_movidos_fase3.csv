@@ -1,0 +1,22 @@
+archivo_antiguo,nueva_ubicacion,tipo,compatibilidad
+db.php,app/Config/database.php,configuración de base de datos,adaptador en raíz
+config_google.php,app/Config/google.php,configuración de Google Login,adaptador en raíz
+config_correo.php,app/Config/mail.php,configuración SMTP/correo,adaptador en raíz
+config_correo.example.php,app/Config/mail.example.php,plantilla de configuración SMTP,adaptador en raíz
+empresa_config.php,app/Config/company.php,configuración de empresa,adaptador en raíz
+seguridad.php,app/Middleware/security.php,"seguridad, sesión, roles y CSRF",adaptador en raíz
+funciones_automatizacion.php,app/Helpers/funciones_automatizacion.php,helper/funciones compartidas,adaptador en raíz
+funciones_auxiliares.php,app/Helpers/funciones_auxiliares.php,helper/funciones compartidas,adaptador en raíz
+funciones_backorder.php,app/Helpers/funciones_backorder.php,helper/funciones compartidas,adaptador en raíz
+funciones_descuentos_volumen.php,app/Helpers/funciones_descuentos_volumen.php,helper/funciones compartidas,adaptador en raíz
+funciones_facturacion.php,app/Helpers/funciones_facturacion.php,helper/funciones compartidas,adaptador en raíz
+funciones_ficha_tecnica.php,app/Helpers/funciones_ficha_tecnica.php,helper/funciones compartidas,adaptador en raíz
+funciones_garantias.php,app/Helpers/funciones_garantias.php,helper/funciones compartidas,adaptador en raíz
+funciones_google_auth.php,app/Helpers/funciones_google_auth.php,helper/funciones compartidas,adaptador en raíz
+funciones_home.php,app/Helpers/funciones_home.php,helper/funciones compartidas,adaptador en raíz
+funciones_logistica.php,app/Helpers/funciones_logistica.php,helper/funciones compartidas,adaptador en raíz
+funciones_notificaciones.php,app/Helpers/funciones_notificaciones.php,helper/funciones compartidas,adaptador en raíz
+funciones_planes.php,app/Helpers/funciones_planes.php,helper/funciones compartidas,adaptador en raíz
+funciones_soporte.php,app/Helpers/funciones_soporte.php,helper/funciones compartidas,adaptador en raíz
+funciones_stock.php,app/Helpers/funciones_stock.php,helper/funciones compartidas,adaptador en raíz
+funciones_wishlist.php,app/Helpers/funciones_wishlist.php,helper/funciones compartidas,adaptador en raíz

@@ -1,0 +1,69 @@
+# Archivos conservados por seguridad
+
+Estos archivos no se eliminaron porque pueden ser rutas, controladores, adaptadores o endpoints.
+
+| Archivo | Tipo | Motivo |
+|---|---|---|
+| `add_to_cart.php` | critico | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `admin.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `analitica.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `api_filtrar_productos.php` | endpoint_api | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `api_filtros.php` | endpoint_api | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `api_guardar_producto.php` | endpoint_api | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `api_producto.php` | endpoint_api | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `api_wishlist.php` | endpoint_api | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `auth.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `banner_redirect.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `buscar_sugerencias.php` | endpoint_api | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `cancelar_membresia.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `carrito.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `checkout.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `config_correo.example.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `config_correo.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `config_google.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `correos_empresa.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `crear_admin.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `crear_usuario_empresa.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `db.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `empresa_config.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `factura_pdf.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `ficha_tecnica.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `ficha_tecnica_pdf.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `flujo_admin.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_automatizacion.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_auxiliares.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_backorder.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_descuentos_volumen.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_facturacion.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_ficha_tecnica.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_garantias.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_google_auth.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_home.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_logistica.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_notificaciones.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_planes.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_soporte.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_stock.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `funciones_wishlist.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `garantia.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `generar_etiqueta.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `google_auth.php` | critico | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `imprimir_guia.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `index.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `logout.php` | critico | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `mi_cuenta.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `notificaciones.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `planes.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `probar_correo_facturacion.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `procesar_devolucion.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `producto.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `proveedor.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `recibir_devolucion.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `responder_devolucion.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `seguridad.php` | adaptador_php | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `simulador_sucursales.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `soporte.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `soporte_admin.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `tracking.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `verificar_phpmailer.php` | ruta_raiz | Se conserva para no romper URL, POST, include o compatibilidad. |
+| `wishlist.php` | controlador_con_vista_separada | Se conserva para no romper URL, POST, include o compatibilidad. |

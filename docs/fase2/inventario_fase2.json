@@ -1,0 +1,2265 @@
+[
+  {
+    "tipo": "directorio",
+    "ruta": "app",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Config",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Controllers",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Controllers/Admin",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Controllers/Api",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Controllers/Auth",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Controllers/Cliente",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Controllers/Proveedor",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Helpers",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Middleware",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Repositories",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Repositories/Devoluciones",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Repositories/Pedidos",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Repositories/Productos",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Repositories/Proveedores",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Repositories/Usuarios",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Auth",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Carrito",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Catalogo",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Checkout",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Devoluciones",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Facturacion",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Garantias",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Notificaciones",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Pedidos",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Proveedor",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Services/Reabastecimiento",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "app/Support",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "assets",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "bootstrap",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "components",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/functions",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/hotfixes",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/migrations",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/queries",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/queries/admin",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/queries/cliente",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/queries/proveedor",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/schema",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/seeds",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "database/triggers",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "docs",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "docs/fase1",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "docs/fase2",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "public",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "public/assets",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "public/media",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "public/uploads",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "routes",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "scripts",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/cache",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/comprobantes",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/facturas",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/logs",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/notas_credito",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/temp",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/uploads",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/uploads/devoluciones",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/uploads/perfiles",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/uploads/productos",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "storage/uploads/soporte",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "uploads",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "uploads/banners",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "uploads/confirmaciones",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "uploads/devoluciones",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "uploads/perfiles",
+    "fase": "existente"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/admin",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/admin/dashboard",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/admin/devoluciones",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/admin/pedidos",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/admin/productos",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/admin/proveedores",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/auth",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/cliente",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/cliente/carrito",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/cliente/catalogo",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/cliente/checkout",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/cliente/cuenta",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/cliente/soporte",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/components",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/layouts",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/proveedor",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/proveedor/capacidad",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/proveedor/cotizaciones",
+    "fase": "2"
+  },
+  {
+    "tipo": "directorio",
+    "ruta": "views/proveedor/perfil",
+    "fase": "2"
+  },
+  {
+    "tipo": "archivo",
+    "ruta": ".env.example",
+    "extension": ".example",
+    "bytes": 585
+  },
+  {
+    "tipo": "archivo",
+    "ruta": ".gitignore",
+    "extension": "",
+    "bytes": 161
+  },
+  {
+    "tipo": "archivo",
+    "ruta": ".htaccess",
+    "extension": "",
+    "bytes": 1019
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "AUDITORIA_SEGURIDAD_RUTAS.md",
+    "extension": ".md",
+    "bytes": 3476
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_AJUSTE_FICHA_CARRITO_LIMPIEZA.md",
+    "extension": ".md",
+    "bytes": 2385
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_AJUSTE_FINAL.md",
+    "extension": ".md",
+    "bytes": 2950
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_AJUSTE_FINAL_CARRITO_FICHA.md",
+    "extension": ".md",
+    "bytes": 1900
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_AJUSTE_LOGO_FICHAS.md",
+    "extension": ".md",
+    "bytes": 1660
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_AJUSTE_PREMIUM_FICHA_CARRITO.md",
+    "extension": ".md",
+    "bytes": 1263
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_ANALITICA_POWERBI_LIMPIEZA_EMOJIS.md",
+    "extension": ".md",
+    "bytes": 1381
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_ANALITICA_REAL_ICONOS_RESTAURADOS.md",
+    "extension": ".md",
+    "bytes": 781
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_BACKORDER_RESERVA_REORDEN.md",
+    "extension": ".md",
+    "bytes": 1923
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_BUSQUEDA_INTELIGENTE_AUTOCOMPLETE.md",
+    "extension": ".md",
+    "bytes": 961
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_CALENDARIO_SOBRESTOCK.md",
+    "extension": ".md",
+    "bytes": 1307
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_CARRITO_CALENDARIO_ORDENADO.md",
+    "extension": ".md",
+    "bytes": 1274
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_CENTRO_SOPORTE_SIMPLE.md",
+    "extension": ".md",
+    "bytes": 911
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_CORREO_EMPRESA_LISTO.md",
+    "extension": ".md",
+    "bytes": 2815
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_CORREO_FUNCIONAL_SEGURO.md",
+    "extension": ".md",
+    "bytes": 990
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_DESCUENTOS_VOLUMEN_FUNCIONALES.md",
+    "extension": ".md",
+    "bytes": 1645
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_DEVOLUCIONES_COSTOS_FLUJOS_DISTINTOS.md",
+    "extension": ".md",
+    "bytes": 1598
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_DEVOLUCIONES_DECISION_CLIENTE.md",
+    "extension": ".md",
+    "bytes": 969
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_DEVOLUCIONES_ESTIMACION_REEMPLAZO_PRIME.md",
+    "extension": ".md",
+    "bytes": 1044
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_DEVOLUCIONES_FLUJO_SECUENCIAL_FRAUDE.md",
+    "extension": ".md",
+    "bytes": 1260
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_DEVOLUCIONES_MOTIVOS_CUBIERTOS.md",
+    "extension": ".md",
+    "bytes": 1198
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_DISENO_FACTURA_APROBADO.md",
+    "extension": ".md",
+    "bytes": 688
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_EMPRESA_ADMIN_SIMPLIFICADA.md",
+    "extension": ".md",
+    "bytes": 1678
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FACTURACION_GARANTIAS_CHECKOUT.md",
+    "extension": ".md",
+    "bytes": 3204
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FACTURA_PDF_DISENO_EXACTO.md",
+    "extension": ".md",
+    "bytes": 783
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FASE1_MAPA_DEPENDENCIAS.md",
+    "extension": ".md",
+    "bytes": 1335
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FINAL_CORREO_FACTURACION.md",
+    "extension": ".md",
+    "bytes": 2710
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_ADMIN_CRUD_PRODUCTOS.md",
+    "extension": ".md",
+    "bytes": 1467
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_CHECKOUT_FACTURA_CORREO.md",
+    "extension": ".md",
+    "bytes": 2693
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_CHECKOUT_PRODUCTO_ID_BOOLEAN.md",
+    "extension": ".md",
+    "bytes": 906
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_CUENTA_NAV_LOGIN_FOOTER.md",
+    "extension": ".md",
+    "bytes": 970
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_GOOGLE_CLIENT_ID_VISIBLE.md",
+    "extension": ".md",
+    "bytes": 706
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_ICONOS_CATEGORIAS.md",
+    "extension": ".md",
+    "bytes": 559
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_LLEGO_DANADO_FLUJO_CONECTADO.md",
+    "extension": ".md",
+    "bytes": 1338
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_LOGO_NAVBAR_CONTRASTE.md",
+    "extension": ".md",
+    "bytes": 450
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FIX_REABASTECIMIENTO_DUPLICADAS.md",
+    "extension": ".md",
+    "bytes": 1094
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_FLUJO_GUIADO.md",
+    "extension": ".md",
+    "bytes": 2170
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_GOOGLE_CLIENT_ID_CONFIGURADO.md",
+    "extension": ".md",
+    "bytes": 435
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_GOOGLE_LOGIN_VINCULACION.md",
+    "extension": ".md",
+    "bytes": 1226
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_HOME_BANNERS_RECOMENDADOS.md",
+    "extension": ".md",
+    "bytes": 1355
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_HOTFIX_FUNCION_REABASTECIMIENTO.md",
+    "extension": ".md",
+    "bytes": 736
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_HOTFIX_NOTIFICACIONES_DESCUENTO_WISHLIST.md",
+    "extension": ".md",
+    "bytes": 1310
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_HOTFIX_NOTIFICACIONES_WISHLIST_PHP_FINAL.md",
+    "extension": ".md",
+    "bytes": 873
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_HOTFIX_TRIGGER_NOTIFICACIONES_WISHLIST.md",
+    "extension": ".md",
+    "bytes": 961
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_INSTALAR_PHPMAILER.md",
+    "extension": ".md",
+    "bytes": 1398
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_LOGIN_REDISHENO_LOGO_CLARO.md",
+    "extension": ".md",
+    "bytes": 594
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_MODALES_DEVOLUCIONES_FLUJO_FINAL.md",
+    "extension": ".md",
+    "bytes": 2536
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_MULTIPLES_IMAGENES_PRODUCTO.md",
+    "extension": ".md",
+    "bytes": 1099
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_NAVBAR_FOOTER_GLOBAL.md",
+    "extension": ".md",
+    "bytes": 885
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_NAVBAR_FOOTER_PRODUCTO_REAL.md",
+    "extension": ".md",
+    "bytes": 891
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_NAVBAR_PRODUCTO_UNIFICADO.md",
+    "extension": ".md",
+    "bytes": 924
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_NAV_NOTIS_OFERTAS_FIX.md",
+    "extension": ".md",
+    "bytes": 920
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_NOTA_CREDITO_CORREO_AUTO.md",
+    "extension": ".md",
+    "bytes": 1039
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_PANEL_EMPRESA_FACTURACION.md",
+    "extension": ".md",
+    "bytes": 1909
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_PARCHE_ERRORES_BACKORDER.md",
+    "extension": ".md",
+    "bytes": 2072
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_PROVEEDOR_EDITAR_CAPACIDAD.md",
+    "extension": ".md",
+    "bytes": 773
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_RECHAZO_ESTIMACION_FINAL.md",
+    "extension": ".md",
+    "bytes": 1514
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_REEMPLAZO_SERIES_TRAZABILIDAD.md",
+    "extension": ".md",
+    "bytes": 1306
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_REFORMULACION_SEGURA.md",
+    "extension": ".md",
+    "bytes": 4545
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "README_UPLOADS_ORDENADOS.md",
+    "extension": ".md",
+    "bytes": 2008
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "add_to_cart.php",
+    "extension": ".php",
+    "bytes": 3249
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "admin.php",
+    "extension": ".php",
+    "bytes": 209290
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "analitica.php",
+    "extension": ".php",
+    "bytes": 45671
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "api_filtrar_productos.php",
+    "extension": ".php",
+    "bytes": 4459
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "api_filtros.php",
+    "extension": ".php",
+    "bytes": 2643
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "api_guardar_producto.php",
+    "extension": ".php",
+    "bytes": 3579
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "api_producto.php",
+    "extension": ".php",
+    "bytes": 1088
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "api_wishlist.php",
+    "extension": ".php",
+    "bytes": 1513
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Config/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Controllers/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Controllers/Admin/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Controllers/Api/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Controllers/Auth/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Controllers/Cliente/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Controllers/Proveedor/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Helpers/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Middleware/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/README.md",
+    "extension": ".md",
+    "bytes": 547
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Repositories/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Repositories/Devoluciones/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Repositories/Pedidos/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Repositories/Productos/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Repositories/Proveedores/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Repositories/Usuarios/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Auth/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Carrito/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Catalogo/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Checkout/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Devoluciones/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Facturacion/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Garantias/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Notificaciones/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Pedidos/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Proveedor/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Services/Reabastecimiento/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Support/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "app/Support/paths.php",
+    "extension": ".php",
+    "bytes": 773
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "assets/electromax_logo.png",
+    "extension": ".png",
+    "bytes": 158007
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "assets/electromax_logo.svg",
+    "extension": ".svg",
+    "bytes": 751
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "assets/electromax_logo_pdf.jpg",
+    "extension": ".jpg",
+    "bytes": 49656
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "assets/electromax_logo_web.png",
+    "extension": ".png",
+    "bytes": 158007
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "assets/emx_modales.js",
+    "extension": ".js",
+    "bytes": 7865
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "assets/emx_search_autocomplete.js",
+    "extension": ".js",
+    "bytes": 7334
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "assets/factura_header_electromax.jpg",
+    "extension": ".jpg",
+    "bytes": 19771
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "auth.php",
+    "extension": ".php",
+    "bytes": 21100
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "banner_redirect.php",
+    "extension": ".php",
+    "bytes": 2317
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "bd.sql",
+    "extension": ".sql",
+    "bytes": 17899
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "bootstrap/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "bootstrap/README.md",
+    "extension": ".md",
+    "bytes": 175
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "bootstrap/app.php",
+    "extension": ".php",
+    "bytes": 1002
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "buscar_sugerencias.php",
+    "extension": ".php",
+    "bytes": 5483
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "cancelar_membresia.php",
+    "extension": ".php",
+    "bytes": 1212
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "carrito.php",
+    "extension": ".php",
+    "bytes": 39511
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "checkout.php",
+    "extension": ".php",
+    "bytes": 71970
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "components/footer.php",
+    "extension": ".php",
+    "bytes": 6649
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "components/navbar.php",
+    "extension": ".php",
+    "bytes": 9206
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "composer.json",
+    "extension": ".json",
+    "bytes": 57
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "config_correo.example.php",
+    "extension": ".php",
+    "bytes": 569
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "config_correo.php",
+    "extension": ".php",
+    "bytes": 1751
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "config_google.php",
+    "extension": ".php",
+    "bytes": 671
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "correos_empresa.php",
+    "extension": ".php",
+    "bytes": 10944
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "crear_admin.php",
+    "extension": ".php",
+    "bytes": 1239
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "crear_usuario_empresa.php",
+    "extension": ".php",
+    "bytes": 3561
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/README.md",
+    "extension": ".md",
+    "bytes": 189
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/functions/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/hotfixes/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/migrations/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/queries/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/queries/admin/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/queries/cliente/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/queries/proveedor/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/schema/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/seeds/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "database/triggers/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "db.php",
+    "extension": ".php",
+    "bytes": 1235
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/00_RESUMEN_FASE_1.md",
+    "extension": ".md",
+    "bytes": 1335
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/ARCHIVOS_CRITICOS_NO_MOVER_AUN.md",
+    "extension": ".md",
+    "bytes": 3474
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/DEPENDENCIAS_ENTRE_ARCHIVOS.md",
+    "extension": ".md",
+    "bytes": 13972
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/INVENTARIO_SQL_ACTUAL.md",
+    "extension": ".md",
+    "bytes": 2175
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/MAPA_ARCHIVOS_ACTUAL.md",
+    "extension": ".md",
+    "bytes": 4775
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/PLAN_FASE_2.md",
+    "extension": ".md",
+    "bytes": 2262
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/RUTAS_ACTUALES.md",
+    "extension": ".md",
+    "bytes": 16285
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/inventario_archivos.csv",
+    "extension": ".csv",
+    "bytes": 9370
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase1/inventario_tecnico.json",
+    "extension": ".json",
+    "bytes": 13344
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "docs/fase2/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "empresa_config.php",
+    "extension": ".php",
+    "bytes": 450
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "factura_pdf.php",
+    "extension": ".php",
+    "bytes": 1282
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "ficha_tecnica.php",
+    "extension": ".php",
+    "bytes": 6983
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "ficha_tecnica_pdf.php",
+    "extension": ".php",
+    "bytes": 13326
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "fix_reabastecimiento_duplicadas.sql",
+    "extension": ".sql",
+    "bytes": 1173
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "flujo_admin.php",
+    "extension": ".php",
+    "bytes": 76555
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_automatizacion.php",
+    "extension": ".php",
+    "bytes": 6697
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_auxiliares.php",
+    "extension": ".php",
+    "bytes": 1124
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_backorder.php",
+    "extension": ".php",
+    "bytes": 25679
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_descuentos_volumen.php",
+    "extension": ".php",
+    "bytes": 4591
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_facturacion.php",
+    "extension": ".php",
+    "bytes": 41764
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_ficha_tecnica.php",
+    "extension": ".php",
+    "bytes": 13185
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_garantias.php",
+    "extension": ".php",
+    "bytes": 3001
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_google_auth.php",
+    "extension": ".php",
+    "bytes": 15591
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_home.php",
+    "extension": ".php",
+    "bytes": 12460
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_logistica.php",
+    "extension": ".php",
+    "bytes": 6487
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_notificaciones.php",
+    "extension": ".php",
+    "bytes": 618
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_planes.php",
+    "extension": ".php",
+    "bytes": 2170
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_soporte.php",
+    "extension": ".php",
+    "bytes": 5257
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_stock.php",
+    "extension": ".php",
+    "bytes": 22595
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "funciones_wishlist.php",
+    "extension": ".php",
+    "bytes": 13213
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "garantia.php",
+    "extension": ".php",
+    "bytes": 6431
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "generar_etiqueta.php",
+    "extension": ".php",
+    "bytes": 3285
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "google_auth.php",
+    "extension": ".php",
+    "bytes": 1948
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "hotfix_notificaciones_descuento_wishlist.sql",
+    "extension": ".sql",
+    "bytes": 884
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "hotfix_notificaciones_wishlist_php_final.sql",
+    "extension": ".sql",
+    "bytes": 1307
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "hotfix_notificaciones_wishlist_trigger.sql",
+    "extension": ".sql",
+    "bytes": 5868
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "imprimir_guia.php",
+    "extension": ".php",
+    "bytes": 4588
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "index.php",
+    "extension": ".php",
+    "bytes": 70358
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "instalar_phpmailer_si_tengo_composer.bat",
+    "extension": ".bat",
+    "bytes": 603
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "instalar_phpmailer_windows.bat",
+    "extension": ".bat",
+    "bytes": 1790
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "logout.php",
+    "extension": ".php",
+    "bytes": 341
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "mi_cuenta.php",
+    "extension": ".php",
+    "bytes": 93919
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_busqueda_inteligente.sql",
+    "extension": ".sql",
+    "bytes": 794
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_descuentos_volumen_funcionales.sql",
+    "extension": ".sql",
+    "bytes": 619
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_devoluciones_decision_cliente.sql",
+    "extension": ".sql",
+    "bytes": 2962
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_devoluciones_estimacion_reemplazo_prime.sql",
+    "extension": ".sql",
+    "bytes": 950
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_devoluciones_flujo_secuencial_fraude.sql",
+    "extension": ".sql",
+    "bytes": 2024
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_email_outbox_panel.sql",
+    "extension": ".sql",
+    "bytes": 633
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_empresa_config_admin.sql",
+    "extension": ".sql",
+    "bytes": 3032
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_empresa_simplificada_admin.sql",
+    "extension": ".sql",
+    "bytes": 3032
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_facturacion_garantias_checkout.sql",
+    "extension": ".sql",
+    "bytes": 11761
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_final_correo_facturacion.sql",
+    "extension": ".sql",
+    "bytes": 15589
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_flujo_guiado.sql",
+    "extension": ".sql",
+    "bytes": 6263
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_google_login.sql",
+    "extension": ".sql",
+    "bytes": 1266
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_nota_credito_correo_auto.sql",
+    "extension": ".sql",
+    "bytes": 1044
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_notificaciones_wishlist_mejoradas.sql",
+    "extension": ".sql",
+    "bytes": 455
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_reemplazo_series_trazabilidad.sql",
+    "extension": ".sql",
+    "bytes": 1451
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_reformulacion_segura.sql",
+    "extension": ".sql",
+    "bytes": 7608
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "migracion_soporte_tickets.sql",
+    "extension": ".sql",
+    "bytes": 2464
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "notificaciones.php",
+    "extension": ".php",
+    "bytes": 5534
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "planes.php",
+    "extension": ".php",
+    "bytes": 21124
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "probar_correo_facturacion.php",
+    "extension": ".php",
+    "bytes": 2406
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "procesar_devolucion.php",
+    "extension": ".php",
+    "bytes": 8786
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "producto.php",
+    "extension": ".php",
+    "bytes": 56526
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "proveedor.php",
+    "extension": ".php",
+    "bytes": 66653
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "public/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "public/README.md",
+    "extension": ".md",
+    "bytes": 258
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "public/assets/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "public/media/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "public/uploads/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "recibir_devolucion.php",
+    "extension": ".php",
+    "bytes": 4117
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "responder_devolucion.php",
+    "extension": ".php",
+    "bytes": 4877
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "routes/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "routes/README.md",
+    "extension": ".md",
+    "bytes": 205
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "routes/admin.php",
+    "extension": ".php",
+    "bytes": 160
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "routes/api.php",
+    "extension": ".php",
+    "bytes": 225
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "routes/proveedor.php",
+    "extension": ".php",
+    "bytes": 176
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "routes/web.php",
+    "extension": ".php",
+    "bytes": 420
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "scripts/reorganizar_uploads_existentes.php",
+    "extension": ".php",
+    "bytes": 1192
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "seguridad.php",
+    "extension": ".php",
+    "bytes": 15471
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "simulador_sucursales.php",
+    "extension": ".php",
+    "bytes": 22958
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "soporte.php",
+    "extension": ".php",
+    "bytes": 20739
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "soporte_admin.php",
+    "extension": ".php",
+    "bytes": 22452
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/README.md",
+    "extension": ".md",
+    "bytes": 248
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/cache/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/comprobantes/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/facturas/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/logs/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/notas_credito/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/temp/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/uploads/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/uploads/devoluciones/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/uploads/perfiles/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/uploads/productos/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "storage/uploads/soporte/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "tracking.php",
+    "extension": ".php",
+    "bytes": 35314
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/.htaccess",
+    "extension": "",
+    "bytes": 191
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/Televisor Indurama 2.png",
+    "extension": ".png",
+    "bytes": 287960
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/Televisor Indurama 3.png",
+    "extension": ".png",
+    "bytes": 432446
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/Televisor Indurama 4.png",
+    "extension": ".png",
+    "bytes": 43882
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/Televisor Indurama 5.png",
+    "extension": ".png",
+    "bytes": 40347
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/Televisor Indurama.png",
+    "extension": ".png",
+    "bytes": 213638
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/_README_ESTRUCTURA_UPLOADS.txt",
+    "extension": ".txt",
+    "bytes": 356
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/INFORME TECNICO DN INVESTIGACION ANTIDROGAS. ok.pdf",
+    "extension": ".pdf",
+    "bytes": 1332947
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/banner.webp",
+    "extension": ".webp",
+    "bytes": 138238
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/banner2.webp",
+    "extension": ".webp",
+    "bytes": 193478
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/banner3.webp",
+    "extension": ".webp",
+    "bytes": 159684
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/banner_1784505975.jpg",
+    "extension": ".jpg",
+    "bytes": 35195
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/banner_1784686666.webp",
+    "extension": ".webp",
+    "bytes": 138238
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/banner_1784687194.webp",
+    "extension": ".webp",
+    "bytes": 193478
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/banner_1784859999.webp",
+    "extension": ".webp",
+    "bytes": 193478
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/banners/orden_de_compra pintura manta 2_nro._nic-1768148880001-2026-00028-signed.pdf",
+    "extension": ".pdf",
+    "bytes": 299247
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/confirmaciones/conf_9628a754_1785464753_0.jpg",
+    "extension": ".jpg",
+    "bytes": 3121
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/devoluciones/dev_6a60140f86f2f_Tom And Jerry Wallpaper.jpg",
+    "extension": ".jpg",
+    "bytes": 35195
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/devoluciones/dev_6a62a3d968f48_banner_1784505975.jpg",
+    "extension": ".jpg",
+    "bytes": 35195
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/devoluciones/dev_6a62b1537e87f_banner_1784505975.jpg",
+    "extension": ".jpg",
+    "bytes": 35195
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/devoluciones/dev_6a6811d698290_user_2c296d6c-652d-4f02-aa8c-1ac9c7b13c9e_1785200600.jpeg",
+    "extension": ".jpeg",
+    "bytes": 49582
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/logo indurama.png",
+    "extension": ".png",
+    "bytes": 10759
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/logo lg.png",
+    "extension": ".png",
+    "bytes": 12103
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/logo samsung.png",
+    "extension": ".png",
+    "bytes": 6189
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/logo.png",
+    "extension": ".png",
+    "bytes": 2105259
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/marca_1784408625.png",
+    "extension": ".png",
+    "bytes": 10759
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/marca_1784408744.png",
+    "extension": ".png",
+    "bytes": 12103
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/marca_1784408813.png",
+    "extension": ".png",
+    "bytes": 6189
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/perfiles/ft.jpeg",
+    "extension": ".jpeg",
+    "bytes": 49582
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/perfiles/user_2c296d6c-652d-4f02-aa8c-1ac9c7b13c9e_1785200600.jpeg",
+    "extension": ".jpeg",
+    "bytes": 49582
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_1784343838.png",
+    "extension": ".png",
+    "bytes": 65175
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_1784386952.png",
+    "extension": ".png",
+    "bytes": 65175
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_1784387310.png",
+    "extension": ".png",
+    "bytes": 65175
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_1784389146.png",
+    "extension": ".png",
+    "bytes": 320376
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_cb2c225c-bedb-4f8d-a5fe-944c00dbeedc_1784390846_0.png",
+    "extension": ".png",
+    "bytes": 320376
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_cb2c225c-bedb-4f8d-a5fe-944c00dbeedc_1784390846_1.png",
+    "extension": ".png",
+    "bytes": 65175
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_0.png",
+    "extension": ".png",
+    "bytes": 213638
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_1.png",
+    "extension": ".png",
+    "bytes": 287960
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_2.png",
+    "extension": ".png",
+    "bytes": 432446
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_3.png",
+    "extension": ".png",
+    "bytes": 43882
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "uploads/prod_d954dfe2-ebd1-48f9-8ecf-891e6de1cd7d_1784395203_4.png",
+    "extension": ".png",
+    "bytes": 40347
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "verificar_phpmailer.php",
+    "extension": ".php",
+    "bytes": 3733
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/README.md",
+    "extension": ".md",
+    "bytes": 226
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/admin/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/admin/dashboard/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/admin/devoluciones/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/admin/pedidos/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/admin/productos/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/admin/proveedores/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/auth/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/cliente/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/cliente/carrito/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/cliente/catalogo/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/cliente/checkout/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/cliente/cuenta/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/cliente/soporte/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/components/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/layouts/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/proveedor/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/proveedor/capacidad/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/proveedor/cotizaciones/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "views/proveedor/perfil/.gitkeep",
+    "extension": "",
+    "bytes": 0
+  },
+  {
+    "tipo": "archivo",
+    "ruta": "wishlist.php",
+    "extension": ".php",
+    "bytes": 6319
+  }
+]

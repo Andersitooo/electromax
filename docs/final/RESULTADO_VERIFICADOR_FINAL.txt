@@ -1,0 +1,5 @@
+Verificación estructura final neta
+Raíz: /mnt/data/emx_final_estructura_neta
+
+Resultado: estructura final neta correcta. No hay PHP/SQL legacy en raíz.
+

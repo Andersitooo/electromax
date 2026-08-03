@@ -1,0 +1,43 @@
+{
+  "fase": 4,
+  "fecha": "2026-08-02 23:12:17",
+  "objetivo": "Separar lógica de negocio y comentar funciones, reglas y cálculos",
+  "cambios": [
+    {
+      "archivo": "app/Services/Catalogo/PricingService.php",
+      "tipo": "nuevo",
+      "descripcion": "Servicio de precios, IVA y descuentos"
+    },
+    {
+      "archivo": "app/Services/Inventario/SerialNumberService.php",
+      "tipo": "nuevo",
+      "descripcion": "Servicio de SKU, series y validación de series"
+    },
+    {
+      "archivo": "app/Services/Proveedor/SupplierCapacityService.php",
+      "tipo": "nuevo",
+      "descripcion": "Servicio de capacidad y descuentos del proveedor"
+    },
+    {
+      "archivo": "app/Services/ReglasNegocio/BusinessRulesReference.php",
+      "tipo": "nuevo",
+      "descripcion": "Mapa explicativo de reglas del negocio"
+    },
+    {
+      "archivo": "app/Helpers/funciones_descuentos_volumen.php",
+      "tipo": "modificado",
+      "descripcion": "Ahora delega cálculos a PricingService"
+    },
+    {
+      "archivo": "app/Helpers/funciones_auxiliares.php",
+      "tipo": "modificado",
+      "descripcion": "Ahora delega SKU y series a SerialNumberService"
+    },
+    {
+      "archivo": "proveedor.php",
+      "tipo": "modificado",
+      "descripcion": "Ahora delega descuento por rango y normalización a SupplierCapacityService"
+    }
+  ],
+  "nota": "Las rutas antiguas se conservan. La separación completa de vistas corresponde a la Fase 5."
+}
