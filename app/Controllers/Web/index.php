@@ -271,9 +271,80 @@ if (isset($pdo)) {
         FROM productos p LEFT JOIN categorias c ON p.categoria_id = c.id LEFT JOIN marcas m ON p.marca_id = m.id
         LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1
         WHERE $where_sql ORDER BY {$order_sql} $limit";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute($execute_params);
-    $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute($execute_params);
+        $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Throwable $e) {
+        /*
+         * Fallback estable para producción:
+         * Si la búsqueda avanzada falla por diferencias de driver PDO/PostgreSQL
+         * (parámetros nombrados, pg_trgm o funciones de similitud), no rompemos la web.
+         * Se ejecuta una búsqueda simple, insensible a mayúsculas/minúsculas,
+         * usando parámetros posicionales.
+         */
+        error_log('ElectroMax búsqueda avanzada falló: ' . $e->getMessage());
+
+        if (empty($busqueda_activa)) {
+            throw $e;
+        }
+
+        $fallback_terms = [];
+        $fallback_terms[] = $busqueda_query;
+        foreach ($busqueda_tokens as $token) {
+            if ($token !== '' && !in_array($token, $fallback_terms, true)) {
+                $fallback_terms[] = $token;
+            }
+        }
+        $fallback_terms = array_slice($fallback_terms, 0, 8);
+
+        $fallback_where = ["p.deleted_at IS NULL", "p.is_active = TRUE"];
+        $fallback_params = [];
+        $fallback_search_parts = [];
+
+        foreach ($fallback_terms as $term) {
+            $like = '%' . $term . '%';
+            $prefix = $term . '%';
+            $fallback_search_parts[] = "(
+                p.nombre ILIKE ?
+                OR p.nombre ILIKE ?
+                OR COALESCE(p.descripcion_corta,'') ILIKE ?
+                OR COALESCE(p.sku,'') ILIKE ?
+                OR COALESCE(m.nombre,'') ILIKE ?
+                OR COALESCE(c.nombre,'') ILIKE ?
+            )";
+            array_push($fallback_params, $like, $prefix, $like, $like, $like, $like);
+        }
+
+        if (!empty($fallback_search_parts)) {
+            $fallback_where[] = '(' . implode(' OR ', $fallback_search_parts) . ')';
+        }
+
+        $rank_prefix = $busqueda_query . '%';
+        $rank_like = '%' . $busqueda_query . '%';
+
+        $fallback_sql = "SELECT p.*, c.nombre as categoria, c.slug as categoria_slug, m.nombre as marca, pm.url as imagen_principal,
+            0 AS search_score,
+            (SELECT COALESCE(AVG(calificacion),0) FROM \"reseñas_productos\" WHERE producto_id = p.id AND aprobado = TRUE) as promedio_calificacion,
+            (SELECT COUNT(*) FROM \"reseñas_productos\" WHERE producto_id = p.id AND aprobado = TRUE) as total_reseñas
+            FROM productos p
+            LEFT JOIN categorias c ON p.categoria_id = c.id
+            LEFT JOIN marcas m ON p.marca_id = m.id
+            LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1
+            WHERE " . implode(' AND ', $fallback_where) . "
+            ORDER BY
+                CASE WHEN p.nombre ILIKE ? THEN 0 ELSE 1 END,
+                CASE WHEN p.nombre ILIKE ? THEN 0 ELSE 1 END,
+                p.nombre ASC
+            LIMIT 48";
+
+        $fallback_params[] = $rank_prefix;
+        $fallback_params[] = $rank_like;
+
+        $stmt = $pdo->prepare($fallback_sql);
+        $stmt->execute($fallback_params);
+        $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 function getCategoryIcon($n) {
