@@ -10,11 +10,22 @@ require_once EMX_HELPERS_PATH . '/funciones_google_auth.php';
 $action = $_GET['action'] ?? 'login';
 
 try {
-    if ($action === 'login') {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') throw new Exception('Método no permitido.');
+    if ($action === 'login' || $action === 'registro') {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            throw new Exception('Solicitud de Google inválida. Vuelve al formulario y presiona el botón de Google nuevamente.');
+        }
+
         emxVerificarCsrf();
+
         $credential = $_POST['credential'] ?? '';
-        if (!$credential) throw new Exception('Google no devolvió credencial.');
+        if (!$credential) {
+            throw new Exception('Google no devolvió credencial. Intenta nuevamente o usa correo y contraseña.');
+        }
+
+        // Para login y registro usamos el mismo flujo:
+        // - Si la cuenta Google ya existe, inicia sesión.
+        // - Si existe un cliente con el mismo correo, vincula Google automáticamente.
+        // - Si no existe, crea el cliente.
         $user = emxGoogleAutenticar($pdo, $credential);
         header('Location: ' . emxGoogleRedirectPorRol($user['rol_nombre'] ?? 'CLIENTE'));
         exit;

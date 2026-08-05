@@ -10,7 +10,21 @@ if (!defined('EMX_ROOT')) {
     require_once dirname(__DIR__, 2) . '/bootstrap/app.php';
 }
 
-require_once EMX_ROOT . '/config_google.php';
+// Cargar configuración real de Google desde la estructura nueva.
+// Antes apuntaba a EMX_ROOT/config_google.php, archivo que ya no existe en la estructura final,
+// y eso podía dejar google_auth.php en blanco con error 500.
+if (!function_exists('emxGoogleClientId')) {
+    $googleConfigNuevo = defined('EMX_CONFIG_PATH') ? EMX_CONFIG_PATH . '/google.php' : EMX_ROOT . '/app/Config/google.php';
+    $googleConfigLegacy = EMX_ROOT . '/config_google.php';
+
+    if (is_file($googleConfigNuevo)) {
+        require_once $googleConfigNuevo;
+    } elseif (is_file($googleConfigLegacy)) {
+        require_once $googleConfigLegacy;
+    } else {
+        throw new Exception('No se encontró la configuración de Google Login. Revisa app/Config/google.php.');
+    }
+}
 
 function emxGoogleColumnExists($pdo, $tabla, $columna) {
     if (function_exists('emxDbColumnExists')) return emxDbColumnExists($pdo, $tabla, $columna);
