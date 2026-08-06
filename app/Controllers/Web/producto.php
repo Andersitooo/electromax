@@ -139,6 +139,31 @@ if ($producto_id && isset($pdo)) {
 
         $productos_relacionados = emxObtenerRecomendadosProducto($pdo, $producto, $producto_id, 10);
 
+        // Última red de seguridad: si el recomendador no devuelve datos por alguna
+        // diferencia de BD, aún mostramos productos activos para no dejar vacía la
+        // sección "Productos recomendados" debajo de especificaciones técnicas.
+        if (empty($productos_relacionados)) {
+            try {
+                $stmt_rel_fallback = $pdo->prepare("
+                    SELECT p.*, c.nombre as categoria, c.slug as categoria_slug, m.nombre as marca, pm.url as imagen_principal
+                    FROM productos p
+                    LEFT JOIN categorias c ON p.categoria_id = c.id
+                    LEFT JOIN marcas m ON p.marca_id = m.id
+                    LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1
+                    WHERE p.id <> ? AND p.deleted_at IS NULL AND p.is_active = TRUE
+                    ORDER BY
+                        CASE WHEN p.categoria_id = ? THEN 0 ELSE 1 END,
+                        CASE WHEN p.marca_id = ? THEN 0 ELSE 1 END,
+                        p.created_at DESC
+                    LIMIT 10
+                ");
+                $stmt_rel_fallback->execute([$producto_id, $producto['categoria_id'] ?? null, $producto['marca_id'] ?? null]);
+                $productos_relacionados = $stmt_rel_fallback->fetchAll(PDO::FETCH_ASSOC);
+            } catch (Throwable $e) {
+                $productos_relacionados = [];
+            }
+        }
+
         $stmt_reviews = $pdo->prepare("SELECT r.*, u.nombres, u.apellidos, u.foto_perfil_url FROM reseñas_productos r JOIN usuarios u ON r.usuario_id = u.id WHERE r.producto_id = ? AND r.aprobado = TRUE ORDER BY r.created_at DESC LIMIT 10");
         $stmt_reviews->execute([$producto_id]);
         $reviews = $stmt_reviews->fetchAll(PDO::FETCH_ASSOC);

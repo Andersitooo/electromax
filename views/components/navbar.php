@@ -14,6 +14,17 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 $currentPage = basename($_SERVER['PHP_SELF'] ?? 'index.php');
 $isLogged = isset($_SESSION['usuario_id']);
 
+// Detecta la categoría activa para resaltar correctamente el menú inferior.
+// Funciona en index.php?categoria=slug y también en producto.php cuando el producto
+// pertenece a una categoría concreta.
+$activeCategoriaSlug = '';
+if ($currentPage === 'index.php' && !empty($_GET['categoria'])) {
+    $activeCategoriaSlug = (string)$_GET['categoria'];
+} elseif ($currentPage === 'producto.php' && isset($producto) && is_array($producto) && !empty($producto['categoria_slug'])) {
+    $activeCategoriaSlug = (string)$producto['categoria_slug'];
+}
+$inicioActivo = ($currentPage === 'index.php' && $activeCategoriaSlug === '' && empty($_GET['q']) && empty($_GET['tag']) && empty($_GET['descuento_min']) && empty($_GET['prime_only']));
+
 if (!function_exists('emxNavTableExists')) {
     function emxNavTableExists($pdo, $table) {
         static $cache = [];
@@ -76,9 +87,9 @@ if (isset($pdo)) {
 ?>
 <nav class="sticky top-0 z-50 bg-gradient-to-r from-sky-50 via-white to-blue-50 border-b border-blue-100 shadow-[0_10px_30px_rgba(15,23,42,.07)] backdrop-blur-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="min-h-[76px] flex items-center gap-4">
+        <div class="min-h-[68px] sm:min-h-[76px] flex items-center gap-2 sm:gap-4">
             <a href="index.php" class="flex items-center shrink-0 group" aria-label="ElectroMax">
-                <img src="assets/electromax_logo.png" alt="ElectroMax" class="h-13 sm:h-14 w-auto max-w-[220px] object-contain drop-shadow-md group-hover:scale-[1.02] transition">
+                <img src="assets/electromax_logo.png" alt="ElectroMax" class="h-11 sm:h-14 w-auto max-w-[160px] sm:max-w-[220px] object-contain drop-shadow-md group-hover:scale-[1.02] transition">
             </a>
 
             <form action="index.php" method="GET" class="hidden md:flex flex-1 max-w-xl mx-auto relative" data-emx-search-form autocomplete="off">
@@ -98,7 +109,7 @@ if (isset($pdo)) {
                 </div>
             </form>
 
-            <div class="flex items-center gap-3 ml-auto">
+            <div class="flex items-center gap-1.5 sm:gap-3 ml-auto">
                 <?php if ($isLogged): ?>
                     <a href="wishlist.php" class="relative w-10 h-10 rounded-xl flex items-center justify-center text-slate-600 hover:text-red-600 hover:bg-red-50 transition" title="Lista de deseos">
                         <i class="fas fa-heart text-lg"></i>
@@ -139,18 +150,39 @@ if (isset($pdo)) {
         </div>
     </div>
 
+
+    <div class="md:hidden border-t border-blue-100 bg-white/95 px-4 py-3">
+        <form action="index.php" method="GET" class="relative" data-emx-search-form autocomplete="off">
+            <div class="relative w-full">
+                <input
+                    type="text"
+                    name="q"
+                    data-emx-search-input
+                    value="<?= htmlspecialchars($_GET['q'] ?? '') ?>"
+                    placeholder="Buscar productos..."
+                    class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition text-sm text-slate-800 placeholder:text-slate-400 shadow-inner"
+                >
+                <button type="submit" class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-700 transition" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div data-emx-search-results class="hidden absolute left-0 right-0 top-[calc(100%+10px)] bg-white border border-slate-200 rounded-2xl shadow-2xl shadow-slate-900/12 overflow-hidden z-[90]"></div>
+            </div>
+        </form>
+    </div>
+
     <div class="bg-white/95 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center gap-2 overflow-x-auto py-2.5 no-scrollbar">
-                <a href="index.php" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-bold transition <?= $currentPage === 'index.php' ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900' ?>">Inicio</a>
+                <a href="index.php" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-bold transition <?= $inicioActivo ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900' ?>">Inicio</a>
 
                 <?php foreach ($categorias_nav_comp as $cat): ?>
-                    <a href="index.php?categoria=<?= urlencode($cat['slug']) ?>" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-semibold transition text-slate-600 hover:bg-slate-100 hover:text-slate-900">
+                    <?php $catActiva = ($activeCategoriaSlug !== '' && (string)$cat['slug'] === $activeCategoriaSlug); ?>
+                    <a href="index.php?categoria=<?= urlencode($cat['slug']) ?>" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-semibold transition <?= $catActiva ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900' ?>" <?= $catActiva ? 'aria-current="page"' : '' ?>>
                         <?= htmlspecialchars($cat['nombre']) ?>
                     </a>
                 <?php endforeach; ?>
 
-                <a href="planes.php" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-bold bg-amber-500 text-white ml-auto flex items-center gap-1 hover:bg-amber-600 transition">
+                <a href="planes.php" class="whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-bold bg-amber-500 text-white flex items-center gap-1 hover:bg-amber-600 transition">
                     <i class="fas fa-crown text-xs"></i>Membresías
                 </a>
 

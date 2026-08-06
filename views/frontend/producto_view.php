@@ -66,6 +66,20 @@
         .modal-content {
             animation: modalSlide 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
+
+        /* Ajustes finales de responsividad: ficha, tabs y recomendados cómodos en móvil/tablet. */
+        @media (max-width: 640px) {
+            .gallery-container { border-radius: 1rem; padding: 1rem; min-height: 280px; }
+            .gallery-arrow { opacity: 1; width: 38px; height: 38px; }
+            .tab-btn { padding-left: 1rem !important; padding-right: 1rem !important; }
+            .spec-card { padding: 1rem; }
+            .swiper { overflow: hidden !important; }
+            .related-swiper .swiper-slide { width: 74vw; }
+        }
+        @media (min-width: 641px) and (max-width: 1023px) {
+            .related-swiper .swiper-slide { width: 42vw; }
+        }
+
         @keyframes modalSlide {
             from { opacity: 0; transform: translateY(20px) scale(0.95); }
             to { opacity: 1; transform: translateY(0) scale(1); }
@@ -521,19 +535,23 @@
         }
 
         document.addEventListener('DOMContentLoaded', () =>{
-            new Swiper('.related-swiper', {
-                slidesPerView: 1.5,
-                spaceBetween: 16,
-                breakpoints: {
-                    640: { slidesPerView: 2.5 },
-                    1024: { slidesPerView: 3.5 },
-                    1280: { slidesPerView: 4.5 }
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next-rel',
-                    prevEl: '.swiper-button-prev-rel',
-                },
-            });
+            const related = document.querySelector('.related-swiper');
+            if (related && typeof Swiper !== 'undefined') {
+                new Swiper('.related-swiper', {
+                    slidesPerView: 1.15,
+                    spaceBetween: 14,
+                    breakpoints: {
+                        480: { slidesPerView: 1.4, spaceBetween: 14 },
+                        640: { slidesPerView: 2.2, spaceBetween: 16 },
+                        1024: { slidesPerView: 3.5, spaceBetween: 18 },
+                        1280: { slidesPerView: 4.5, spaceBetween: 20 }
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next-rel',
+                        prevEl: '.swiper-button-prev-rel',
+                    },
+                });
+            }
         });
 
         document.addEventListener('keydown', (e) =>{

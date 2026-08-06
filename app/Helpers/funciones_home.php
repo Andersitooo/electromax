@@ -154,12 +154,31 @@ function emxObtenerRecomendadosProducto(PDO $pdo, array $producto, string $produ
 
         $sql = "\n            WITH ventas AS (\n                SELECT dp.producto_id, SUM(COALESCE(dp.cantidad, 0))::integer AS total_ventas\n                FROM detalle_pedidos dp\n                INNER JOIN pedidos ped ON ped.id = dp.pedido_id\n                WHERE LOWER(COALESCE(ped.estado, '')) NOT IN ('pendiente', 'cancelado', 'reembolsado', 'rechazado', 'fallido')\n                GROUP BY dp.producto_id\n            ), base AS (" . emxProductoQueryBase() . ")\n            SELECT base.*, COALESCE(v.total_ventas, 0) AS total_ventas,\n                   (CASE WHEN base.categoria_id = ? THEN 55 ELSE 0 END\n                    + CASE WHEN base.marca_id = ? THEN 20 ELSE 0 END\n                    + CASE WHEN ABS(base.precio_base - ?) / ? <= 0.25 THEN 15 ELSE 0 END\n                    + LEAST(COALESCE(v.total_ventas, 0), 50) * 0.20\n                    + COALESCE(base.promedio_calificacion, 0) * 2\n                   ) AS recomendacion_score\n            FROM base\n            LEFT JOIN ventas v ON v.producto_id = base.id\n            WHERE base.id <>?\n              AND base.deleted_at IS NULL\n              AND base.is_active = TRUE\n            ORDER BY recomendacion_score DESC, base.created_at DESC\n            LIMIT " . (int)$limit;
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$categoriaId, $marcaId, $precio, $precio, $productoId, $categoriaId]);
+        $stmt->execute([$categoriaId, $marcaId, $precio, $precio, $productoId]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (Throwable $e) {
         try {
-            $stmt = $pdo->prepare("\n                SELECT p.*, m.nombre as marca, pm.url as imagen_principal\n                FROM productos p\n                LEFT JOIN marcas m ON p.marca_id = m.id\n                LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1\n                WHERE p.id <>? AND p.deleted_at IS NULL AND p.is_active = TRUE\n                ORDER BY p.created_at DESC\n                LIMIT " . (int)$limit);
-            $stmt->execute([$productoId, $producto['categoria_id'] ?? null]);
+            $stmt = $pdo->prepare("
+                SELECT p.*, c.nombre as categoria, c.slug as categoria_slug, m.nombre as marca, pm.url as imagen_principal,
+                       COALESCE(rv.promedio_calificacion, 0) as promedio_calificacion,
+                       COALESCE(rv.total_resenas, 0) as total_reseñas
+                FROM productos p
+                LEFT JOIN categorias c ON p.categoria_id = c.id
+                LEFT JOIN marcas m ON p.marca_id = m.id
+                LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1
+                LEFT JOIN (
+                    SELECT producto_id, AVG(calificacion) as promedio_calificacion, COUNT(*) as total_resenas
+                    FROM reseñas_productos
+                    WHERE aprobado = TRUE
+                    GROUP BY producto_id
+                ) rv ON rv.producto_id = p.id
+                WHERE p.id <>? AND p.deleted_at IS NULL AND p.is_active = TRUE
+                ORDER BY
+                    CASE WHEN p.categoria_id = ? THEN 0 ELSE 1 END,
+                    CASE WHEN p.marca_id = ? THEN 0 ELSE 1 END,
+                    p.created_at DESC
+                LIMIT " . (int)$limit);
+            $stmt->execute([$productoId, $producto['categoria_id'] ?? null, $producto['marca_id'] ?? null]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (Throwable $e2) {
             return [];
