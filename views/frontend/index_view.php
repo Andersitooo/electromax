@@ -55,18 +55,6 @@
             100% { transform: scale(1); }
         }
         .heart-anim { animation: heartPop 0.4s ease-in-out; }
-
-        /* Ajustes finales de responsividad para móvil, tablet y escritorio. */
-        @media (max-width: 640px) {
-            .card-hover:hover { transform: none; box-shadow: 0 8px 18px rgba(15,23,42,0.08); }
-            .filtros-sidebar { display: none; }
-            .productos-grid { width: 100%; }
-            #contenedor-productos, #productos-destacados-grid { gap: .85rem; }
-            .cat-icon-wrap { width: 2.55rem !important; height: 2.55rem !important; }
-        }
-        @media (min-width: 641px) and (max-width: 1023px) {
-            .productos-grid { width: 100%; }
-        }
     </style></head><body class="flex flex-col min-h-screen bg-gray-50"><?php require EMX_VIEWS_PATH . '/components/navbar.php'; ?><?php if (!$filtro_activo): ?><!-- BENEFICIOS STRIP --><div class="bg-slate-800 py-2.5"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-6 sm:gap-10"><div class="flex items-center gap-2 text-white"><div class="w-6 h-6 bg-emerald-500/20 rounded flex items-center justify-center"><i class="fas fa-truck-fast text-emerald-400 text-xs"></i></div><span class="text-xs font-medium">Envío gratis +$500</span></div><div class="flex items-center gap-2 text-white"><div class="w-6 h-6 bg-blue-500/20 rounded flex items-center justify-center"><i class="fas fa-shield-halved text-blue-400 text-xs"></i></div><span class="text-xs font-medium">Compra segura</span></div><div class="flex items-center gap-2 text-white"><div class="w-6 h-6 bg-amber-500/20 rounded flex items-center justify-center"><i class="fas fa-rotate-left text-amber-400 text-xs"></i></div><span class="text-xs font-medium">30 días devolución</span></div><div class="flex items-center gap-2 text-white"><div class="w-6 h-6 bg-slate-500/20 rounded flex items-center justify-center"><i class="fas fa-headset text-slate-400 text-xs"></i></div><span class="text-xs font-medium">Soporte 24/7</span></div></div></div><!-- HERO PRINCIPAL DINÁMICO --><?= emxRenderHomeSlot($pdo, $secciones_home, 'hero_principal') ?><!-- CATEGORIAS --><?php if (!empty($categorias_display)): ?><section class="bg-white py-8"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between mb-5"><h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Categorías</h2><span class="text-sm text-gray-400"><?= count($categorias_display) ?> disponibles</span></div><div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4"><?php foreach ($categorias_display as $cat):
                 $icon = getCategoryIcon($cat['nombre']);
                 $accent = getCategoryAccent($cat['nombre']);

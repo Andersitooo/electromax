@@ -158,14 +158,28 @@ function ensure_space(&$c,&$pages,&$pageNo,$p,$logoExists,$logoInfo,&$y,$needed)
         $y = 642;
     }
 }
-function draw_spec_card($x,$y,$w,$h,$label,$valueLines) {
+function draw_table_head($y) {
     $c = '';
-    $c .= pdf_rect($x,$y-$h+8,$w,$h,0.97,0.985,1.00);
-    $c .= pdf_text($x+12,$y-10,8.2,$label,'F2',0.00,0.32,0.70);
-    $yy = $y - 26;
-    foreach (array_slice($valueLines,0,5) as $line) {
-        $c .= pdf_text($x+12,$yy,8.8,$line,'F1',0.08,0.11,0.17);
-        $yy -= 11;
+    $c .= pdf_rect(42,$y-18,511,24,0.93,0.96,1.00);
+    $c .= pdf_text(54,$y-4,7.5,'#','F2',0.00,0.32,0.70);
+    $c .= pdf_text(86,$y-4,7.5,'ESPECIFICACION','F2',0.00,0.32,0.70);
+    $c .= pdf_text(246,$y-4,7.5,'DETALLE DEL PRODUCTO','F2',0.00,0.32,0.70);
+    return $c;
+}
+function draw_spec_row($y,$num,$label,$valueLines,$rowH) {
+    $c = '';
+    $c .= pdf_rect(42,$y-$rowH+8,511,$rowH,0.985,0.992,1.00);
+    $c .= pdf_rect(42,$y-$rowH+8,511,0.7,0.86,0.90,0.96);
+    $c .= pdf_rect(54,$y-19,22,22,0.00,0.32,0.70);
+    $c .= pdf_text(60,$y-10,7.5,$num,'F2',1,1,1);
+    foreach (wrap_pdf($label, 24) as $i=>$line) {
+        if ($i > 2) break;
+        $c .= pdf_text(88,$y-4-($i*10),8.2,$line,'F2',0.06,0.16,0.36);
+    }
+    $yy = $y - 4;
+    foreach (array_slice($valueLines,0,6) as $line) {
+        $c .= pdf_text(246,$yy,8.3,$line,'F1',0.08,0.11,0.17);
+        $yy -= 10.5;
     }
     return $c;
 }
@@ -199,33 +213,31 @@ if (!empty(trim((string)($p['descripcion_corta'] ?? '')))) {
     $y -= ($boxH + 18);
 }
 
-$c .= pdf_text(42,$y,14,'Especificaciones técnicas','F2',0.06,0.16,0.36); $y -= 24;
+$c .= pdf_text(42,$y,14,'Especificaciones técnicas','F2',0.06,0.16,0.36); $y -= 22;
 if (!$groups) {
     $c .= pdf_rect(42,$y-30,511,34,0.98,0.98,0.99);
     $c .= pdf_text(54,$y-12,9,'No hay especificaciones técnicas registradas para este producto.','F1',0.35,0.42,0.52);
 } else {
     foreach ($groups as $group =>$items) {
-        ensure_space($c,$pages,$pageNo,$p,$logoExists,$logoInfo,$y,48);
+        ensure_space($c,$pages,$pageNo,$p,$logoExists,$logoInfo,$y,72);
         $c .= pdf_rect(42,$y-22,511,28,0.05,0.07,0.12);
         $c .= pdf_text(54,$y-5,10,$group,'F2',1,1,1);
         $c .= pdf_text(485,$y-5,7,count($items).' dato(s)','F2',0.75,0.86,1.00);
-        $y -= 40;
-
-        $cards = [];
+        $y -= 38;
+        $c .= draw_table_head($y);
+        $y -= 30;
+        $n = 1;
         foreach ($items as $k=>$v) {
-            $lines = wrap_pdf(ficha_value($v,$k), 34);
-            $cards[] = ['label'=>ficha_label($k),'lines'=>$lines,'h'=>max(58, 28 + count($lines)*11)];
+            $label = ficha_label($k);
+            $valueLines = wrap_pdf(ficha_value($v,$k), 52);
+            $labelLines = wrap_pdf($label, 24);
+            $rowH = max(40, 22 + max(count(array_slice($valueLines,0,6))*10.5, count(array_slice($labelLines,0,3))*10));
+            ensure_space($c,$pages,$pageNo,$p,$logoExists,$logoInfo,$y,$rowH+18);
+            $c .= draw_spec_row($y,str_pad((string)$n,2,'0',STR_PAD_LEFT),$label,$valueLines,$rowH);
+            $y -= ($rowH + 7);
+            $n++;
         }
-        for ($i=0; $i<count($cards); $i+=2) {
-            $c1 = $cards[$i];
-            $c2 = $cards[$i+1] ?? null;
-            $rowH = max($c1['h'], $c2['h'] ?? 0);
-            ensure_space($c,$pages,$pageNo,$p,$logoExists,$logoInfo,$y,$rowH+14);
-            $c .= draw_spec_card(42,$y,247,$rowH,$c1['label'],$c1['lines']);
-            if ($c2) $c .= draw_spec_card(306,$y,247,$rowH,$c2['label'],$c2['lines']);
-            $y -= ($rowH + 12);
-        }
-        $y -= 4;
+        $y -= 10;
     }
 }
 $c .= build_footer();

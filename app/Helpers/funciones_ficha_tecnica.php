@@ -231,27 +231,28 @@ if (!function_exists('emxRenderFichaPremium')) {
         if (!$grupos) {
             return '<div class="rounded-3xl border-2 border-dashed border-slate-300 p-10 text-center text-slate-500 bg-slate-50"><i class="fas fa-circle-info text-3xl mb-3 text-blue-300"></i><p class="font-bold">No hay especificaciones técnicas registradas para este producto.</p></div>';
         }
-        $html = '<div class="space-y-8">';
-        foreach ($grupos as $grupo =>$items) {
-            $html .= '<section class="rounded-[1.6rem] border border-slate-200 bg-white overflow-hidden shadow-sm">';
+
+        $html = '<div class="space-y-8 emx-spec-table-wrap">';
+        foreach ($grupos as $grupo => $items) {
+            $html .= '<section class="rounded-[1.6rem] border border-slate-200 bg-white overflow-hidden shadow-sm emx-spec-table-section">';
             $html .= '<header class="bg-gradient-to-r from-slate-950 via-blue-950 to-slate-900 text-white px-5 md:px-7 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">';
-            $html .= '<div class="flex items-center gap-3"><span class="w-11 h-11 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center"><i class="fas ' . htmlspecialchars(emxFichaIconoGrupo($grupo)) . ' text-blue-200"></i></span><div><p class="text-[11px] uppercase tracking-[.22em] text-blue-200 font-black">Sección técnica</p><h3 class="font-black text-xl leading-tight">' . htmlspecialchars($grupo) . '</h3></div></div>';
+            $html .= '<div class="flex items-center gap-3"><span class="w-11 h-11 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center"><i class="fas ' . htmlspecialchars(emxFichaIconoGrupo($grupo)) . ' text-blue-200"></i></span><div><p class="text-[11px] uppercase tracking-[.22em] text-blue-200 font-black">Tabla técnica</p><h3 class="font-black text-xl leading-tight">' . htmlspecialchars($grupo) . '</h3></div></div>';
             $html .= '<span class="text-xs font-black text-blue-100 bg-white/10 rounded-full px-3 py-1">' . count($items) . ' dato(s)</span>';
             $html .= '</header>';
-            $html .= '<div class="divide-y divide-slate-100">';
+            $html .= '<div class="overflow-x-auto">';
+            $html .= '<table class="w-full text-left border-collapse emx-spec-table">';
+            $html .= '<thead><tr class="bg-blue-50/80 border-b border-blue-100"><th class="w-16 px-5 py-3 text-[11px] uppercase tracking-[.16em] text-blue-700 font-black">#</th><th class="w-[32%] px-5 py-3 text-[11px] uppercase tracking-[.16em] text-blue-700 font-black">Especificación</th><th class="px-5 py-3 text-[11px] uppercase tracking-[.16em] text-blue-700 font-black">Detalle del producto</th></tr></thead><tbody class="divide-y divide-slate-100">';
             $n = 1;
-            foreach ($items as $k =>$v) {
+            foreach ($items as $k => $v) {
                 $num = str_pad((string)$n, 2, '0', STR_PAD_LEFT);
-                $html .= '<div class="grid lg:grid-cols-[310px,1fr] gap-4 lg:gap-8 px-5 md:px-7 py-5 md:py-6 hover:bg-blue-50/30 transition">';
-                $html .= '<div class="flex items-start gap-4">';
-                $html .= '<span class="w-10 h-10 rounded-2xl bg-blue-50 text-blue-700 border border-blue-100 flex items-center justify-center shrink-0 text-sm font-black">' . $num . '</span>';
-                $html .= '<div><h4 class="text-sm md:text-base text-slate-950 font-black leading-snug">' . htmlspecialchars(emxFichaLabel($k)) . '</h4><p class="text-xs text-slate-500 mt-1">Especificación registrada</p></div>';
-                $html .= '</div>';
-                $html .= '<div class="min-w-0 lg:border-l lg:border-slate-100 lg:pl-8">' . emxRenderFichaValorPremium($v, $k) . '</div>';
-                $html .= '</div>';
+                $html .= '<tr class="hover:bg-blue-50/35 transition align-top">';
+                $html .= '<td class="px-5 py-4"><span class="w-9 h-9 rounded-xl bg-blue-700 text-white flex items-center justify-center text-xs font-black shadow-sm">' . $num . '</span></td>';
+                $html .= '<th class="px-5 py-4 text-slate-950 font-black leading-snug"><span class="block">' . htmlspecialchars(emxFichaLabel($k)) . '</span><span class="block text-[11px] text-slate-400 font-bold mt-1 uppercase tracking-wide">Campo técnico</span></th>';
+                $html .= '<td class="px-5 py-4 text-slate-800 font-semibold leading-relaxed">' . emxRenderFichaValorPremium($v, $k) . '</td>';
+                $html .= '</tr>';
                 $n++;
             }
-            $html .= '</div></section>';
+            $html .= '</tbody></table></div></section>';
         }
         return $html . '</div>';
     }

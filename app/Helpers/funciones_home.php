@@ -158,27 +158,8 @@ function emxObtenerRecomendadosProducto(PDO $pdo, array $producto, string $produ
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     } catch (Throwable $e) {
         try {
-            $stmt = $pdo->prepare("
-                SELECT p.*, c.nombre as categoria, c.slug as categoria_slug, m.nombre as marca, pm.url as imagen_principal,
-                       COALESCE(rv.promedio_calificacion, 0) as promedio_calificacion,
-                       COALESCE(rv.total_resenas, 0) as total_reseñas
-                FROM productos p
-                LEFT JOIN categorias c ON p.categoria_id = c.id
-                LEFT JOIN marcas m ON p.marca_id = m.id
-                LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1
-                LEFT JOIN (
-                    SELECT producto_id, AVG(calificacion) as promedio_calificacion, COUNT(*) as total_resenas
-                    FROM reseñas_productos
-                    WHERE aprobado = TRUE
-                    GROUP BY producto_id
-                ) rv ON rv.producto_id = p.id
-                WHERE p.id <>? AND p.deleted_at IS NULL AND p.is_active = TRUE
-                ORDER BY
-                    CASE WHEN p.categoria_id = ? THEN 0 ELSE 1 END,
-                    CASE WHEN p.marca_id = ? THEN 0 ELSE 1 END,
-                    p.created_at DESC
-                LIMIT " . (int)$limit);
-            $stmt->execute([$productoId, $producto['categoria_id'] ?? null, $producto['marca_id'] ?? null]);
+            $stmt = $pdo->prepare("\n                SELECT p.*, m.nombre as marca, pm.url as imagen_principal\n                FROM productos p\n                LEFT JOIN marcas m ON p.marca_id = m.id\n                LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1\n                WHERE p.id <>? AND p.deleted_at IS NULL AND p.is_active = TRUE\n                ORDER BY CASE WHEN p.categoria_id = ? THEN 0 ELSE 1 END, p.created_at DESC\n                LIMIT " . (int)$limit);
+            $stmt->execute([$productoId, $producto['categoria_id'] ?? null]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (Throwable $e2) {
             return [];

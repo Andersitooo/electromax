@@ -66,20 +66,6 @@
         .modal-content {
             animation: modalSlide 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-
-        /* Ajustes finales de responsividad: ficha, tabs y recomendados cómodos en móvil/tablet. */
-        @media (max-width: 640px) {
-            .gallery-container { border-radius: 1rem; padding: 1rem; min-height: 280px; }
-            .gallery-arrow { opacity: 1; width: 38px; height: 38px; }
-            .tab-btn { padding-left: 1rem !important; padding-right: 1rem !important; }
-            .spec-card { padding: 1rem; }
-            .swiper { overflow: hidden !important; }
-            .related-swiper .swiper-slide { width: 74vw; }
-        }
-        @media (min-width: 641px) and (max-width: 1023px) {
-            .related-swiper .swiper-slide { width: 42vw; }
-        }
-
         @keyframes modalSlide {
             from { opacity: 0; transform: translateY(20px) scale(0.95); }
             to { opacity: 1; transform: translateY(0) scale(1); }
@@ -118,6 +104,68 @@
         @keyframes slideInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+
+        /* Recomendados finales: tarjetas premium + carrusel limpio */
+        .related-section-final {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, .22);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 55%, #eef6ff 100%);
+            box-shadow: 0 24px 60px -42px rgba(15, 23, 42, .55);
+        }
+        .related-section-final::before {
+            content: "";
+            position: absolute;
+            width: 18rem;
+            height: 18rem;
+            right: -7rem;
+            top: -8rem;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(37, 99, 235, .16), rgba(37, 99, 235, 0));
+            pointer-events: none;
+        }
+        .related-card-final {
+            height: 100%;
+            min-height: 365px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid rgba(226, 232, 240, .95);
+            box-shadow: 0 14px 40px -30px rgba(15, 23, 42, .6);
+            transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+        }
+        .related-card-final:hover {
+            transform: translateY(-5px);
+            border-color: rgba(37, 99, 235, .35);
+            box-shadow: 0 26px 70px -34px rgba(37, 99, 235, .55);
+        }
+        .related-img-final {
+            min-height: 190px;
+            background: radial-gradient(circle at center, #fff 0%, #eef5ff 100%);
+        }
+        .related-arrow-final {
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #dbe7f5;
+            color: #0f172a;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 14px 28px -22px rgba(15, 23, 42, .9);
+            transition: all .18s ease;
+        }
+        .related-arrow-final:hover { background: #0f172a; color: #fff; border-color: #0f172a; }
+        @media (max-width: 640px) {
+            .related-section-final { border-radius: 1.25rem; padding: 1rem !important; }
+            .related-card-final { min-height: 335px; }
+            .related-img-final { min-height: 165px; }
+            .gallery-arrow { opacity: 1; }
         }
     </style></head><body class="flex flex-col min-h-screen"><?php require EMX_VIEWS_PATH . '/components/navbar.php'; ?><?php if (!$producto): ?><div class="flex-grow flex items-center justify-center py-20"><div class="text-center"><div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6"><i class="fas fa-box-open text-4xl text-slate-400"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-2">Producto no encontrado</h2><a href="index.php" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-xl font-medium hover:bg-slate-800 transition mt-4"><i class="fas fa-arrow-left"></i>Volver al inicio
                 </a></div></div><?php else: ?><!-- Breadcrumb --><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"><nav class="flex items-center gap-2 text-sm text-slate-500"><a href="index.php" class="hover:text-blue-600 transition">Inicio</a><i class="fas fa-chevron-right text-xs"></i><a href="index.php?categoria=<?= htmlspecialchars($producto['categoria_slug']) ?>" class="hover:text-blue-600 transition"><?= htmlspecialchars($producto['categoria']) ?></a><i class="fas fa-chevron-right text-xs"></i><span class="text-slate-900 font-medium truncate"><?= htmlspecialchars($producto['nombre']) ?></span></nav></div><!-- Producto Principal --><main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16"><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12"><!-- Galería --><div class="space-y-4"><div class="gallery-container relative bg-white rounded-2xl overflow-hidden border border-slate-200 aspect-square flex items-center justify-center p-8 shadow-sm"><?php if (!empty($imagenes)): ?><img src="<?= htmlspecialchars($imagenes[0]) ?>" alt="<?= htmlspecialchars($producto['nombre']) ?>" class="w-full h-full object-contain" id="main-image"><?php if (count($imagenes) >1): ?><button type="button" onclick="changeImage(-1)" class="gallery-arrow prev"><i class="fas fa-chevron-left text-slate-700"></i></button><button type="button" onclick="changeImage(1)" class="gallery-arrow next"><i class="fas fa-chevron-right text-slate-700"></i></button><?php endif; ?><?php else: ?><div class="text-slate-300"><i class="fas fa-image text-6xl"></i></div><?php endif; ?><?php if ($tiene_descuento): ?><span class="absolute top-4 left-4 bg-red-500 text-white text-sm font-bold px-3 py-1.5 rounded-full shadow-lg">-<?= $porcentaje_descuento ?>%</span><?php endif; ?></div><?php if (count($imagenes) >1): ?><div class="flex gap-3 overflow-x-auto no-scrollbar"><?php foreach ($imagenes as $index =>$img): ?><button type="button" onclick="setImage(<?= $index ?>)" class="img-thumb flex-shrink-0 w-20 h-20 bg-white rounded-xl overflow-hidden border border-slate-200 p-2 <?= $index === 0 ? 'active' : '' ?>"><img src="<?= htmlspecialchars($img) ?>" class="w-full h-full object-contain"></button><?php endforeach; ?></div><?php endif; ?></div><!-- Info Producto --><div class="flex flex-col"><div class="mb-4"><p class="text-sm text-blue-600 font-semibold mb-2 uppercase tracking-wide"><?= htmlspecialchars($producto['marca'] ?? 'General') ?></p><h1 class="text-2xl lg:text-3xl font-extrabold text-slate-900 mb-3 leading-tight"><?= htmlspecialchars($producto['nombre']) ?></h1><?php if ($avg_rating >0): ?><a href="#tab-reviews" onclick="switchTab('reviews')" class="inline-flex items-center gap-2 mb-4 hover:opacity-80 transition"><div class="flex text-yellow-400 text-sm"><?php 
@@ -224,11 +272,12 @@
                                                                 $tiene_media_rev = ($rev['calificacion'] - $estrellas_completas_rev) >= 0.5;
                                                                 for ($i = 1; $i <= 5; $i++): 
                                                                     if ($i <= $estrellas_completas_rev): ?><i class="fas fa-star"></i><?php elseif ($i == $estrellas_completas_rev + 1 && $tiene_media_rev): ?><i class="fas fa-star-half-alt"></i><?php else: ?><i class="far fa-star text-slate-300"></i><?php endif; 
-                                                                endfor; ?></div></div><span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full self-start sm:self-auto"><i class="far fa-clock mr-1"></i><?= date('d M, Y', strtotime($rev['created_at'])) ?></span></div><?php if (!empty($rev['titulo'])): ?><h4 class="font-bold text-slate-800 mb-2 text-base"><?= htmlspecialchars($rev['titulo']) ?></h4><?php endif; ?><div class="relative"><i class="fas fa-quote-left absolute -top-2 -left-1 text-4xl text-slate-100 -z-10"></i><p class="text-slate-600 text-sm leading-relaxed relative z-10 pl-2"><?= nl2br(htmlspecialchars($rev['comentario'])) ?></p></div></div></div></div><?php endforeach; ?></div><?php endif; ?></div></div></div></div><!-- Productos Recomendados --><?php if (!empty($productos_relacionados)): ?><div class="mb-8"><h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2"><i class="fas fa-sparkles text-blue-600"></i>Productos recomendados
-                    </h2><div class="swiper related-swiper"><div class="swiper-wrapper"><?php foreach ($productos_relacionados as $rel): 
-                                $rel_iva = $rel['iva_porcentaje'] ?? 15;
-                                $rel_precio = $rel['precio_base'] * (1 + ($rel_iva / 100));
-                            ?><div class="swiper-slide"><a href="producto.php?id=<?= $rel['id'] ?>" class="block bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"><div class="aspect-square bg-slate-50 p-6 flex items-center justify-center"><?php if (!empty($rel['imagen_principal'])): ?><img src="<?= htmlspecialchars($rel['imagen_principal']) ?>" class="w-full h-full object-contain"><?php else: ?><i class="fas fa-image text-4xl text-slate-300"></i><?php endif; ?></div><div class="p-4"><p class="text-xs text-slate-500 mb-1 font-medium uppercase"><?= htmlspecialchars($rel['marca'] ?? 'General') ?></p><h3 class="font-semibold text-slate-900 mb-2 line-clamp-2 text-sm leading-snug"><?= htmlspecialchars($rel['nombre']) ?></h3><span class="text-lg font-extrabold text-slate-900">$<?= number_format($rel_precio, 2) ?></span></div></a></div><?php endforeach; ?></div></div><div class="hidden md:flex items-center justify-end gap-2 mt-4"><div class="swiper-button-prev-rel cursor-pointer w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-50 hover:border-slate-300 transition shadow-sm"><i class="fas fa-chevron-left text-slate-700"></i></div><div class="swiper-button-next-rel cursor-pointer w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-50 hover:border-slate-300 transition shadow-sm"><i class="fas fa-chevron-right text-slate-700"></i></div></div></div><?php endif; ?></main><?php endif; ?><!-- Modal de Stock --><div id="stock-modal" class="hidden fixed inset-0 z-[100] modal-overlay flex items-center justify-center p-4"><div class="modal-content bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 text-center border border-slate-100"><div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-exclamation-triangle text-3xl text-amber-600"></i></div><h3 class="text-xl font-bold text-slate-900 mb-2">Stock Insuficiente</h3><p class="text-slate-600 mb-6" id="stock-message">No hay suficientes unidades disponibles</p><button type="button" onclick="closeStockModal()" class="w-full py-3 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition active:scale-95">Entendido
+                                                                endfor; ?></div></div><span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full self-start sm:self-auto"><i class="far fa-clock mr-1"></i><?= date('d M, Y', strtotime($rev['created_at'])) ?></span></div><?php if (!empty($rev['titulo'])): ?><h4 class="font-bold text-slate-800 mb-2 text-base"><?= htmlspecialchars($rev['titulo']) ?></h4><?php endif; ?><div class="relative"><i class="fas fa-quote-left absolute -top-2 -left-1 text-4xl text-slate-100 -z-10"></i><p class="text-slate-600 text-sm leading-relaxed relative z-10 pl-2"><?= nl2br(htmlspecialchars($rev['comentario'])) ?></p></div></div></div></div><?php endforeach; ?></div><?php endif; ?></div></div></div></div><!-- Productos Recomendados --><?php if (!empty($productos_relacionados)): ?><section class="related-section-final rounded-[2rem] p-4 sm:p-6 lg:p-8 mb-10"><div class="relative z-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6"><div><p class="text-xs uppercase tracking-[.24em] text-blue-700 font-black mb-2">También te puede interesar</p><h2 class="text-2xl md:text-3xl font-black text-slate-950 flex items-center gap-3"><span class="w-11 h-11 rounded-2xl bg-blue-700 text-white flex items-center justify-center shadow-lg shadow-blue-700/20"><i class="fas fa-sparkles"></i></span>Productos recomendados</h2><p class="text-sm text-slate-500 mt-2 max-w-2xl">Opciones relacionadas por categoría, marca, precio, calificación y disponibilidad.</p></div><div class="flex items-center gap-2"><button type="button" class="related-arrow-final swiper-button-prev-rel" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button><button type="button" class="related-arrow-final swiper-button-next-rel" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button></div></div><div class="swiper related-swiper relative z-10"><div class="swiper-wrapper items-stretch"><?php foreach (array_slice($productos_relacionados, 0, 12) as $rel):
+                                $rel_iva = (float)($rel['iva_porcentaje'] ?? 15);
+                                $rel_precio = (float)($rel['precio_base'] ?? 0) * (1 + ($rel_iva / 100));
+                                $rel_stock = (int)($rel['stock_actual_global'] ?? 0);
+                            ?><div class="swiper-slide h-auto"><a href="producto.php?id=<?= urlencode((string)$rel['id']) ?>" class="related-card-final group"><div class="related-img-final relative p-5 flex items-center justify-center"><span class="absolute left-4 top-4 rounded-full bg-white/90 border border-blue-100 px-3 py-1 text-[10px] font-black text-blue-700 uppercase shadow-sm"><?= htmlspecialchars($rel['marca'] ?? 'GENERAL') ?></span><?php if (!empty($rel['imagen_principal'])): ?><img src="<?= htmlspecialchars($rel['imagen_principal']) ?>" alt="<?= htmlspecialchars($rel['nombre'] ?? 'Producto') ?>" class="w-full h-44 object-contain group-hover:scale-105 transition duration-300"><?php else: ?><div class="w-24 h-24 rounded-3xl bg-white border border-slate-200 flex items-center justify-center text-slate-300"><i class="fas fa-image text-4xl"></i></div><?php endif; ?></div><div class="p-5 flex flex-col flex-1"><h3 class="font-black text-slate-950 text-sm md:text-base leading-snug line-clamp-2 min-h-[2.8rem]"><?= htmlspecialchars($rel['nombre'] ?? 'Producto recomendado') ?></h3><div class="mt-3 flex flex-wrap items-center gap-2 text-[11px]"><span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-bold"><i class="fas fa-layer-group mr-1"></i><?= htmlspecialchars($rel['categoria'] ?? 'Catálogo') ?></span><span class="px-2.5 py-1 rounded-full <?= $rel_stock > 0 ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700' ?>font-bold"><i class="fas fa-box mr-1"></i><?= $rel_stock > 0 ? 'Disponible' : 'Agotado' ?></span></div><div class="mt-auto pt-5 flex items-end justify-between gap-3"><div><p class="text-[11px] uppercase tracking-wide text-slate-400 font-black">Precio final</p><p class="text-xl font-black text-slate-950">$<?= number_format($rel_precio, 2) ?></p></div><span class="w-10 h-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center group-hover:bg-slate-950 transition"><i class="fas fa-arrow-right"></i></span></div></div></a></div><?php endforeach; ?></div></div></section><?php endif; ?>
+</main><?php endif; ?><!-- Modal de Stock --><div id="stock-modal" class="hidden fixed inset-0 z-[100] modal-overlay flex items-center justify-center p-4"><div class="modal-content bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 text-center border border-slate-100"><div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-exclamation-triangle text-3xl text-amber-600"></i></div><h3 class="text-xl font-bold text-slate-900 mb-2">Stock Insuficiente</h3><p class="text-slate-600 mb-6" id="stock-message">No hay suficientes unidades disponibles</p><button type="button" onclick="closeStockModal()" class="w-full py-3 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition active:scale-95">Entendido
             </button></div></div><?php require EMX_VIEWS_PATH . '/components/footer.php'; ?><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><script>const imagenesArr = <?= $imagenes_json ?: '[]' ?>;
         let currentImgIndex = 0;
         const maxStock = <?= (int)$producto['stock_actual_global'] ?>;
@@ -535,23 +584,21 @@
         }
 
         document.addEventListener('DOMContentLoaded', () =>{
-            const related = document.querySelector('.related-swiper');
-            if (related && typeof Swiper !== 'undefined') {
-                new Swiper('.related-swiper', {
-                    slidesPerView: 1.15,
-                    spaceBetween: 14,
-                    breakpoints: {
-                        480: { slidesPerView: 1.4, spaceBetween: 14 },
-                        640: { slidesPerView: 2.2, spaceBetween: 16 },
-                        1024: { slidesPerView: 3.5, spaceBetween: 18 },
-                        1280: { slidesPerView: 4.5, spaceBetween: 20 }
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next-rel',
-                        prevEl: '.swiper-button-prev-rel',
-                    },
-                });
-            }
+            new Swiper('.related-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 16,
+                grabCursor: true,
+                watchOverflow: true,
+                breakpoints: {
+                    640: { slidesPerView: 2, spaceBetween: 18 },
+                    1024: { slidesPerView: 3, spaceBetween: 20 },
+                    1280: { slidesPerView: 4, spaceBetween: 22 }
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next-rel',
+                    prevEl: '.swiper-button-prev-rel',
+                },
+            });
         });
 
         document.addEventListener('keydown', (e) =>{
