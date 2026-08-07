@@ -147,23 +147,63 @@ function emxObtenerMasVendidos(PDO $pdo, int $limit = 12): array {
 }
 
 function emxObtenerRecomendadosProducto(PDO $pdo, array $producto, string $productoId, int $limit = 10): array {
-    try {
-        $categoriaId = $producto['categoria_id'] ?? null;
-        $marcaId = $producto['marca_id'] ?? null;
-        $precio = max((float)($producto['precio_base'] ?? 0), 1);
+    $limit = max(4, min(16, (int)$limit));
+    $categoriaId = $producto['categoria_id'] ?? null;
+    $marcaId = $producto['marca_id'] ?? null;
+    $precio = max((float)($producto['precio_base'] ?? 0), 0);
 
-        $sql = "\n            WITH ventas AS (\n                SELECT dp.producto_id, SUM(COALESCE(dp.cantidad, 0))::integer AS total_ventas\n                FROM detalle_pedidos dp\n                INNER JOIN pedidos ped ON ped.id = dp.pedido_id\n                WHERE LOWER(COALESCE(ped.estado, '')) NOT IN ('pendiente', 'cancelado', 'reembolsado', 'rechazado', 'fallido')\n                GROUP BY dp.producto_id\n            ), base AS (" . emxProductoQueryBase() . ")\n            SELECT base.*, COALESCE(v.total_ventas, 0) AS total_ventas,\n                   (CASE WHEN base.categoria_id = ? THEN 55 ELSE 0 END\n                    + CASE WHEN base.marca_id = ? THEN 20 ELSE 0 END\n                    + CASE WHEN ABS(base.precio_base - ?) / ? <= 0.25 THEN 15 ELSE 0 END\n                    + LEAST(COALESCE(v.total_ventas, 0), 50) * 0.20\n                    + COALESCE(base.promedio_calificacion, 0) * 2\n                   ) AS recomendacion_score\n            FROM base\n            LEFT JOIN ventas v ON v.producto_id = base.id\n            WHERE base.id <>?\n              AND base.deleted_at IS NULL\n              AND base.is_active = TRUE\n            ORDER BY recomendacion_score DESC, base.created_at DESC\n            LIMIT " . (int)$limit;
+    $resultados = [];
+    $vistos = [(string)$productoId => true];
+
+    $agregar = function(array $rows) use (&$resultados, &$vistos, $limit) {
+        foreach ($rows as $row) {
+            $id = (string)($row['id'] ?? '');
+            if ($id === '' || isset($vistos[$id])) continue;
+            $vistos[$id] = true;
+            $resultados[] = $row;
+            if (count($resultados) >= $limit) break;
+        }
+    };
+
+    $query = function(string $where, array $params, string $order = '') use ($pdo, $limit) {
+        $sql = emxProductoQueryBase() . "\n            WHERE p.deleted_at IS NULL\n              AND p.is_active = TRUE\n              " . $where . "\n            " . ($order ?: "ORDER BY p.stock_actual_global DESC, promedio_calificacion DESC, p.created_at DESC") . "\n            LIMIT " . (int)$limit;
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$categoriaId, $marcaId, $precio, $precio, $productoId, $categoriaId]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->execute($params);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC) ?: [];
+    };
+
+    try {
+        // 1) Primero productos de la misma categoría. Es lo que el cliente espera en "recomendados".
+        if ($categoriaId) {
+            $agregar($query("AND p.id <> ? AND p.categoria_id = ?", [$productoId, $categoriaId], "ORDER BY promedio_calificacion DESC, p.stock_actual_global DESC, p.created_at DESC"));
+        }
+
+        // 2) Luego productos de la misma marca, si todavía faltan.
+        if (count($resultados) < $limit && $marcaId) {
+            $agregar($query("AND p.id <> ? AND p.marca_id = ?", [$productoId, $marcaId], "ORDER BY promedio_calificacion DESC, p.stock_actual_global DESC, p.created_at DESC"));
+        }
+
+        // 3) Luego productos con precio parecido.
+        if (count($resultados) < $limit && $precio > 0) {
+            $min = $precio * 0.70;
+            $max = $precio * 1.35;
+            $agregar($query("AND p.id <> ? AND p.precio_base BETWEEN ? AND ?", [$productoId, $min, $max], "ORDER BY ABS(p.precio_base - " . (float)$precio . ") ASC, promedio_calificacion DESC, p.created_at DESC"));
+        }
+
+        // 4) Fallback final: cualquier producto activo para que la sección nunca quede vacía si existe catálogo.
+        if (count($resultados) < $limit) {
+            $agregar($query("AND p.id <> ?", [$productoId], "ORDER BY p.stock_actual_global DESC, promedio_calificacion DESC, p.created_at DESC"));
+        }
     } catch (Throwable $e) {
         try {
-            $stmt = $pdo->prepare("\n                SELECT p.*, m.nombre as marca, pm.url as imagen_principal\n                FROM productos p\n                LEFT JOIN marcas m ON p.marca_id = m.id\n                LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1\n                WHERE p.id <>? AND p.deleted_at IS NULL AND p.is_active = TRUE\n                ORDER BY p.created_at DESC\n                LIMIT " . (int)$limit);
-            $stmt->execute([$productoId, $producto['categoria_id'] ?? null]);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt = $pdo->prepare("\n                SELECT p.*, c.nombre as categoria, c.slug as categoria_slug, m.nombre as marca, pm.url as imagen_principal,\n                       COALESCE(p.calificacion_promedio, 0) as promedio_calificacion,\n                       0 as total_reseñas\n                FROM productos p\n                LEFT JOIN categorias c ON p.categoria_id = c.id\n                LEFT JOIN marcas m ON p.marca_id = m.id\n                LEFT JOIN producto_multimedia pm ON p.id = pm.producto_id AND pm.tipo = 'FOTO' AND pm.orden = 1\n                WHERE p.id <> ? AND p.deleted_at IS NULL AND p.is_active = TRUE\n                ORDER BY p.created_at DESC\n                LIMIT " . (int)$limit);
+            $stmt->execute([$productoId]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC) ?: [];
         } catch (Throwable $e2) {
             return [];
         }
     }
+
+    return $resultados;
 }
 ?>
