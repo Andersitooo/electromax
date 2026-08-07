@@ -38,6 +38,70 @@ function emxFactPublicPath($relative) {
 }
 
 
+if (!function_exists('emxFactStoragePath')) {
+function emxFactStoragePath($relative = '') {
+    $relative = ltrim(str_replace('\\', '/', (string)$relative), '/');
+    $base = defined('EMX_STORAGE_PATH') ? EMX_STORAGE_PATH : (EMX_ROOT . '/storage');
+    return rtrim($base, '/\\') . ($relative !== '' ? '/' . $relative : '');
+}
+}
+
+if (!function_exists('emxFactEnsureDir')) {
+function emxFactEnsureDir($dir) {
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0775, true);
+    }
+    if (is_dir($dir)) {
+        @chmod($dir, 0775);
+    }
+    return is_dir($dir) && is_writable($dir);
+}
+}
+
+if (!function_exists('emxFactRelativePdfPath')) {
+function emxFactRelativePdfPath($tipo, $numero) {
+    $tipo = strtolower((string)$tipo) === 'nota_credito' ? 'notas_credito' : 'facturas';
+    $prefijo = $tipo === 'notas_credito' ? 'nota_credito_' : 'factura_';
+    $safeNumero = preg_replace('/[^0-9A-Za-z_-]/', '_', (string)$numero) ?: date('Ymd_His');
+    return 'storage/' . $tipo . '/' . date('Y/m') . '/' . $prefijo . $safeNumero . '.pdf';
+}
+}
+
+if (!function_exists('emxFactAbsoluteFromRelative')) {
+function emxFactAbsoluteFromRelative($relative) {
+    $relative = ltrim(str_replace('\\', '/', (string)$relative), '/');
+    if ($relative === '') return null;
+    return EMX_ROOT . '/' . $relative;
+}
+}
+
+if (!function_exists('emxFactResolveAttachmentPath')) {
+function emxFactResolveAttachmentPath($archivo) {
+    $archivo = trim((string)$archivo);
+    if ($archivo === '') return null;
+
+    $archivoNorm = str_replace('\\', '/', $archivo);
+    $candidates = [];
+
+    if (preg_match('/^[A-Za-z]:\//', $archivoNorm) || str_starts_with($archivoNorm, '/')) {
+        $candidates[] = $archivoNorm;
+    } else {
+        $rel = ltrim($archivoNorm, '/');
+        $candidates[] = EMX_ROOT . '/' . $rel;
+        $candidates[] = EMX_PUBLIC_PATH . '/' . $rel;
+        $candidates[] = emxFactStoragePath($rel);
+    }
+
+    foreach (array_unique($candidates) as $candidate) {
+        if ($candidate && is_file($candidate) && filesize($candidate) > 0 && is_readable($candidate)) {
+            return $candidate;
+        }
+    }
+    return null;
+}
+}
+
+
 if (!function_exists('emxFactColumnExists')) {
 function emxFactColumnExists($pdo, $tabla, $columna) {
     static $cache = [];
@@ -431,8 +495,19 @@ function emxCrearPdfBasico($path, $titulo, $subtitulo, $empresa, $cliente, $nume
     for ($i=1;$i<=count($objects);$i++) $pdf .= sprintf("%010d 00000 n \n", $offsets[$i]);
     $pdf .= "trailer << /Size ".(count($objects)+1)." /Root 1 0 R >>\nstartxref\n$xref\n%%EOF";
 
-    if (!is_dir(dirname($path))) @mkdir(dirname($path), 0775, true);
-    file_put_contents($path, $pdf);
+    $dir = dirname($path);
+    if (!emxFactEnsureDir($dir)) {
+        error_log('[facturacion_pdf] No se pudo preparar carpeta PDF: ' . $dir);
+        return null;
+    }
+
+    $bytes = @file_put_contents($path, $pdf, LOCK_EX);
+    if ($bytes === false || $bytes <= 0 || !is_file($path)) {
+        error_log('[facturacion_pdf] No se pudo escribir PDF: ' . $path);
+        return null;
+    }
+
+    @chmod($path, 0664);
     return $path;
 }
 }
@@ -491,14 +566,23 @@ function emxEnviarCorreoDocumento($pdo, $usuario_id, $email, $asunto, $html, $ar
             $mail->Subject = $asunto;
             $mail->Body = $html;
             $mail->AltBody = strip_tags(str_replace(['<br>','<br/>','<br />'], "\n", $html));
-            if ($archivo && is_file($archivo)) $mail->addAttachment($archivo);
+
+            $archivoAdjunto = emxFactResolveAttachmentPath($archivo);
+            if ($archivo && !$archivoAdjunto) {
+                error_log('[facturacion_email] Archivo adjunto no encontrado o no legible: ' . (string)$archivo);
+            }
+            if ($archivoAdjunto) {
+                $nombreAdjunto = basename($archivoAdjunto);
+                $mail->addAttachment($archivoAdjunto, $nombreAdjunto);
+            }
+
             $mail->send();
             // Registrar también los correos enviados reales para poder verlos en el panel administrativo.
             try {
                 if (emxFactTableExists($pdo, 'email_outbox')) {
                     $estadoRegistro = 'enviado';
                     $stLog = $pdo->prepare("INSERT INTO email_outbox (usuario_id, email_destino, asunto, cuerpo_html, archivo_adjunto, tipo, estado, error_msg, enviado_at) VALUES (?, ?, ?, ?, ?, ?, ?, NULL, NOW())");
-                    $stLog->execute([$usuario_id, $email, $asunto, $html, $archivo, $tipo, $estadoRegistro]);
+                    $stLog->execute([$usuario_id, $email, $asunto, $html, $archivoAdjunto ?: $archivo, $tipo, $estadoRegistro]);
                 }
             } catch (Throwable $eLog) {}
             return ['ok'=>true, 'estado'=>'enviado'];
@@ -512,7 +596,7 @@ function emxEnviarCorreoDocumento($pdo, $usuario_id, $email, $asunto, $html, $ar
     try {
         if (emxFactTableExists($pdo, 'email_outbox')) {
             $st = $pdo->prepare("INSERT INTO email_outbox (usuario_id, email_destino, asunto, cuerpo_html, archivo_adjunto, tipo, estado, error_msg) VALUES (?, ?, ?, ?, ?, ?, 'pendiente', ?)");
-            $st->execute([$usuario_id, $email, $asunto, $html, $archivo, $tipo, $error ?? null]);
+            $st->execute([$usuario_id, $email, $asunto, $html, emxFactResolveAttachmentPath($archivo) ?: $archivo, $tipo, $error ?? null]);
         }
     } catch (Throwable $e) {}
     return ['ok'=>false, 'estado'=>'pendiente', 'error'=>$error ?? 'No enviado'];
@@ -564,9 +648,12 @@ function emxGenerarFacturaPedido($pdo, $pedido_id, $enviarCorreo = true) {
     $ins = $pdo->prepare("INSERT INTO factura_detalles (factura_id, producto_id, sku, descripcion, cantidad, precio_unitario, descuento, iva_porcentaje, subtotal, iva, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     foreach ($itemsPdf as $it) $ins->execute([$facturaId, $it['producto_id'], $it['sku'], $it['descripcion'], $it['cantidad'], $it['precio_unitario'], 0, $it['iva_porcentaje'], $it['subtotal'], $it['iva'], $it['total']]);
 
-    $pdfRel = 'documentos/facturacion/facturas/' . date('Y/m') . '/factura_' . preg_replace('/[^0-9A-Za-z_-]/','_', $numero) . '.pdf';
-    $pdfAbs = EMX_ROOT . '/' . $pdfRel;
-    emxCrearPdfBasico($pdfAbs, 'Factura de compra', 'Pedido #' . strtoupper(substr($pedido_id,0,8)) . ' | Clave de acceso: ' . $clave, $empresa, $cliente, $numero, $itemsPdf, ['subtotal'=>$subtotal,'descuento'=>0,'iva'=>$iva,'total'=>$total], 'FACTURA');
+    $pdfRel = emxFactRelativePdfPath('factura', $numero);
+    $pdfAbs = emxFactAbsoluteFromRelative($pdfRel);
+    $pdfGenerado = emxCrearPdfBasico($pdfAbs, 'Factura de compra', 'Pedido #' . strtoupper(substr($pedido_id,0,8)) . ' | Clave de acceso: ' . $clave, $empresa, $cliente, $numero, $itemsPdf, ['subtotal'=>$subtotal,'descuento'=>0,'iva'=>$iva,'total'=>$total], 'FACTURA');
+    if (!$pdfGenerado || !is_file($pdfAbs)) {
+        error_log('[facturacion_pdf] La factura se emitió, pero no se pudo generar el PDF para adjuntar: ' . $numero);
+    }
     $pdo->prepare("UPDATE facturas SET pdf_url = ? WHERE id = ?")->execute([$pdfRel, $facturaId]);
 
     if ($enviarCorreo && !empty($cliente['email'])) {
@@ -646,7 +733,7 @@ function emxEnviarCorreoNotaCredito($pdo, $nota_credito_id) {
         $total = (float)($nc['total'] ?? 0);
         $pedidoCodigo = !empty($nc['pedido_id']) ? strtoupper(substr((string)$nc['pedido_id'], 0, 8)) : 'N/D';
         $pdfRel = trim((string)($nc['pdf_url'] ?? ''));
-        $pdfAbs = $pdfRel !== '' ? EMX_ROOT . '/' . ltrim(str_replace('\\', '/', $pdfRel), '/') : null;
+        $pdfAbs = $pdfRel !== '' ? emxFactResolveAttachmentPath($pdfRel) : null;
 
         $html = '<div style="font-family:Arial,Helvetica,sans-serif;background:#eef3f9;padding:28px;color:#0f172a">' .
             '<div style="max-width:680px;margin:auto;background:#ffffff;border-radius:22px;overflow:hidden;border:1px solid #dbe6f3;box-shadow:0 12px 32px rgba(15,23,42,.10)">' .
@@ -677,7 +764,7 @@ function emxEnviarCorreoNotaCredito($pdo, $nota_credito_id) {
             $email,
             'Nota de crédito ElectroMax ' . $numero,
             $html,
-            ($pdfAbs && is_file($pdfAbs)) ? $pdfAbs : null,
+            $pdfAbs ?: null,
             'nota_credito'
         );
 
@@ -720,9 +807,12 @@ function emxGenerarNotaCreditoTotal($pdo, $pedido_id, $devolucion_id = null, $mo
     $ncId = $st->fetchColumn();
 
     $items = [[ 'descripcion'=>'Nota de crédito total sobre factura '.$fact['numero_factura'], 'cantidad'=>1, 'precio_unitario'=>$fact['subtotal'], 'iva'=>$fact['iva'], 'total'=>$fact['total'] ]];
-    $pdfRel = 'documentos/facturacion/notas_credito/' . date('Y/m') . '/nota_credito_' . preg_replace('/[^0-9A-Za-z_-]/','_', $numero) . '.pdf';
-    $pdfAbs = EMX_ROOT . '/' . $pdfRel;
-    emxCrearPdfBasico($pdfAbs, 'Nota de crédito', 'Factura relacionada: '.$fact['numero_factura'].' | Motivo: '.$motivo, $empresa, $cliente, $numero, $items, ['subtotal'=>$fact['subtotal'], 'descuento'=>0, 'iva'=>$fact['iva'], 'total'=>$fact['total']], 'NOTA DE CRÉDITO');
+    $pdfRel = emxFactRelativePdfPath('nota_credito', $numero);
+    $pdfAbs = emxFactAbsoluteFromRelative($pdfRel);
+    $pdfGenerado = emxCrearPdfBasico($pdfAbs, 'Nota de crédito', 'Factura relacionada: '.$fact['numero_factura'].' | Motivo: '.$motivo, $empresa, $cliente, $numero, $items, ['subtotal'=>$fact['subtotal'], 'descuento'=>0, 'iva'=>$fact['iva'], 'total'=>$fact['total']], 'NOTA DE CRÉDITO');
+    if (!$pdfGenerado || !is_file($pdfAbs)) {
+        error_log('[facturacion_pdf] La nota de crédito se emitió, pero no se pudo generar el PDF para adjuntar: ' . $numero);
+    }
     $pdo->prepare("UPDATE notas_credito SET pdf_url = ? WHERE id = ?")->execute([$pdfRel, $ncId]);
     $pdo->prepare("UPDATE facturas SET estado = 'nota_credito_total' WHERE id = ?")->execute([$fact['id']]);
     if ($devolucion_id && emxFactColumnExists($pdo, 'devoluciones', 'nota_credito_id')) $pdo->prepare("UPDATE devoluciones SET nota_credito_id = ? WHERE id = ?")->execute([$ncId, $devolucion_id]);
