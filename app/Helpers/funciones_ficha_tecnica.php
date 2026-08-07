@@ -262,22 +262,24 @@ if (!function_exists('emxRenderFichaPremium')) {
 if (!function_exists('emxFichaDocumentoCss')) {
     function emxFichaDocumentoCss(bool $pdf = false): string {
         $base = <<<'CSS'
-:root{--emx-blue:#0565d8;--emx-blue2:#0b4da2;--emx-navy:#06173a;--emx-soft:#eaf4ff;--emx-line:#d9e7f7;--emx-text:#0f1f3a;}
+:root{--emx-blue:#0565d8;--emx-blue2:#0b4da2;--emx-navy:#06173a;--emx-soft:#eaf4ff;--emx-line:#d9e7f7;--emx-text:#0f1f3a;--emx-muted:#64748b;}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:'DejaVu Sans','Inter','Arial',sans-serif;color:var(--emx-text);background:#eaf4ff;}
 .emx-ficha-page{width:100%;max-width:1120px;margin:0 auto;padding:24px;}
 .emx-ficha-card{background:#fff;border:1px solid #dce8f7;border-radius:30px;overflow:hidden;box-shadow:0 28px 70px -42px rgba(6,23,58,.45);}
-.emx-ficha-hero{background:linear-gradient(135deg,#dceeff 0%,#eef7ff 48%,#bfdcff 100%);border-bottom:8px solid #0875ef;padding:34px 36px 24px;position:relative;}
-.emx-ficha-logo{width:290px;max-width:100%;height:auto;display:block;margin-bottom:18px;}
+.emx-ficha-hero{background:linear-gradient(135deg,#dceeff 0%,#eef7ff 48%,#bfdcff 100%);border-bottom:8px solid #0875ef;padding:32px 36px;position:relative;}
+.emx-hero-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:30px;align-items:center;}
+.emx-hero-info{min-width:0;}
+.emx-ficha-logo{width:285px;max-width:100%;height:auto;display:block;margin-bottom:18px;}
 .emx-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.28em;font-weight:900;color:#075fca;margin:0 0 12px;}
 .emx-ficha-title{font-size:34px;line-height:1.05;margin:0 0 18px;color:#071f4f;font-weight:900;letter-spacing:-.03em;}
-.emx-meta-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px;}
-.emx-meta-card{background:rgba(255,255,255,.66);border:1px solid #c8ddf4;border-radius:16px;padding:12px 14px;min-height:64px;}
+.emx-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px;}
+.emx-meta-card{background:rgba(255,255,255,.72);border:1px solid #c8ddf4;border-radius:16px;padding:12px 14px;min-height:64px;}
 .emx-meta-card small{display:block;text-transform:uppercase;letter-spacing:.15em;font-size:10px;color:#075fca;font-weight:900;margin-bottom:5px;}
 .emx-meta-card strong{font-size:13px;color:#06173a;font-weight:900;line-height:1.25;display:block;}
-.emx-product-image-box{margin-top:18px;background:rgba(255,255,255,.55);border:1px solid #c8ddf4;border-radius:22px;min-height:230px;padding:14px;display:flex;align-items:center;justify-content:center;}
-.emx-product-image-box img{max-width:100%;max-height:220px;object-fit:contain;display:block;}
-.emx-product-image-empty{height:210px;width:100%;border-radius:18px;background:#f0f7ff;display:flex;align-items:center;justify-content:center;color:#9bbce7;font-size:54px;}
+.emx-product-image-box{background:rgba(255,255,255,.68);border:1px solid #c8ddf4;border-radius:26px;min-height:270px;padding:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 18px 45px -32px rgba(6,23,58,.55);}
+.emx-product-image-box img{max-width:100%;max-height:250px;object-fit:contain;display:block;}
+.emx-product-image-empty{height:240px;width:100%;border-radius:20px;background:#f0f7ff;display:flex;align-items:center;justify-content:center;color:#9bbce7;font-size:58px;}
 .emx-ficha-body{padding:34px 36px 38px;background:#fff;}
 .emx-section{border:1px solid #dce8f7;border-radius:24px;background:#fff;margin-bottom:26px;overflow:hidden;}
 .emx-section-pad{padding:24px 26px;}
@@ -290,6 +292,7 @@ html,body{margin:0;padding:0;font-family:'DejaVu Sans','Inter','Arial',sans-seri
 table.emx-spec-table{width:100%;border-collapse:collapse;table-layout:fixed;}
 .emx-spec-table th{background:#071f4f;color:#fff;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.12em;padding:14px 16px;border-right:1px solid rgba(255,255,255,.14);}
 .emx-spec-table td{padding:15px 16px;border-top:1px solid #dce8f7;border-right:1px solid #e5edf7;vertical-align:top;font-size:13px;line-height:1.55;color:#1e293b;word-break:break-word;}
+.emx-spec-table th:last-child,.emx-spec-table td:last-child{border-right:0;}
 .emx-spec-table tr:nth-child(even) td{background:#f8fbff;}
 .emx-spec-table tr:hover td{background:#eef6ff;}
 .emx-col-num{width:68px;text-align:center!important;}
@@ -303,12 +306,12 @@ table.emx-spec-table{width:100%;border-collapse:collapse;table-layout:fixed;}
 .emx-actions{max-width:1120px;margin:0 auto 18px;padding:0 24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
 .emx-btn{display:inline-flex;align-items:center;gap:9px;border-radius:14px;text-decoration:none;font-weight:900;padding:12px 16px;border:1px solid #d7e4f3;background:#fff;color:#0f1f3a;}
 .emx-btn-primary{background:#0875ef;border-color:#0875ef;color:#fff;}
-@media(max-width:900px){.emx-ficha-page{padding:14px}.emx-ficha-hero,.emx-ficha-body{padding:24px 18px}.emx-meta-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.emx-ficha-title{font-size:28px}.emx-spec-head{display:block}.emx-spec-count{display:inline-block;margin-top:10px}.emx-spec-table th,.emx-spec-table td{padding:12px 10px;font-size:12px}.emx-col-num{width:54px}.emx-col-num span{width:30px;height:30px}}
-@media(max-width:560px){.emx-meta-grid{grid-template-columns:1fr}.emx-ficha-title{font-size:24px}.emx-ficha-logo{width:230px}.emx-product-image-box{min-height:180px}.emx-product-image-box img{max-height:170px}.emx-spec-table th:nth-child(1),.emx-spec-table td:nth-child(1){display:none}.emx-spec-table th,.emx-spec-table td{font-size:12px}.emx-section-title{font-size:22px}}
+@media(max-width:900px){.emx-ficha-page{padding:14px}.emx-ficha-hero,.emx-ficha-body{padding:24px 18px}.emx-hero-layout{grid-template-columns:1fr;gap:20px}.emx-meta-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.emx-ficha-title{font-size:28px}.emx-spec-head{display:block}.emx-spec-count{display:inline-block;margin-top:10px}.emx-spec-table th,.emx-spec-table td{padding:12px 10px;font-size:12px}.emx-col-num{width:54px}.emx-col-num span{width:30px;height:30px}.emx-product-image-box{min-height:210px}.emx-product-image-box img{max-height:200px}}
+@media(max-width:560px){.emx-meta-grid{grid-template-columns:1fr}.emx-ficha-title{font-size:24px}.emx-ficha-logo{width:230px}.emx-product-image-box{min-height:180px}.emx-product-image-box img{max-height:170px}.emx-spec-table th:nth-child(1),.emx-spec-table td:nth-child(1){display:none}.emx-spec-table th,.emx-spec-table td{font-size:12px}.emx-section-title{font-size:22px}.emx-section-pad{padding:18px 14px}.emx-ficha-footer{padding:16px 18px}}
 @media print{.no-print,.emx-actions{display:none!important}html,body{background:#fff}.emx-ficha-page{max-width:none;width:100%;padding:0}.emx-ficha-card{box-shadow:none;border-radius:0;border:0}.emx-ficha-hero{border-bottom:6px solid #0875ef;-webkit-print-color-adjust:exact;print-color-adjust:exact}.emx-spec-table th,.emx-col-num span{background:#071f4f!important;color:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.emx-spec-table tr:nth-child(even) td{background:#f8fbff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.emx-ficha-footer{background:#06173a!important;color:#c7d7ea!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 CSS;
         if ($pdf) {
-            $base .= "\n@page{size:A4 portrait;margin:8mm;}html,body{background:#fff;font-size:12px}.emx-ficha-page{max-width:none;width:100%;padding:0}.emx-ficha-card{border-radius:0;box-shadow:none;border:0}.emx-ficha-hero{padding:20px 22px 18px;border-bottom:6px solid #0875ef}.emx-ficha-logo{width:250px;margin-bottom:12px}.emx-ficha-title{font-size:25px;margin-bottom:12px}.emx-meta-grid{grid-template-columns:repeat(4,1fr);gap:8px}.emx-meta-card{padding:9px 10px;border-radius:12px;min-height:50px}.emx-product-image-box{min-height:165px;margin-top:12px}.emx-product-image-box img{max-height:155px}.emx-ficha-body{padding:20px 22px}.emx-section{margin-bottom:16px;border-radius:16px}.emx-section-pad{padding:16px 18px}.emx-section-title{font-size:21px}.emx-description{font-size:12px;line-height:1.55}.emx-spec-table th{font-size:9.5px;padding:9px 10px}.emx-spec-table td{font-size:10.5px;padding:8px 10px;line-height:1.4}.emx-col-num{width:45px}.emx-col-num span{width:25px;height:25px;border-radius:8px;font-size:9px}.emx-ficha-footer{padding:12px 22px;font-size:9.5px;page-break-inside:avoid}.emx-section,.emx-product-image-box,.emx-meta-card{page-break-inside:avoid}.emx-spec-table tr{page-break-inside:avoid;page-break-after:auto}";
+            $base .= "\n@page{size:A4 portrait;margin:8mm;}html,body{background:#fff;font-size:11.5px}.emx-ficha-page{max-width:none;width:100%;padding:0}.emx-ficha-card{border-radius:0;box-shadow:none;border:0}.emx-ficha-hero{padding:22px 24px;border-bottom:6px solid #0875ef}.emx-hero-layout{grid-template-columns:minmax(0,1fr) 250px;gap:22px}.emx-ficha-logo{width:235px;margin-bottom:12px}.emx-kicker{font-size:9.5px;margin-bottom:8px}.emx-ficha-title{font-size:22px;margin-bottom:10px;line-height:1.08}.emx-meta-grid{grid-template-columns:repeat(2,1fr);gap:8px}.emx-meta-card{padding:8px 9px;border-radius:12px;min-height:46px}.emx-meta-card small{font-size:8px}.emx-meta-card strong{font-size:10.5px}.emx-product-image-box{min-height:205px;padding:12px;border-radius:18px}.emx-product-image-box img{max-height:190px}.emx-product-image-empty{height:185px;font-size:44px}.emx-ficha-body{padding:20px 24px}.emx-section{margin-bottom:16px;border-radius:16px}.emx-section-pad{padding:15px 17px}.emx-section-title{font-size:18px}.emx-description{font-size:10.5px;line-height:1.55}.emx-spec-head{margin-bottom:10px}.emx-spec-count{font-size:9.5px;padding:6px 9px}.emx-spec-table th{font-size:8.5px;padding:8px 9px}.emx-spec-table td{font-size:9.5px;padding:7px 9px;line-height:1.36}.emx-col-num{width:42px}.emx-col-num span{width:23px;height:23px;border-radius:7px;font-size:8px}.emx-ficha-footer{padding:12px 24px;font-size:8.8px;page-break-inside:avoid}.emx-section,.emx-product-image-box,.emx-meta-card{page-break-inside:avoid}.emx-spec-table tr{page-break-inside:avoid;page-break-after:auto}";
         }
         return $base;
     }
@@ -342,10 +345,89 @@ if (!function_exists('emxFichaRenderDocumento')) {
         $pdfUrl = 'ficha_tecnica_pdf.php?id=' . urlencode($id);
 
         ob_start();
-        if ($standalone): ?><!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ficha Técnica - <?= emxFichaEscape($titulo) ?></title><?php if (!$pdf): ?><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><?php endif; ?><style><?= emxFichaDocumentoCss($pdf) ?></style></head><body><?php endif; ?>
-        <?php if (!$pdf): ?><div class="emx-actions no-print"><a href="<?= emxFichaEscape($volver) ?>" class="emx-btn"><i class="fas fa-arrow-left"></i>Volver</a><a href="<?= emxFichaEscape($pdfUrl) ?>" class="emx-btn emx-btn-primary"><i class="fas fa-file-pdf"></i>Descargar / imprimir PDF</a></div><?php endif; ?>
-        <div class="emx-ficha-page"><article class="emx-ficha-card"><header class="emx-ficha-hero"><img src="<?= emxFichaEscape($logoSrc) ?>" alt="ElectroMax" class="emx-ficha-logo"><p class="emx-kicker">Ficha técnica oficial</p><h1 class="emx-ficha-title"><?= emxFichaEscape($titulo) ?></h1><?php if ($datosProducto): ?><div class="emx-meta-grid"><?php foreach ($datosProducto as [$label, $value]): ?><div class="emx-meta-card"><small><?= emxFichaEscape($label) ?></small><strong><?= emxFichaEscape($value) ?></strong></div><?php endforeach; ?></div><?php endif; ?><div class="emx-product-image-box"><?php if ($imgSrc !== ''): ?><img src="<?= emxFichaEscape($imgSrc) ?>" alt="<?= emxFichaEscape($titulo) ?>"><?php else: ?><div class="emx-product-image-empty"><i class="fas fa-box"></i></div><?php endif; ?></div></header><main class="emx-ficha-body"><?php if ($descripcion !== ''): ?><section class="emx-section"><div class="emx-section-pad"><p class="emx-section-label">Resumen del producto</p><h2 class="emx-section-title">Descripción comercial registrada</h2><p class="emx-description"><?= nl2br(emxFichaEscape($descripcion)) ?></p></div></section><?php endif; ?><section class="emx-section"><div class="emx-section-pad"><div class="emx-spec-head"><div><p class="emx-section-label">Detalle técnico</p><h2 class="emx-section-title">Especificaciones técnicas</h2><p class="emx-description" style="margin-top:4px">Información organizada en una sola tabla para facilitar lectura, impresión y revisión técnica.</p></div><span class="emx-spec-count"><?= count($filas) ?> especificación(es)</span></div><?= emxRenderFichaPremium($specs) ?></div></section></main><footer class="emx-ficha-footer"><strong><?= emxFichaEscape($footerNombre) ?></strong> · <?= emxFichaEscape($footerDireccion) ?> · <?= emxFichaEscape($footerEmail) ?> · <?= emxFichaEscape($footerTelefono) ?><br>Documento generado con la información registrada en el catálogo del sistema.</footer></article></div>
-        <?php if ($standalone): ?></body></html><?php endif;
+        if ($standalone): ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Técnica - <?= emxFichaEscape($titulo) ?></title>
+    <?php if (!$pdf): ?>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <?php endif; ?>
+    <style><?= emxFichaDocumentoCss($pdf) ?></style>
+</head>
+<body>
+        <?php endif; ?>
+        <?php if (!$pdf): ?>
+        <div class="emx-actions no-print">
+            <a href="<?= emxFichaEscape($volver) ?>" class="emx-btn"><i class="fas fa-arrow-left"></i>Volver</a>
+            <a href="<?= emxFichaEscape($pdfUrl) ?>" class="emx-btn emx-btn-primary"><i class="fas fa-file-pdf"></i>Descargar / imprimir PDF</a>
+        </div>
+        <?php endif; ?>
+        <div class="emx-ficha-page">
+            <article class="emx-ficha-card">
+                <header class="emx-ficha-hero">
+                    <div class="emx-hero-layout">
+                        <div class="emx-hero-info">
+                            <img src="<?= emxFichaEscape($logoSrc) ?>" alt="ElectroMax" class="emx-ficha-logo">
+                            <p class="emx-kicker">Ficha técnica oficial</p>
+                            <h1 class="emx-ficha-title"><?= emxFichaEscape($titulo) ?></h1>
+                            <?php if ($datosProducto): ?>
+                            <div class="emx-meta-grid">
+                                <?php foreach ($datosProducto as [$label, $value]): ?>
+                                <div class="emx-meta-card">
+                                    <small><?= emxFichaEscape($label) ?></small>
+                                    <strong><?= emxFichaEscape($value) ?></strong>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="emx-product-image-box">
+                            <?php if ($imgSrc !== ''): ?>
+                                <img src="<?= emxFichaEscape($imgSrc) ?>" alt="<?= emxFichaEscape($titulo) ?>">
+                            <?php else: ?>
+                                <div class="emx-product-image-empty"><i class="fas fa-box"></i></div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </header>
+                <main class="emx-ficha-body">
+                    <?php if ($descripcion !== ''): ?>
+                    <section class="emx-section">
+                        <div class="emx-section-pad">
+                            <p class="emx-section-label">Resumen del producto</p>
+                            <h2 class="emx-section-title">Descripción comercial registrada</h2>
+                            <p class="emx-description"><?= nl2br(emxFichaEscape($descripcion)) ?></p>
+                        </div>
+                    </section>
+                    <?php endif; ?>
+                    <section class="emx-section">
+                        <div class="emx-section-pad">
+                            <div class="emx-spec-head">
+                                <div>
+                                    <p class="emx-section-label">Detalle técnico</p>
+                                    <h2 class="emx-section-title">Especificaciones técnicas</h2>
+                                    <p class="emx-description" style="margin-top:4px">Información organizada en una sola tabla cuadriculada para lectura, revisión e impresión.</p>
+                                </div>
+                                <span class="emx-spec-count"><?= count($filas) ?> especificación(es)</span>
+                            </div>
+                            <?= emxRenderFichaPremium($specs) ?>
+                        </div>
+                    </section>
+                </main>
+                <footer class="emx-ficha-footer">
+                    <strong><?= emxFichaEscape($footerNombre) ?></strong> · <?= emxFichaEscape($footerDireccion) ?> · <?= emxFichaEscape($footerEmail) ?> · <?= emxFichaEscape($footerTelefono) ?><br>
+                    Documento generado con la información registrada en el catálogo del sistema.
+                </footer>
+            </article>
+        </div>
+        <?php if ($standalone): ?>
+</body>
+</html>
+        <?php endif;
         return ob_get_clean();
     }
 }
